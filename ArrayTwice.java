@@ -12,13 +12,23 @@ public class ArrayTwice {
             ar[i]=sc.nextInt();
         }
         Arrays.sort(ar);
-        for (int j = 0; j <m; j=j+2) {
-            if(ar[j]!=ar[j+1])
+        boolean flag=true;
+        for (int j = 0; j <m-1; j=j+2) {
+
+            if((ar[j]!=ar[j+1]))
             {
                 System.out.println(ar[j]);
+                flag=false;
+
                 break;
             }
 
+
+
+
+        }
+        if (flag){
+            System.out.println(ar[m-1]);
         }
     }
 }
