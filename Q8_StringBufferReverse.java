@@ -13,6 +13,6 @@ public class Q8_StringBufferReverse
         sb.append(s1);
         sb.reverse();
        sb.delete(4,9);
-        System.out.println(sb);
+        System.out.println("new string is "+sb);
     }
 }

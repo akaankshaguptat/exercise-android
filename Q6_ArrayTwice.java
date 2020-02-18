@@ -22,10 +22,6 @@ public class Q6_ArrayTwice {
 
                 break;
             }
-
-
-
-
         }
         if (flag){
             System.out.println(ar[m-1]);

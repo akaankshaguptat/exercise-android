@@ -5,9 +5,9 @@ import java.lang.*;
 public class Q5_ArrayCommonElement {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
-        System.out.println("enter array size");
+        System.out.println("enter array1 size");
         int m=sc.nextInt();
-        System.out.println("enter array size");
+        System.out.println("enter array2 size");
 
         int n=sc.nextInt();
 
