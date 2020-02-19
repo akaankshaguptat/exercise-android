@@ -7,10 +7,11 @@ public class Q2_Duplicatewords {
         System.out.println("enter string");
         String s1=sc.nextLine();
         String words[]=s1.split(" ");
+        int count=0;
         System.out.println("duplicate words :occurences");
 
         for (int i = 0; i <words.length ; i++) {
-            int count=1;
+           count=1;
             for (int j = i+1; j < words.length; j++) {
                 if(words[i].equals(words[j])){
                     count++;
