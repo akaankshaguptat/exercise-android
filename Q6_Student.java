@@ -44,7 +44,7 @@ class SortbyScore implements Comparator<Student>
 }
 
 
-class Q6_Employee {
+class Q6_Student {
     public static void main(String[] args) {
         ArrayList<Student> ar = new ArrayList<Student>();
         ar.add(new Student(20, "akaanksha1", 100));
