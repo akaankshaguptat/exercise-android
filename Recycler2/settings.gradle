@@ -1,0 +1,3 @@
+include ':app'
+rootProject.name='Recycler2'
+include ':app:login'
