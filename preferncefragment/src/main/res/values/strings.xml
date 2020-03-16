@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">PrefernceFragment</string>
+    <string-array name="ringtone">
+        <item>ring1</item>
+        <item>ring2</item>
+        <item>ring3</item>
+        <item>ring4</item>
+    </string-array>
+</resources>
