@@ -11,11 +11,9 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.text.Layout;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -27,13 +25,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.util.List;
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -48,54 +39,24 @@ public class MainActivity extends AppCompatActivity {
         btnGlide=findViewById(R.id.btnGlide);
         btnHttpurl=findViewById(R.id.btnHttp);
         btnJsonHttp=findViewById(R.id.btnJsonHttp);
+        btnJsonHttp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent1=new Intent(MainActivity.this,HttpURlList.class);
+                startActivity(intent1);
+            }
+        });
         btnretro=findViewById(R.id.btnretrofit);
         btnretro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Retrofit retrofit=new Retrofit.Builder()
-                        .baseUrl("https://jsonplaceholder.typicode.com/")
-                        .addConverterFactory(GsonConverterFactory.create()).build();
-                JsonPlaceHolderApi jsonPlaceHolderApi=retrofit.create(JsonPlaceHolderApi.class);
-                Call<List<Post>> call=jsonPlaceHolderApi.getPost();
-                call.enqueue(new Callback<List<Post>>() {
-                    @Override
-                    public void onResponse(Call<List<Post>> call, Response<List<Post>> response) {
-                        if(!response.isSuccessful()){
-                            data.setText("code:"+response.code());
-                            return;
-                        }
-                        List<Post> posts=response.body();
-                        for(Post post:posts){
-                            String content="";
-                            content+="id"+post.getId()+"\n";
-                            content+="user id"+post.getUserId()+"\n";
-                            content+="title"+post.getTitle()+"\n\n";
-                            content+="text:"+post.getText()+"\n\n";
-
-                            data.append(content);
-
-                        }
-
-                    }
-
-                    @Override
-                    public void onFailure(Call<List<Post>> call, Throwable t) {
-                        data.setText(t.getMessage());
-
-                    }
-                });
+                Intent intent=new Intent(MainActivity.this, RetrofitList.class);
+                startActivity(intent);
             }
         });
+
 
         data=findViewById(R.id.data);
-        btnJsonHttp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                FetchData fetchData=new FetchData();
-                fetchData.execute();
-
-            }
-        });
         btnGlide.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

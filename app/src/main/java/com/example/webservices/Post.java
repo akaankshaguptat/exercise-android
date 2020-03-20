@@ -8,6 +8,12 @@ public class Post {
     private String title;
     private String name;
 
+    public Post(String name, String message, String profileImage) {
+        this.name = name;
+        this.message = message;
+        this.profileImage = profileImage;
+    }
+
     public String getName() {
         return name;
     }
