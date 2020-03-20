@@ -25,25 +25,24 @@ public class HttpURlList extends AppCompatActivity {
 
     RecyclerView recyclerView;
     MyAdapter myAdapter;
-    public static ArrayList<Post> arrayList=new ArrayList<>();
+    public static ArrayList<Post> arrayList = new ArrayList<>();
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_retrofit);
-        recyclerView=findViewById(R.id.recyclerview);
-        LinearLayoutManager linearLayoutManager=new LinearLayoutManager(this);
+        recyclerView = findViewById(R.id.recyclerview);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(linearLayoutManager);
-        GetData getData=new GetData();
+        GetData getData = new GetData();
         getData.execute();
-        Log.v("list",arrayList+" ");
-
-
+        Log.v("list", arrayList + " ");
 
 
     }
-    public class GetData extends AsyncTask<Void,Void,Void> {
+
+    public class GetData extends AsyncTask<Void, Void, Void> {
         String data = "", dataparsed = "", singleparse = "", finaldata = "";
         String json_string = "";
         ArrayList<Post> arrayList = new ArrayList<>();

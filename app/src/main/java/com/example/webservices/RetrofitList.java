@@ -21,7 +21,7 @@ public class RetrofitList extends AppCompatActivity {
     RecyclerView recyclerView;
     MyAdapter myAdapter;
     public static ArrayList<Post> arrayList = new ArrayList<>();
-    public static final String URL="https://storage.googleapis.com/network-security-conf-codelab.appspot.com/";
+    public static final String URL = "https://storage.googleapis.com/network-security-conf-codelab.appspot.com/";
 
 
     @Override
@@ -50,18 +50,18 @@ public class RetrofitList extends AppCompatActivity {
 
                 model jsonResponse = response.body();
 
-                Log.v("body",jsonResponse.getPosts().length+"" );
+                Log.v("body", jsonResponse.getPosts().length + "");
                 ArrayList<Post> data = new ArrayList(Arrays.asList(jsonResponse.getPosts()));
-                String name= data.get(0).getName();
-                Log.v("name==",name+"");
-                MyAdapter adapter = new MyAdapter(data,RetrofitList.this);
+                String name = data.get(0).getName();
+                Log.v("name==", name + "");
+                MyAdapter adapter = new MyAdapter(data, RetrofitList.this);
                 recyclerView.setAdapter(adapter);
 
             }
 
             @Override
             public void onFailure(Call<model> call, Throwable t) {
-                Log.v("Error",t.getMessage());
+                Log.v("Error", t.getMessage());
             }
         });
 
