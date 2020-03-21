@@ -1,0 +1,17 @@
+Notification channel Priorities-
+
+for above Android version7.1(API level 25) ,it is called NOTIFICATION IMPORTANCE
+
+IMPORTANCE_HIGH-Urgent
+                Makes a sound and appears as a heads-up notification
+IMPORTANCE_DEFAULT-High
+                   Makes a sound
+IMPORTANCE_LOW-Medium
+               No sound
+IMPORTANCE_MIN-Low
+               No sound and does not appear in the status bar
+Once you submit the channel to the NotificationManager, you cannot change the importance level.
+However, the user can change their preferences for your app's channels at any time.
+
+
+
