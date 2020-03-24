@@ -1,3 +1,4 @@
+//Write a program to create HasSet. print all the value.
 fun main(args: Array<String>){
     var hashSet = HashSet<Int>(6)
     hashSet.add(2)

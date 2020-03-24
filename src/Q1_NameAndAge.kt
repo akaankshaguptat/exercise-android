@@ -1,4 +1,4 @@
-
+//Write a program to print your Firstname,LastName & age using init block,companion object.
 class Q1_NameAndAge {
 
     init{
