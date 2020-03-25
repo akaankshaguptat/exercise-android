@@ -1,3 +1,4 @@
+//WAP to create singleton class.
 object SingletonClass{
     fun dispaly(){
         println("this is singleton class")

@@ -1,3 +1,4 @@
+//WAP to create extension function.
 class Example{
 }
 fun Example.display(){
