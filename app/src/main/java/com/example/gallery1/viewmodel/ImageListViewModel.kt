@@ -7,11 +7,7 @@ import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.bumptech.glide.Glide
-import com.example.gallery1.Adapters.CategoryListAdapter
-import com.example.gallery1.R
-import com.example.gallery1.model.CategoryListModel
 import com.example.gallery1.model.ImageListModel
-import com.example.gallery1.view.CategoryImagesFragment
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 
@@ -22,6 +18,7 @@ class ImageListViewModel:ViewModel, LifecycleObserver {
     val TAG="viewmodel"
     private lateinit var userId:String
     private lateinit var fAuth: FirebaseAuth
+
 
     var id:String =""
     var imageUrl1:String = ""
@@ -34,6 +31,7 @@ class ImageListViewModel:ViewModel, LifecycleObserver {
     }
 
     var arraylistmutablelivedata=MutableLiveData<ArrayList<ImageListViewModel>>()
+
 
 
     var arrayList=ArrayList<ImageListViewModel>()
@@ -81,20 +79,11 @@ class ImageListViewModel:ViewModel, LifecycleObserver {
                 }
             }
 
-//        var imageListModel1=ImageListModel("1","https://firebasestorage.googleapis.com/v0/b/gallery1-a1a11.appspot.com/o/categoryImage%2FaXbUnAhJa3R5AnMHZeDSZzToHvr1%2Ftest?alt=media&token=52aced93-815b-4239-976f-cc0cbb592ce9","123")
-//        var imageListModel2=ImageListModel("1","https://firebasestorage.googleapis.com/v0/b/gallery1-a1a11.appspot.com/o/categoryImage%2FaXbUnAhJa3R5AnMHZeDSZzToHvr1%2Ftest?alt=media&token=52aced93-815b-4239-976f-cc0cbb592ce9","123")
-//
-//        var imageListViewModel1:ImageListViewModel= ImageListViewModel(imageListModel1)
-//        var imageListViewModel2:ImageListViewModel=ImageListViewModel(imageListModel2)
-//
-//        arrayList!!.add(imageListViewModel1)
-//        arrayList!!.add(imageListViewModel2)
-//
-//        arraylistmutablelivedata.value=arrayList
 
         return arraylistmutablelivedata
 
     }
+
 }
 
 

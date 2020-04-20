@@ -18,18 +18,15 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
-import com.example.gallery1.Adapters.CategoryListAdapter
 import com.example.gallery1.Adapters.ImageListAdapter
-import com.example.gallery1.Category
 
 import com.example.gallery1.R
+import com.example.gallery1.model.ImageListModel
 import com.example.gallery1.viewmodel.ImageListViewModel
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.storage.FirebaseStorage
-import kotlinx.android.synthetic.main.fragment_add_category.*
 import java.io.ByteArrayOutputStream
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
@@ -229,4 +226,6 @@ class CategoryImagesFragment : Fragment() {
                 }
             }
     }
+
+    
 }
