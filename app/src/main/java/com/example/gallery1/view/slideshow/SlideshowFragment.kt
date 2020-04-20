@@ -8,7 +8,9 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import com.example.gallery1.Category
 import com.example.gallery1.R
+import com.example.gallery1.view.TimelineFragment
 
 class SlideshowFragment : Fragment() {
 
@@ -22,10 +24,12 @@ class SlideshowFragment : Fragment() {
         slideshowViewModel =
                 ViewModelProviders.of(this).get(SlideshowViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_slideshow, container, false)
-        val textView: TextView = root.findViewById(R.id.text_slideshow)
-        slideshowViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
+
+
+        val timelineFragment= TimelineFragment()
+        activity?.supportFragmentManager?.beginTransaction()
+            ?.add(R.id.timeline_frag,timelineFragment)
+            ?.addToBackStack(null)?.commit()
         return root
     }
 }

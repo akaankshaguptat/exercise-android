@@ -198,11 +198,12 @@ class CategoryImagesFragment : Fragment() {
                 Log.d(TAG,imageUid)
                 db.collection("users").document(userId).collection("timeline").document(imageUid)
                     .set(user)
+                Toast.makeText(activity,"image data saved",Toast.LENGTH_SHORT).show()
             }
             .addOnFailureListener { e ->
                 Log.w(ContentValues.TAG, "Error adding document", e)
             }
-        Toast.makeText(activity,"image data saved",Toast.LENGTH_SHORT).show()
+
 
 
 
