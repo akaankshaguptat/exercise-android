@@ -58,10 +58,11 @@ class ImageListViewModel:ViewModel, LifecycleObserver {
                         Log.d(TAG,document.id)
                         var id=document.id
                         var imageUrl=document.data.get("imageUrl").toString()
+                        var timeStamp=document.data.get("timeStamp").toString()
 
 
 
-                        var imageListModel1=ImageListModel("1",imageUrl,"123")
+                        var imageListModel1=ImageListModel(id,imageUrl,timeStamp)
 
 
                         var imageListViewModel1:ImageListViewModel= ImageListViewModel(imageListModel1)

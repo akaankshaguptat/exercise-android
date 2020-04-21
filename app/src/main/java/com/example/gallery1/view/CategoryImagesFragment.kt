@@ -82,6 +82,10 @@ class CategoryImagesFragment : Fragment() {
         var bundle=arguments
         id= bundle?.getString("data")!!
         Log.d(TAG,id)
+        var bundle1=Bundle()
+        bundle1.putString("cat_id",id)
+        var imageDisplayFragment=ImageDisplayFragment()
+        imageDisplayFragment.arguments=bundle1
         userId = fAuth.currentUser?.uid!!
         val db = FirebaseFirestore.getInstance()
 
@@ -182,7 +186,8 @@ class CategoryImagesFragment : Fragment() {
         val user = hashMapOf(
             "imageUrl" to imageUri.toString(),
             "imageId" to  imageId,
-            "timeStamp" to time
+            "timeStamp" to time,
+            "cat_id"  to id
         )
         val db = FirebaseFirestore.getInstance()
 
@@ -227,5 +232,5 @@ class CategoryImagesFragment : Fragment() {
             }
     }
 
-    
+
 }
