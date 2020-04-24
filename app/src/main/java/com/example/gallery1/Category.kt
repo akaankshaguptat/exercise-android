@@ -2,17 +2,16 @@ package com.example.gallery1
 
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.gallery1.Adapters.CategoryListAdapter
 import com.example.gallery1.model.CategoryListModel
-import com.example.gallery1.view.CategoryImagesFragment
 import com.example.gallery1.view.home.HomeViewModel
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.firebase.auth.FirebaseAuth
@@ -36,15 +35,15 @@ class Category : Fragment() {
     private var gridLayoutManager: GridLayoutManager? = null
     private var arrayList: ArrayList<CategoryListModel>? = null
     private var categoryListAdapter: CategoryListAdapter? = null
-    private lateinit var fstore:FirebaseStorage
+    private lateinit var fstore: FirebaseStorage
     val db = FirebaseFirestore.getInstance()
     var fAuth = FirebaseAuth.getInstance()
-    var userId=fAuth.currentUser?.uid.toString()
+    var userId = fAuth.currentUser?.uid.toString()
 
-    var bundle=Bundle()
+    var bundle = Bundle()
 
 
-    var TAG="category"
+    var TAG = "category"
 
 
     // TODO: Rename and change types of parameters
@@ -64,23 +63,24 @@ class Category : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-         val root=inflater.inflate(R.layout.fragment_category, container, false)
+        val root = inflater.inflate(R.layout.fragment_category, container, false)
 
         recyclerView = root.findViewById(R.id.category_recyclerview)
         gridLayoutManager = GridLayoutManager(context, 2, LinearLayoutManager.VERTICAL, false)
-        recyclerView?.layoutManager =GridLayoutManager(context, 2, LinearLayoutManager.VERTICAL, false)
+        recyclerView?.layoutManager =
+            GridLayoutManager(context, 2, LinearLayoutManager.VERTICAL, false)
 
         arrayList = ArrayList()
         arrayList = setDataInList()
 //        categoryListAdapter = context?.let { CategoryListAdapter(it, arrayList!!) }
 //        recyclerView?.adapter = categoryListAdapter
 
-        var btnAddCategory=root.findViewById<FloatingActionButton>(R.id.btnAddCategory)
+        var btnAddCategory = root.findViewById<FloatingActionButton>(R.id.btnAddCategory)
         btnAddCategory.setOnClickListener {
-            Toast.makeText(activity,"add btn clicked", Toast.LENGTH_SHORT).show()
-            val addCategoryFragment=AddCategoryFragment()
+            Toast.makeText(activity, "add btn clicked", Toast.LENGTH_SHORT).show()
+            val addCategoryFragment = AddCategoryFragment()
             activity?.supportFragmentManager?.beginTransaction()
-                ?.replace(R.id.home_frag,addCategoryFragment)
+                ?.replace(R.id.home_frag, addCategoryFragment)
                 ?.addToBackStack(null)?.commit()
 
         }
@@ -88,28 +88,24 @@ class Category : Fragment() {
     }
 
 
-
-
-
-
     fun setDataInList(): ArrayList<CategoryListModel> {
         var items: ArrayList<CategoryListModel> = ArrayList()
         db.collection("users").document(userId).collection("category")
             .get()
-            .addOnCompleteListener {task->
-                if(task.isSuccessful){
-                    for(document in task.result!!){
-                        Log.d(TAG,document.id)
-                        var id=document.id
+            .addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    for (document in task.result!!) {
+                        Log.d(TAG, document.id)
+                        var id = document.id
 
-                        var imageUrl=document.data.get("imageUrl").toString()
-                        var title=document.data.getValue("title").toString()
+                        var imageUrl = document.data.get("imageUrl").toString()
+                        var title = document.data.getValue("title").toString()
 
-                        val b = items.add(CategoryListModel(imageUrl, title,id))
+                        val b = items.add(CategoryListModel(imageUrl, title, id))
 //                        Glide.with(this).load(imageUrl).into(category_image)
 
                     }
-                    categoryListAdapter = context?.let { CategoryListAdapter(it, items!!) }
+                    categoryListAdapter = context?.let { CategoryListAdapter(it, items) }
                     recyclerView?.adapter = categoryListAdapter
                 }
             }
