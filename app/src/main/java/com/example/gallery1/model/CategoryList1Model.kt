@@ -1,8 +1,6 @@
 package com.example.gallery1.model
 
-import androidx.lifecycle.ViewModel
-
-class CategoryListModel {
+class CategoryList1Model {
     var cat_image:String = ""
     var cat_title:String?=null
     var cat_id:String?=null
@@ -12,6 +10,5 @@ class CategoryListModel {
         this.cat_title = cat_title
         this.cat_id=cat_id
     }
-
 
 }

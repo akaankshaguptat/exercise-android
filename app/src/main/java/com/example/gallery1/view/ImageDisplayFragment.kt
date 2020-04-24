@@ -50,6 +50,7 @@ class ImageDisplayFragment : Fragment() {
         var bundle=arguments
         var id= bundle?.getString("data")!!
 
+
         Log.d("display",id)
 
         fAuth = FirebaseAuth.getInstance()
@@ -61,6 +62,7 @@ class ImageDisplayFragment : Fragment() {
             var imageurl1= documentSnapshot?.getString("imageUrl")
             var cat_id=documentSnapshot?.getString("cat_id").toString()
             Log.d("cat_id",cat_id)
+
             Glide.with(this).load(imageurl1).into(imageView_display)
             var btn_delete=root.findViewById(R.id.btn_delete) as FloatingActionButton
             btn_delete.setOnClickListener {
@@ -77,6 +79,7 @@ class ImageDisplayFragment : Fragment() {
 //                    .addToBackStack(null).commit()
 
                 Toast.makeText(context,"image deleted",Toast.LENGTH_SHORT).show()
+
 
 
             }

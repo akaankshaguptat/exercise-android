@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.gallery1.*
+import com.example.gallery1.view.Category1
 
 class HomeFragment : Fragment() {
 
@@ -27,7 +28,7 @@ class HomeFragment : Fragment() {
             //textView.text = it
         })
 
-        val categoryFragment=Category()
+        val categoryFragment= Category1()
         activity?.supportFragmentManager?.beginTransaction()
             ?.add(R.id.home_frag,categoryFragment)
             ?.addToBackStack(null)?.commit()

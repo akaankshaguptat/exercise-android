@@ -30,11 +30,7 @@ class ImageListViewModel:ViewModel, LifecycleObserver {
         this.timeStamp = imageListModel.timeStamp
     }
 
-    var arraylistmutablelivedata=MutableLiveData<ArrayList<ImageListViewModel>>()
 
-
-
-    var arrayList=ArrayList<ImageListViewModel>()
 
     fun getImageUrl():String{
         return imageUrl1
@@ -48,29 +44,23 @@ class ImageListViewModel:ViewModel, LifecycleObserver {
         fAuth = FirebaseAuth.getInstance()
         userId = fAuth.currentUser?.uid!!
         Log.d(TAG,id1)
+        var arraylistmutablelivedata=MutableLiveData<ArrayList<ImageListViewModel>>()
+
 
         db.collection("users").document(userId).collection("category").document(id1)
             .collection("CategoryImages")
             .get()
             .addOnCompleteListener {task->
                 if(task.isSuccessful){
+                    var arrayList=ArrayList<ImageListViewModel>()
                     for(document in task.result!!){
                         Log.d(TAG,document.id)
                         var id=document.id
                         var imageUrl=document.data.get("imageUrl").toString()
                         var timeStamp=document.data.get("timeStamp").toString()
-
-
-
                         var imageListModel1=ImageListModel(id,imageUrl,timeStamp)
-
-
                         var imageListViewModel1:ImageListViewModel= ImageListViewModel(imageListModel1)
-
-
                         arrayList!!.add(imageListViewModel1)
-
-
                         arraylistmutablelivedata.value=arrayList
 
 

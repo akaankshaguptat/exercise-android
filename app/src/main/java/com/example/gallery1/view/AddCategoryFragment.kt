@@ -1,4 +1,4 @@
-package com.example.gallery1
+package com.example.gallery1.view
 
 import android.app.Activity
 import android.content.ContentValues
@@ -14,6 +14,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
 import android.widget.Toast
+import com.example.gallery1.R
+import com.example.gallery1.view.Category1
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.storage.FirebaseStorage
@@ -140,7 +142,7 @@ class AddCategoryFragment : Fragment() {
                     Log.w(ContentValues.TAG, "Error adding document", e)
                 }
             Toast.makeText(activity,"category data saved",Toast.LENGTH_SHORT).show()
-            val category=Category()
+            val category= Category1()
             activity?.supportFragmentManager?.beginTransaction()
                 ?.replace(R.id.home_frag,category)
                 ?.addToBackStack(null)?.commit()

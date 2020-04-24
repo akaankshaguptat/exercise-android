@@ -82,18 +82,19 @@ class CategoryImagesFragment : Fragment() {
         var bundle=arguments
         id= bundle?.getString("data")!!
         Log.d(TAG,id)
-        var bundle1=Bundle()
-        bundle1.putString("cat_id",id)
-        var imageDisplayFragment=ImageDisplayFragment()
-        imageDisplayFragment.arguments=bundle1
         userId = fAuth.currentUser?.uid!!
         val db = FirebaseFirestore.getInstance()
 
 
         var documentReference = db.collection("users").document(userId)
             .collection("category").document(id)
-        documentReference.addSnapshotListener { documentSnapshot, firebaseFirestoreException ->
-            mtitle= documentSnapshot?.getString("title")!!
+        documentReference.addSnapshotListener {
+                documentSnapshot, firebaseFirestoreException ->
+            if(documentSnapshot!!.exists()){
+                mtitle= documentSnapshot?.getString("title")!!
+
+            }
+
 
         }
 
