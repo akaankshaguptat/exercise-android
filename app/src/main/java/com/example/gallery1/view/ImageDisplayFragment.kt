@@ -2,14 +2,12 @@ package com.example.gallery1.view
 
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
-import com.example.gallery1.Gallery1Activity
-
 import com.example.gallery1.R
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.firebase.auth.FirebaseAuth
@@ -27,7 +25,7 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class ImageDisplayFragment : Fragment() {
-    private lateinit var userId:String
+    private lateinit var userId: String
     private lateinit var fAuth: FirebaseAuth
     private var param1: String? = null
     private var param2: String? = null
@@ -46,12 +44,12 @@ class ImageDisplayFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
 
-        var root= inflater.inflate(R.layout.fragment_image_display, container, false)
-        var bundle=arguments
-        var id= bundle?.getString("data")!!
+        var root = inflater.inflate(R.layout.fragment_image_display, container, false)
+        var bundle = arguments
+        var id = bundle?.getString("data")!!
 
 
-        Log.d("display",id)
+        Log.d("display", id)
 
         fAuth = FirebaseAuth.getInstance()
         userId = fAuth.currentUser?.uid!!
@@ -59,12 +57,12 @@ class ImageDisplayFragment : Fragment() {
         var documentReference = db.collection("users").document(userId)
             .collection("timeline").document(id)
         documentReference.addSnapshotListener { documentSnapshot, firebaseFirestoreException ->
-            var imageurl1= documentSnapshot?.getString("imageUrl")
-            var cat_id=documentSnapshot?.getString("cat_id").toString()
-            Log.d("cat_id",cat_id)
+            var imageurl1 = documentSnapshot?.getString("imageUrl")
+            var cat_id = documentSnapshot?.getString("cat_id").toString()
+            Log.d("cat_id", cat_id)
 
             Glide.with(this).load(imageurl1).into(imageView_display)
-            var btn_delete=root.findViewById(R.id.btn_delete) as FloatingActionButton
+            var btn_delete = root.findViewById(R.id.btn_delete) as FloatingActionButton
             btn_delete.setOnClickListener {
                 db.collection("users").document(userId).collection("category")
                     .document(cat_id).collection("CategoryImages").document(id).delete()
@@ -78,8 +76,7 @@ class ImageDisplayFragment : Fragment() {
 //                    categoryImagesFragment)
 //                    .addToBackStack(null).commit()
 
-                Toast.makeText(context,"image deleted",Toast.LENGTH_SHORT).show()
-
+                Toast.makeText(context, "image deleted", Toast.LENGTH_SHORT).show()
 
 
             }

@@ -5,13 +5,13 @@ import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import com.example.gallery1.MainActivity.Companion.manager
 import com.google.firebase.auth.FirebaseAuth
 
@@ -31,12 +31,10 @@ class LoginFragment : Fragment() {
     private var param2: String? = null
     private lateinit var mEmail: EditText
     private lateinit var mPassword: EditText
-    private lateinit var mSignInBtn:Button
-
+    private lateinit var mSignInBtn: Button
 
 
     private lateinit var auth: FirebaseAuth
-
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -52,36 +50,38 @@ class LoginFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        var view:View= inflater.inflate(R.layout.fragment_login, container, false)
+        var view: View = inflater.inflate(R.layout.fragment_login, container, false)
 
-        var btn_SignUp= view.findViewById<Button>(R.id.btn_SignUp)
-        mSignInBtn=view.findViewById(R.id.btn_SignIn)
-        mEmail=view.findViewById(R.id.EditText_emaillogin)
-        mPassword=view.findViewById(R.id.EditText_passlogin)
+        var btn_SignUp = view.findViewById<Button>(R.id.btn_SignUp)
+        mSignInBtn = view.findViewById(R.id.btn_SignIn)
+        mEmail = view.findViewById(R.id.EditText_emaillogin)
+        mPassword = view.findViewById(R.id.EditText_passlogin)
         auth = FirebaseAuth.getInstance()
-        if (auth.currentUser!=null){
-            var intent=Intent(activity,Gallery1Activity::class.java)
+        if (auth.currentUser != null) {
+            var intent = Intent(activity, Gallery1Activity::class.java)
             startActivity(intent)
         }
 
-        btn_SignUp.setOnClickListener{
-            manager.beginTransaction().replace(R.id.login_holder,
-                SignupFragment.newInstance("1","2"))
+        btn_SignUp.setOnClickListener {
+            manager.beginTransaction().replace(
+                R.id.login_holder,
+                SignupFragment.newInstance("1", "2")
+            )
                 .addToBackStack(null).commit()
 
         }
-        var btn_SignIn=view.findViewById<Button>(R.id.btn_SignIn)
+        var btn_SignIn = view.findViewById<Button>(R.id.btn_SignIn)
         btn_SignIn.setOnClickListener {
-            var email_login:String=mEmail.text.toString().trim()
-            var password_login:String=mPassword.text.toString().trim()
+            var email_login: String = mEmail.text.toString().trim()
+            var password_login: String = mPassword.text.toString().trim()
 
-            if (TextUtils.isEmpty(email_login)){
-                mEmail.setError("Email is Required")
+            if (TextUtils.isEmpty(email_login)) {
+                mEmail.error = "Email is Required"
                 mEmail.requestFocus()
                 return@setOnClickListener
             }
-            if(TextUtils.isEmpty(password_login)){
-                mPassword.setError("Password is requied")
+            if (TextUtils.isEmpty(password_login)) {
+                mPassword.error = "Password is requied"
                 mPassword.requestFocus()
                 return@setOnClickListener
             }
@@ -96,7 +96,7 @@ class LoginFragment : Fragment() {
                             Log.d(ContentValues.TAG, "user logged in: successful")
                             Toast.makeText(context, "login successful", Toast.LENGTH_SHORT).show()
                             val user = auth.currentUser
-                            var intent=Intent(activity,Gallery1Activity::class.java)
+                            var intent = Intent(activity, Gallery1Activity::class.java)
                             startActivity(intent)
 
                         } else {
@@ -107,8 +107,6 @@ class LoginFragment : Fragment() {
                         }
                     }
             }
-
-
 
 
         }

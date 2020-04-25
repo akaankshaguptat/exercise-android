@@ -9,7 +9,6 @@ import android.os.Bundle
 import android.provider.MediaStore
 import android.text.TextUtils
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -18,11 +17,10 @@ import android.widget.EditText
 import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.core.graphics.drawable.toBitmap
+import androidx.fragment.app.Fragment
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.firestore.SetOptions
 import com.google.firebase.storage.FirebaseStorage
-import kotlinx.android.synthetic.main.fragment_add_category.*
 import kotlinx.android.synthetic.main.fragment_signup.*
 import java.io.ByteArrayOutputStream
 
@@ -37,25 +35,24 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class SignupFragment : Fragment() {
-    private val REQUEST_IMAGE_CAPTURE: Int=102
+    private val REQUEST_IMAGE_CAPTURE: Int = 102
     private lateinit var imageUri: Uri
+
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
 
-    private lateinit var mEmail:EditText
-    private lateinit var mPassword:EditText
-    private lateinit var mRegisterBtn:Button
-    private lateinit var progreBar:ProgressBar
-    private lateinit var mConfirmPassword:EditText
-    private lateinit var mName:EditText
-    private lateinit var userId:String
-    private lateinit var profileLink:String
+    private lateinit var mEmail: EditText
+    private lateinit var mPassword: EditText
+    private lateinit var mRegisterBtn: Button
+    private lateinit var progreBar: ProgressBar
+    private lateinit var mConfirmPassword: EditText
+    private lateinit var mName: EditText
+    private lateinit var userId: String
+    private lateinit var profileLink: String
 
     private lateinit var auth: FirebaseAuth
-    private lateinit var fstore:FirebaseFirestore
-
-
+    private lateinit var fstore: FirebaseFirestore
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -72,14 +69,14 @@ class SignupFragment : Fragment() {
     ): View? {
 
         // Inflate the layout for this fragment
-        var view:View= inflater.inflate(R.layout.fragment_signup, container, false)
+        var view: View = inflater.inflate(R.layout.fragment_signup, container, false)
 
-         mRegisterBtn=view.findViewById(R.id.btn_register)
-         mEmail=view.findViewById(R.id.EditText_email)
-         mPassword=view.findViewById(R.id.EditText_pass)
-         mName=view.findViewById(R.id.editText_name)
-         mConfirmPassword=view.findViewById(R.id.EditText_confirmPass)
-        progreBar=view.findViewById(R.id.progressBar)
+        mRegisterBtn = view.findViewById(R.id.btn_register)
+        mEmail = view.findViewById(R.id.EditText_email)
+        mPassword = view.findViewById(R.id.EditText_pass)
+        mName = view.findViewById(R.id.editText_name)
+        mConfirmPassword = view.findViewById(R.id.EditText_confirmPass)
+        progreBar = view.findViewById(R.id.progressBar)
 
 
 
@@ -87,38 +84,38 @@ class SignupFragment : Fragment() {
 
         auth = FirebaseAuth.getInstance()
         val db = FirebaseFirestore.getInstance()
-        fstore= FirebaseFirestore.getInstance()
+        fstore = FirebaseFirestore.getInstance()
 
 
-        if (auth.currentUser!=null){
-            var intent=Intent(activity,Gallery1Activity::class.java)
+        if (auth.currentUser != null) {
+            var intent = Intent(activity, Gallery1Activity::class.java)
             startActivity(intent)
         }
 
 
 
         mRegisterBtn.setOnClickListener {
-            var email:String=mEmail.text.toString().trim()
-            var password=mPassword.text.toString().trim()
-            var confirmPass=mConfirmPassword.text.toString().trim()
-            var name=mName.text.toString()
+            var email: String = mEmail.text.toString().trim()
+            var password = mPassword.text.toString().trim()
+            var confirmPass = mConfirmPassword.text.toString().trim()
+            var name = mName.text.toString()
 
-            if (TextUtils.isEmpty(email)){
-                mEmail.setError("Email is Required")
+            if (TextUtils.isEmpty(email)) {
+                mEmail.error = "Email is Required"
                 mEmail.requestFocus()
                 return@setOnClickListener
             }
-            if(TextUtils.isEmpty(password)){
-                mPassword.setError("Password is requied")
+            if (TextUtils.isEmpty(password)) {
+                mPassword.error = "Password is requied"
                 mPassword.requestFocus()
                 return@setOnClickListener
             }
-            if(password!=confirmPass){
-                mConfirmPassword.setError("confirm Password should be same as Password")
+            if (password != confirmPass) {
+                mConfirmPassword.error = "confirm Password should be same as Password"
                 mConfirmPassword.requestFocus()
                 return@setOnClickListener
             }
-            progreBar.visibility=View.VISIBLE
+            progreBar.visibility = View.VISIBLE
 
             activity?.let { it1 ->
                 auth.createUserWithEmailAndPassword(email, password)
@@ -126,19 +123,20 @@ class SignupFragment : Fragment() {
                         if (task.isSuccessful) {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "createUserWithEmail:success")
-                           // val user = auth.currentUser
+                            // val user = auth.currentUser
 
 
-                            userId= auth.currentUser?.uid!!
+                            userId = auth.currentUser?.uid!!
 
-                            var imageBitmap=imageView_progilesignup.drawable.toBitmap()
+                            var imageBitmap = imageView_progilesignup.drawable.toBitmap()
 
-                           uplaodImageAndSaveUri(imageBitmap,email,password,name)
+                            uplaodImageAndSaveUri(imageBitmap, email, password, name)
 //
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "createUserWithEmail:failure", task.exception)
-                             Toast.makeText(context, "Authentication failed.", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(context, "Authentication failed.", Toast.LENGTH_SHORT)
+                                .show()
 //
                         }
 
@@ -158,17 +156,17 @@ class SignupFragment : Fragment() {
     }
 
     private fun takepictureIntent() {
-        Intent(MediaStore.ACTION_IMAGE_CAPTURE).also { pictureIntent->
+        Intent(MediaStore.ACTION_IMAGE_CAPTURE).also { pictureIntent ->
             pictureIntent.resolveActivity(activity?.packageManager!!)?.also {
-                startActivityForResult(pictureIntent,REQUEST_IMAGE_CAPTURE)
+                startActivityForResult(pictureIntent, REQUEST_IMAGE_CAPTURE)
             }
         }
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        if(requestCode==REQUEST_IMAGE_CAPTURE && resultCode== Activity.RESULT_OK){
-            val imageBitmap= data?.extras?.get("data") as Bitmap
+        if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == Activity.RESULT_OK) {
+            val imageBitmap = data?.extras?.get("data") as Bitmap
             imageView_progilesignup.setImageBitmap(imageBitmap)
 
 
@@ -180,26 +178,26 @@ class SignupFragment : Fragment() {
         email: String,
         password: String,
         name: String
-    ){
-        var image1:String=""
+    ) {
+        var image1: String = ""
 
-        val baos= ByteArrayOutputStream()
-        var db=FirebaseFirestore.getInstance()
+        val baos = ByteArrayOutputStream()
+        var db = FirebaseFirestore.getInstance()
 
-        val storafgeRef= FirebaseStorage.getInstance()
+        val storafgeRef = FirebaseStorage.getInstance()
             .reference.child("profileImages/${FirebaseAuth.getInstance().currentUser?.uid}")
-        imageBitmap.compress(Bitmap.CompressFormat.JPEG,100,baos)
-        val image=baos.toByteArray()
-        val uplaod=storafgeRef.putBytes(image)
-        uplaod.addOnCompleteListener{uplaodTask->
-            if(uplaodTask.isSuccessful){
-                storafgeRef.downloadUrl.addOnCompleteListener { urlTask->
+        imageBitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos)
+        val image = baos.toByteArray()
+        val uplaod = storafgeRef.putBytes(image)
+        uplaod.addOnCompleteListener { uplaodTask ->
+            if (uplaodTask.isSuccessful) {
+                storafgeRef.downloadUrl.addOnCompleteListener { urlTask ->
                     urlTask.result?.let {
-                        var intent=Intent(activity,Gallery1Activity::class.java)
-                        imageUri=it
+                        var intent = Intent(activity, Gallery1Activity::class.java)
+                        imageUri = it
                         imageView_progilesignup.setImageBitmap(imageBitmap)
-                        Toast.makeText(activity,imageUri.toString(),Toast.LENGTH_SHORT).show()
-                        image1=imageUri.toString()
+                        Toast.makeText(activity, imageUri.toString(), Toast.LENGTH_SHORT).show()
+                        image1 = imageUri.toString()
 
                         val user = hashMapOf(
                             "email" to email,
@@ -220,9 +218,9 @@ class SignupFragment : Fragment() {
 
                     }
                 }
-            }else{
+            } else {
                 uplaodTask.exception?.let {
-                    Toast.makeText(activity,it.message,Toast.LENGTH_SHORT).show()
+                    Toast.makeText(activity, it.message, Toast.LENGTH_SHORT).show()
                 }
             }
 
@@ -230,7 +228,7 @@ class SignupFragment : Fragment() {
 
     }
 
-    public override fun onStart() {
+    override fun onStart() {
         super.onStart()
         // Check if user is signed in (non-null) and update UI accordingly.
         val currentUser = auth.currentUser

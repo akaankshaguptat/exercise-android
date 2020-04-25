@@ -11,7 +11,10 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.*
+import android.widget.Button
+import android.widget.ImageView
+import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import com.bumptech.glide.Glide
@@ -44,9 +47,9 @@ class GalleryFragment : Fragment() {
     private lateinit var userId: String
     private lateinit var mUser: User
     private lateinit var mDatabase: DatabaseReference
-    private lateinit var mEmail:String
-    private lateinit var mPassword:String
-    private lateinit var mName:String
+    private lateinit var mEmail: String
+    private lateinit var mPassword: String
+    private lateinit var mName: String
 
 
     override fun onCreateView(
@@ -86,15 +89,15 @@ class GalleryFragment : Fragment() {
 
         var documentReference = db.collection("users").document(userId)
         documentReference.addSnapshotListener { documentSnapshot, firebaseFirestoreException ->
-           mEmail= documentSnapshot?.getString("email")!!
-            mPassword= documentSnapshot?.getString("password")!!
-            mName= documentSnapshot?.getString("name")!!
-            email.setText(mEmail)
-            password.setText(mPassword)
-            name.setText(mName)
+            mEmail = documentSnapshot?.getString("email")!!
+            mPassword = documentSnapshot.getString("password")!!
+            mName = documentSnapshot.getString("name")!!
+            email.text = mEmail
+            password.text = mPassword
+            name.text = mName
 
 
-            var profile_image1 = documentSnapshot?.getString("profileImage")
+            var profile_image1 = documentSnapshot.getString("profileImage")
             Toast.makeText(activity, profile_image1, Toast.LENGTH_SHORT).show()
 
             Glide.with(this).load(profile_image1).into(profile_image)
@@ -106,15 +109,6 @@ class GalleryFragment : Fragment() {
 
 
         return root
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-//        btn_changePic.setOnClickListener {
-//            takepictureIntent()
-//        }
-
     }
 
     private fun takepictureIntent() {
@@ -131,32 +125,37 @@ class GalleryFragment : Fragment() {
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
             val imageBitmap = data?.extras?.get("data") as Bitmap
             imageView_profile.setImageBitmap(imageBitmap)
-            uplaodImageAndSaveUri(imageBitmap,mEmail,mPassword,mName)
+            uplaodImageAndSaveUri(imageBitmap, mEmail, mPassword, mName)
 
         }
     }
 
-    private fun uplaodImageAndSaveUri(imageBitmap: Bitmap, mEmail: String, mPassword: String, mName: String) {
+    private fun uplaodImageAndSaveUri(
+        imageBitmap: Bitmap,
+        mEmail: String,
+        mPassword: String,
+        mName: String
+    ) {
 
-        var image1:String=""
+        var image1: String = ""
 
-        val baos= ByteArrayOutputStream()
-        var db=FirebaseFirestore.getInstance()
-        val storafgeRef= FirebaseStorage.getInstance()
+        val baos = ByteArrayOutputStream()
+        var db = FirebaseFirestore.getInstance()
+        val storafgeRef = FirebaseStorage.getInstance()
             .reference.child("profileImages/${FirebaseAuth.getInstance().currentUser?.uid}")
-        imageBitmap.compress(Bitmap.CompressFormat.JPEG,100,baos)
-        val image=baos.toByteArray()
-        val uplaod=storafgeRef.putBytes(image)
+        imageBitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos)
+        val image = baos.toByteArray()
+        val uplaod = storafgeRef.putBytes(image)
 
-        uplaod.addOnCompleteListener{uplaodTask->
-            if(uplaodTask.isSuccessful){
-                storafgeRef.downloadUrl.addOnCompleteListener { urlTask->
+        uplaod.addOnCompleteListener { uplaodTask ->
+            if (uplaodTask.isSuccessful) {
+                storafgeRef.downloadUrl.addOnCompleteListener { urlTask ->
                     urlTask.result?.let {
 
-                        imageUri=it
+                        imageUri = it
                         imageView_profile.setImageBitmap(imageBitmap)
-                        Toast.makeText(activity,imageUri.toString(),Toast.LENGTH_SHORT).show()
-                        image1=imageUri.toString()
+                        Toast.makeText(activity, imageUri.toString(), Toast.LENGTH_SHORT).show()
+                        image1 = imageUri.toString()
 
                         val user = hashMapOf(
                             "email" to mEmail,
@@ -176,9 +175,9 @@ class GalleryFragment : Fragment() {
 
                     }
                 }
-            }else{
+            } else {
                 uplaodTask.exception?.let {
-                    Toast.makeText(activity,it.message,Toast.LENGTH_SHORT).show()
+                    Toast.makeText(activity, it.message, Toast.LENGTH_SHORT).show()
                 }
             }
 

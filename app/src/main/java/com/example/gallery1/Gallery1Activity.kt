@@ -5,31 +5,28 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.view.View
-import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.google.android.material.snackbar.Snackbar
-import com.google.android.material.navigation.NavigationView
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
+import androidx.drawerlayout.widget.DrawerLayout
+import androidx.fragment.app.FragmentManager
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-import androidx.drawerlayout.widget.DrawerLayout
-import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
-import androidx.fragment.app.FragmentManager
-import com.example.gallery1.view.CategoryImagesFragment
+import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FirebaseAuth
 
 class Gallery1Activity : AppCompatActivity() {
 
-        companion object {
-    lateinit var manager: FragmentManager
-    var instance: Gallery1Activity? = null
-    fun applicationContext(): Context {
-        return instance!!.applicationContext
+    companion object {
+        lateinit var manager: FragmentManager
+        var instance: Gallery1Activity? = null
+        fun applicationContext(): Context {
+            return instance!!.applicationContext
+        }
     }
-}
+
     private lateinit var appBarConfiguration: AppBarConfiguration
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -49,8 +46,11 @@ class Gallery1Activity : AppCompatActivity() {
         val navController = findNavController(R.id.nav_host_fragment)
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
-        appBarConfiguration = AppBarConfiguration(setOf(
-            R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow), drawerLayout)
+        appBarConfiguration = AppBarConfiguration(
+            setOf(
+                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow
+            ), drawerLayout
+        )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
     }
@@ -68,12 +68,10 @@ class Gallery1Activity : AppCompatActivity() {
 
     fun logout(item: MenuItem) {
         FirebaseAuth.getInstance().signOut()
-        var intent=Intent(applicationContext,MainActivity::class.java)
+        var intent = Intent(applicationContext, MainActivity::class.java)
         finish()
         startActivity(intent)
     }
-
-
 
 
 }

@@ -1,9 +1,8 @@
 package com.example.gallery1
 
 import android.content.Context
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentManager
 
 class MainActivity : AppCompatActivity() {

@@ -8,20 +8,18 @@ import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.gallery1.Adapters.ImageListAdapter
-
 import com.example.gallery1.R
-import com.example.gallery1.model.ImageListModel
 import com.example.gallery1.viewmodel.ImageListViewModel
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.firebase.auth.FirebaseAuth
@@ -43,20 +41,19 @@ private const val ARG_PARAM2 = "param2"
  */
 class CategoryImagesFragment : Fragment() {
 
-    private val REQUEST_IMAGE_CAPTURE: Int=103
+    private val REQUEST_IMAGE_CAPTURE: Int = 103
     private lateinit var imageUri: Uri
-    private var recyclerView:RecyclerView?=null
-    private var imageListAdapter:ImageListAdapter?=null
+    private var recyclerView: RecyclerView? = null
+    private var imageListAdapter: ImageListAdapter? = null
     private var gridLayoutManager: GridLayoutManager? = null
-    private lateinit var id:String
-    private lateinit var btn_takepic:FloatingActionButton
-    private lateinit var mtitle:String
-    private lateinit var userId:String
+    private lateinit var id: String
+    private lateinit var btn_takepic: FloatingActionButton
+    private lateinit var mtitle: String
+    private lateinit var userId: String
     private lateinit var fAuth: FirebaseAuth
-    private lateinit var imageUid:String
+    private lateinit var imageUid: String
 
-    val TAG="imageinfo"
-
+    val TAG = "imageinfo"
 
 
     // TODO: Rename and change types of parameters
@@ -76,22 +73,21 @@ class CategoryImagesFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val root=inflater.inflate(R.layout.fragment_category_images, container, false)
+        val root = inflater.inflate(R.layout.fragment_category_images, container, false)
         fAuth = FirebaseAuth.getInstance()
 
-        var bundle=arguments
-        id= bundle?.getString("data")!!
-        Log.d(TAG,id)
+        var bundle = arguments
+        id = bundle?.getString("data")!!
+        Log.d(TAG, id)
         userId = fAuth.currentUser?.uid!!
         val db = FirebaseFirestore.getInstance()
 
 
         var documentReference = db.collection("users").document(userId)
             .collection("category").document(id)
-        documentReference.addSnapshotListener {
-                documentSnapshot, firebaseFirestoreException ->
-            if(documentSnapshot!!.exists()){
-                mtitle= documentSnapshot?.getString("title")!!
+        documentReference.addSnapshotListener { documentSnapshot, firebaseFirestoreException ->
+            if (documentSnapshot!!.exists()) {
+                mtitle = documentSnapshot.getString("title")!!
 
             }
 
@@ -101,18 +97,21 @@ class CategoryImagesFragment : Fragment() {
 
 
 
-        recyclerView=root.findViewById(R.id.recyler) as RecyclerView
-        btn_takepic=root.findViewById(R.id.btn_takepic)
-        var imageListViewModel:ImageListViewModel=ViewModelProvider(this)[ImageListViewModel::class.java]
-        imageListViewModel.getArrayList(id).observe(this.viewLifecycleOwner, Observer {imageListViewModel->
+        recyclerView = root.findViewById(R.id.recyler) as RecyclerView
+        btn_takepic = root.findViewById(R.id.btn_takepic)
+        var imageListViewModel: ImageListViewModel =
+            ViewModelProvider(this)[ImageListViewModel::class.java]
+        imageListViewModel.getArrayList(id)
+            .observe(this.viewLifecycleOwner, Observer { imageListViewModel ->
 
-            imageListAdapter=context?.let { ImageListAdapter(it, imageListViewModel!!) }
-            gridLayoutManager = GridLayoutManager(context, 2, LinearLayoutManager.VERTICAL, false)
-            recyclerView?.layoutManager = gridLayoutManager
-            recyclerView!!.adapter=imageListAdapter
+                imageListAdapter = context?.let { ImageListAdapter(it, imageListViewModel!!) }
+                gridLayoutManager =
+                    GridLayoutManager(context, 2, LinearLayoutManager.VERTICAL, false)
+                recyclerView?.layoutManager = gridLayoutManager
+                recyclerView!!.adapter = imageListAdapter
 
 
-        })
+            })
 
 
         return root
@@ -126,48 +125,46 @@ class CategoryImagesFragment : Fragment() {
     }
 
     private fun takepictureIntent() {
-        Intent(MediaStore.ACTION_IMAGE_CAPTURE).also { pictureIntent->
+        Intent(MediaStore.ACTION_IMAGE_CAPTURE).also { pictureIntent ->
             pictureIntent.resolveActivity(activity?.packageManager!!)?.also {
-                startActivityForResult(pictureIntent,REQUEST_IMAGE_CAPTURE)
+                startActivityForResult(pictureIntent, REQUEST_IMAGE_CAPTURE)
             }
         }
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        if(requestCode==REQUEST_IMAGE_CAPTURE && resultCode== Activity.RESULT_OK){
-            val imageBitmap= data?.extras?.get("data") as Bitmap
+        if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == Activity.RESULT_OK) {
+            val imageBitmap = data?.extras?.get("data") as Bitmap
             uplaodImageAndSaveUri1(imageBitmap)
 
         }
     }
 
     private fun uplaodImageAndSaveUri1(imageBitmap: Bitmap) {
-        val baos= ByteArrayOutputStream()
-        var imageId=Math.random().toString()
-        val storafgeRef= FirebaseStorage.getInstance()
+        val baos = ByteArrayOutputStream()
+        var imageId = Math.random().toString()
+        val storafgeRef = FirebaseStorage.getInstance()
             .reference.child("categoryImage/${FirebaseAuth.getInstance().currentUser?.uid}/${mtitle}/${imageId}")
-        imageBitmap.compress(Bitmap.CompressFormat.JPEG,100,baos)
-        val image=baos.toByteArray()
-        val uplaod=storafgeRef.putBytes(image)
-        uplaod.addOnCompleteListener{uplaodTask->
-            if(uplaodTask.isSuccessful){
-                storafgeRef.downloadUrl.addOnCompleteListener { urlTask->
+        imageBitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos)
+        val image = baos.toByteArray()
+        val uplaod = storafgeRef.putBytes(image)
+        uplaod.addOnCompleteListener { uplaodTask ->
+            if (uplaodTask.isSuccessful) {
+                storafgeRef.downloadUrl.addOnCompleteListener { urlTask ->
                     urlTask.result?.let {
-                        imageUri=it
+                        imageUri = it
 
-                        Toast.makeText(activity,imageUri.toString(),Toast.LENGTH_SHORT).show()
+                        Toast.makeText(activity, imageUri.toString(), Toast.LENGTH_SHORT).show()
 
-                        uplaodImage(imageUri,imageId)
-
-
+                        uplaodImage(imageUri, imageId)
 
 
                     }
                 }
-            }else{
+            } else {
                 uplaodTask.exception?.let {
-                    Toast.makeText(activity,it.message,Toast.LENGTH_SHORT).show()
+                    Toast.makeText(activity, it.message, Toast.LENGTH_SHORT).show()
                 }
             }
 
@@ -186,9 +183,9 @@ class CategoryImagesFragment : Fragment() {
 
         val user = hashMapOf(
             "imageUrl" to imageUri.toString(),
-            "imageId" to  imageId,
+            "imageId" to imageId,
             "timeStamp" to time,
-            "cat_id"  to id
+            "cat_id" to id
         )
         val db = FirebaseFirestore.getInstance()
 
@@ -197,17 +194,15 @@ class CategoryImagesFragment : Fragment() {
             .collection("CategoryImages").add(user as Map<String, Any>)
             .addOnSuccessListener { documentReference ->
                 Log.d(ContentValues.TAG, "DocumentSnapshot added with ID: ${documentReference.id}")
-                imageUid=documentReference.id
-                Log.d(TAG,imageUid)
+                imageUid = documentReference.id
+                Log.d(TAG, imageUid)
                 db.collection("users").document(userId).collection("timeline").document(imageUid)
                     .set(user)
-                Toast.makeText(activity,"image data saved",Toast.LENGTH_SHORT).show()
+                Toast.makeText(activity, "image data saved", Toast.LENGTH_SHORT).show()
             }
             .addOnFailureListener { e ->
                 Log.w(ContentValues.TAG, "Error adding document", e)
             }
-
-
 
 
     }
