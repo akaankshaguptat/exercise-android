@@ -66,6 +66,7 @@ class Gallery1Activity : AppCompatActivity() {
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
 
+
     fun logout(item: MenuItem) {
         FirebaseAuth.getInstance().signOut()
         var intent = Intent(applicationContext, MainActivity::class.java)
