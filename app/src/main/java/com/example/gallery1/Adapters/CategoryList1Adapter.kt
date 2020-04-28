@@ -47,7 +47,7 @@ class CategoryList1Adapter(
             var args = Bundle()
             var id = categoryList1ViewModel.cat_id
             args.putString("data", id)
-            categoryImagesFragment.arguments = args
+            categoryImagesFragment.setArguments(args)
             Gallery1Activity.manager.beginTransaction().replace(
                 R.id.home_frag,
                 categoryImagesFragment

@@ -76,12 +76,12 @@ class LoginFragment : Fragment() {
             var password_login: String = mPassword.text.toString().trim()
 
             if (TextUtils.isEmpty(email_login)) {
-                mEmail.error = "Email is Required"
+                mEmail.setError("Email is Required")
                 mEmail.requestFocus()
                 return@setOnClickListener
             }
             if (TextUtils.isEmpty(password_login)) {
-                mPassword.error = "Password is requied"
+                mPassword.setError("Password is requied")
                 mPassword.requestFocus()
                 return@setOnClickListener
             }

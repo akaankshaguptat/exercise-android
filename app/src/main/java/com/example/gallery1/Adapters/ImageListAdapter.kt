@@ -16,7 +16,8 @@ import com.example.gallery1.viewmodel.ImageListViewModel
 
 class ImageListAdapter(
     private val context: Context,
-    private val arrayList: ArrayList<ImageListViewModel>
+    private val arrayList: ArrayList<ImageListViewModel>,
+    var id1: String
 ) : RecyclerView.Adapter<ImageListAdapter.ItemView>() {
 
     val TAG = "imagelist"
@@ -43,13 +44,12 @@ class ImageListAdapter(
 
             var bundle = Bundle()
             bundle.putString("data", id)
+            bundle.putString("id", id1)
             val imageDisplayFragment = ImageDisplayFragment()
             imageDisplayFragment.arguments = bundle
             Gallery1Activity.manager.beginTransaction().replace(
-                R.id.home_frag,
-                imageDisplayFragment
-            )
-                .addToBackStack(null).commit()
+                R.id.home_frag, imageDisplayFragment)
+                .addToBackStack("image display 1").commit()
 
         }
 

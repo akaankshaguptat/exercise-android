@@ -11,13 +11,11 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
 import com.example.gallery1.MainActivity
 import com.example.gallery1.R
 import com.google.firebase.auth.FirebaseAuth
@@ -66,6 +64,7 @@ class GalleryFragment : Fragment() {
         password = root.findViewById(R.id.Text_pass)
         name = root.findViewById(R.id.Text_name)
         btn_changePic = root.findViewById(R.id.btn_changeprofilepic)
+        var progressBar_pic = root.findViewById<ProgressBar>(R.id.progressBar_pic)
 
 
         var user = FirebaseAuth.getInstance().currentUser
@@ -90,17 +89,18 @@ class GalleryFragment : Fragment() {
         var documentReference = db.collection("users").document(userId)
         documentReference.addSnapshotListener { documentSnapshot, firebaseFirestoreException ->
             mEmail = documentSnapshot?.getString("email")!!
-            mPassword = documentSnapshot.getString("password")!!
-            mName = documentSnapshot.getString("name")!!
-            email.text = mEmail
-            password.text = mPassword
-            name.text = mName
+            mPassword = documentSnapshot?.getString("password")!!
+            mName = documentSnapshot?.getString("name")!!
+            email.setText(mEmail)
+            password.setText(mPassword)
+            name.setText(mName)
 
 
-            var profile_image1 = documentSnapshot.getString("profileImage")
-            Toast.makeText(activity, profile_image1, Toast.LENGTH_SHORT).show()
+            var profile_image1 = documentSnapshot?.getString("profileImage")
+            //Toast.makeText(activity, profile_image1, Toast.LENGTH_SHORT).show()
 
-            Glide.with(this).load(profile_image1).into(profile_image)
+            Glide.with(this).load(profile_image1).apply(RequestOptions.circleCropTransform())
+                .into(profile_image)
 
         }
 //        imageView_profile.setOnClickListener {
@@ -109,6 +109,15 @@ class GalleryFragment : Fragment() {
 
 
         return root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        btn_changePic.setOnClickListener {
+            takepictureIntent()
+        }
+
     }
 
     private fun takepictureIntent() {
@@ -138,7 +147,7 @@ class GalleryFragment : Fragment() {
     ) {
 
         var image1: String = ""
-
+        progressBar_pic.visibility = View.VISIBLE
         val baos = ByteArrayOutputStream()
         var db = FirebaseFirestore.getInstance()
         val storafgeRef = FirebaseStorage.getInstance()
@@ -154,7 +163,7 @@ class GalleryFragment : Fragment() {
 
                         imageUri = it
                         imageView_profile.setImageBitmap(imageBitmap)
-                        Toast.makeText(activity, imageUri.toString(), Toast.LENGTH_SHORT).show()
+                       //  Toast.makeText(activity, imageUri.toString(), Toast.LENGTH_SHORT).show()
                         image1 = imageUri.toString()
 
                         val user = hashMapOf(
@@ -168,6 +177,7 @@ class GalleryFragment : Fragment() {
                         db.collection("users").document(userId).set(user as Map<String, Any>)
                             .addOnSuccessListener { documentReference ->
                                 // Log.d(TAG, "DocumentSnapshot added with ID: ${documentReference.id}")
+                                progressBar_pic.visibility = View.INVISIBLE
                             }
                             .addOnFailureListener { e ->
                                 Log.w(ContentValues.TAG, "Error adding document", e)
