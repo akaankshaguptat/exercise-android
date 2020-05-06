@@ -1,0 +1,678 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/bharat/Downloads/exercise-android-Gallery12/app/src/main/AndroidManifest.xml:2:1-28:12
+INJECTED from /home/bharat/Downloads/exercise-android-Gallery12/app/src/main/AndroidManifest.xml:2:1-28:12
+INJECTED from /home/bharat/Downloads/exercise-android-Gallery12/app/src/main/AndroidManifest.xml:2:1-28:12
+INJECTED from /home/bharat/Downloads/exercise-android-Gallery12/app/src/main/AndroidManifest.xml:2:1-28:12
+MERGED from [androidx.databinding:databinding-adapters:3.6.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/53825a7badda568fbb21397ee2a137de/databinding-adapters-3.6.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.databinding:databinding-runtime:3.6.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/979aca2a1b76a9a72dee18228748ada5/databinding-runtime-3.6.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/671e9e12fc49f3e7191a1987361bc991/jetified-lifecycle-viewmodel-ktx-2.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.2.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/9cd3855edcf7df9068c25c66cc5eb002/jetified-lifecycle-livedata-ktx-2.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.2.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/c57f642dd4db1f43c3176fd315ebe0a0/jetified-lifecycle-runtime-ktx-2.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-ui-ktx:2.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/895a2a11f4c0445d64adb0d82909a7cd/navigation-ui-ktx-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-ui:2.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/8dc558927c19db4da8e455e6b12b5ac2/navigation-ui-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:2:1-109:12
+MERGED from [com.google.android.material:material:1.1.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/4c120aac66944036d205430256c40dab/material-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [me.zhanghai.android.materialprogressbar:library:1.6.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/dba280b8d792de3cb6e44ebe321c3539/jetified-library-1.6.1/AndroidManifest.xml:6:1-15:12
+MERGED from [androidx.appcompat:appcompat:1.1.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/1cc89dd2886756a3739028f219b3eafe/appcompat-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.firebaseui:firebase-ui-firestore:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/90fa9b0a97da4c7db803e472565f5f97/jetified-firebase-ui-firestore-6.2.1/AndroidManifest.xml:2:1-13:12
+MERGED from [com.firebaseui:firebase-ui-storage:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/8212e70ba6d9a35902701a3b650b5a07/jetified-firebase-ui-storage-6.2.1/AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/bd45863f9a1d4b55a0531eb1c9163c01/legacy-support-v4-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-fragment-ktx:2.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/8e5562e9def55dec4dd20c035e2100ec/navigation-fragment-ktx-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-fragment:2.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/4d6b61058371f941717f7da5f6c6cf8a/navigation-fragment-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/2af19ff859e4658b9bc23bde4ec3572c/lifecycle-extensions-2.2.0/AndroidManifest.xml:17:1-27:12
+MERGED from [com.github.bumptech.glide:glide:4.11.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/29e7b1a4be0816e1ed63f26919f2bbe3/jetified-glide-4.11.0/AndroidManifest.xml:2:1-12:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/edb5a23054e32f0e4c59c8fa58834626/jetified-viewpager2-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.firebase:firebase-auth:19.3.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/7a5ab03f61b35f6e42f6aa98c7818d25/jetified-firebase-auth-19.3.0/AndroidManifest.xml:17:1-42:12
+MERGED from [com.google.android.gms:play-services-auth:17.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/68a9637428836bf99df4e84ac7e7bf81/jetified-play-services-auth-17.0.0/AndroidManifest.xml:17:1-39:12
+MERGED from [com.google.firebase:firebase-database:16.0.4] /home/bharat/.gradle/caches/transforms-2/files-2.1/941ee25f79e46f7160b0f1186beb47ce/jetified-firebase-database-16.0.4/AndroidManifest.xml:15:1-25:12
+MERGED from [com.google.firebase:firebase-firestore:21.4.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/b950f19b1695ba44199d562ffb81b069/jetified-firebase-firestore-21.4.1/AndroidManifest.xml:2:1-26:12
+MERGED from [com.google.firebase:firebase-storage:19.1.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/36bf625173d90381f596961cb1b8c961/jetified-firebase-storage-19.1.1/AndroidManifest.xml:15:1-39:12
+MERGED from [com.google.firebase:firebase-auth-interop:19.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/406b86bc81f9f293355da138dc805e14/jetified-firebase-auth-interop-19.0.0/AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.firebase:firebase-common:19.3.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/4f432a4dc09d73f3927f13339c1ebc43/jetified-firebase-common-19.3.0/AndroidManifest.xml:15:1-39:12
+MERGED from [com.google.firebase:firebase-database-collection:17.0.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/c23cd76c8f4e07ff6b40cf238bceefb0/jetified-firebase-database-collection-17.0.1/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-auth-api-phone:17.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/9384affad05711eee0ad56765f2e78e1/jetified-play-services-auth-api-phone-17.0.0/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-auth-base:17.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/0f844977c11bce2ce984ae74cf82bd87/jetified-play-services-auth-base-17.0.0/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-base:17.1.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/2317652f40cbb9b67f589bf0e58e9b50/jetified-play-services-base-17.1.0/AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/1212bf71a8628a0de7c585079031572a/jetified-play-services-tasks-17.0.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/c9226bcce0603e376e4c3a2ee3e26ab8/jetified-play-services-basement-17.0.0/AndroidManifest.xml:17:1-28:12
+MERGED from [androidx.fragment:fragment:1.2.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/6c932ab469a17e735076dc7059e88e8b/fragment-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity:1.1.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/e8d354520fe076a825de066868c11b9b/jetified-activity-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/e71b6a3d6ee12ef8980e869f7fef2df8/jetified-lifecycle-viewmodel-savedstate-2.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-service:2.2.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/4df31b61064278e89f816c3f9868f463/jetified-lifecycle-service-2.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.2.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/917d211bfa649b8350bdc73a0e08e349/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:17:1-32:12
+MERGED from [androidx.lifecycle:lifecycle-reactivestreams-ktx:2.2.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/16e60143f57043dffa802ef306e87ab6/jetified-lifecycle-reactivestreams-ktx-2.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core-ktx:1.2.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/58ee90ef48c2cd7d73f44d94f6b42070/jetified-core-ktx-1.2.0/AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /home/bharat/.gradle/caches/transforms-2/files-2.1/664e197c43589ac7f4d401459747b14e/constraintlayout-1.1.3/AndroidManifest.xml:2:1-11:12
+MERGED from [com.squareup.picasso:picasso:2.71828] /home/bharat/.gradle/caches/transforms-2/files-2.1/1b9df76ff9d730e6d4e5c27ade08bb4e/jetified-picasso-2.71828/AndroidManifest.xml:2:1-14:12
+MERGED from [androidx.cardview:cardview:1.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/6b72b7b5be52d6d9253094210efea978/cardview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.databinding:viewbinding:3.6.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/f959661231fd8ee306f4497d242956d8/jetified-viewbinding-3.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-reactivestreams:2.2.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/55fbf75397f218fc781c37770fcdaf22/lifecycle-reactivestreams-2.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/0244558192f8c51a4554b44c0e8edc79/jetified-appcompat-resources-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.browser:browser:1.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/9e95ac7a8f8f5f63a084efea3f114fd3/browser-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/f8045d72faf575f92a4463c4384a96c0/legacy-support-core-ui-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/caa7805d709c3ed5bcbf83c512b0253a/drawerlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media:media:1.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/547eeb99ca3844306cd27029448fc236/media-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/752ced6894e3ffb6ad9b513e0f267a96/navigation-runtime-ktx-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-runtime:2.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/f983c85e6593b2317240a3c154eac5e4/navigation-runtime-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/9f98a69a0db79257cf2d76d3ff8feb32/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/1c528b6c484e5dc20ed89d88ed8b83f6/coordinatorlayout-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.transition:transition:1.2.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/d77b42c081462e9bddd463a95928bb0a/transition-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/722736b6421c929687a1bf26a0032727/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/d20e979ba9bc6c586a9b8629a4f55416/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/74a6d1569031722977f706c47894a1e2/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/87c5fa5b1ba5b8b21f3236c88f140f39/slidingpanelayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/bdd2755e8cac4c641303b24ab0f1a763/recyclerview-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview:1.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/a626f14fe638abba415ad85a1ed9ecff/customview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/7854609361ffc28d7835d4dc19b4b48a/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/b39acbd3aef64c89e1714e4d0d01f6a6/swiperefreshlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/38384da82ed07f4a03073be1e8a67f4d/asynclayoutinflater-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-common-ktx:2.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/1759f9526fbd93f8bcde8033bc986dd9/navigation-common-ktx-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-common:2.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/0c7b01f02808cdf79497f365e7c1d011/navigation-common-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.2.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/d5c7c2e1f24da82eb648a8ab04b38491/core-1.2.0/AndroidManifest.xml:17:1-26:12
+MERGED from [com.firebaseui:firebase-ui-common:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/52085c5023d2d265fa8b48cb23747bcd/jetified-firebase-ui-common-6.2.1/AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/8dc9a870c4d3be0b6e9170f1aa31ed7f/lifecycle-runtime-2.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/3d77c72b136d2a8fb69f007d6c5d7a28/versionedparcelable-1.1.0/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.2.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/710c3eb43c9abcbbd1e0bd3aa549c716/jetified-lifecycle-livedata-core-ktx-2.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/b32fca1670e8383470a04e1fbb890a2c/lifecycle-viewmodel-2.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.2.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/7013b98beaad5ff54ad1fbacea23f92f/lifecycle-livedata-2.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate:1.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/d132d2501625654b2df8e9ee06c95716/jetified-savedstate-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/001400d766a002ddeb4e1b1a6c46fe99/lifecycle-livedata-core-2.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/c22ac60da7e2ef5d34c61526ed43c134/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/754ab2deaa914910cd171039990477a9/core-runtime-2.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/4a2adaaa7f6a7bb779f05d3d1be963ec/jetified-gifdecoder-4.11.0/AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/3470a2cba11ccc63b6e054d7a623d4da/exifinterface-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/5f7b1314b5260660cdc7f761861c00a4/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/c90ddb0c7fabd540e0e297088c2bde8d/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/8932480437d4f3145cc8626eaa81ff39/print-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/85b606b059eb2b1909be84bf4f28389d/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.firebase:firebase-components:16.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/b1780a0b8e05bc085eda1424cdfe4058/jetified-firebase-components-16.0.0/AndroidManifest.xml:15:1-23:12
+MERGED from [com.google.firebase:protolite-well-known-types:17.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/0447b2c7a08def29e814c371f8b74c36/jetified-protolite-well-known-types-17.0.0/AndroidManifest.xml:2:1-11:12
+MERGED from [io.grpc:grpc-android:1.21.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/3eab5b4b744125a31a4377b0ccf693e3/jetified-grpc-android-1.21.0/AndroidManifest.xml:2:1-13:12
+INJECTED from /home/bharat/Downloads/exercise-android-Gallery12/app/src/main/AndroidManifest.xml:2:1-28:12
+INJECTED from /home/bharat/Downloads/exercise-android-Gallery12/app/src/main/AndroidManifest.xml:2:1-28:12
+INJECTED from /home/bharat/Downloads/exercise-android-Gallery12/app/src/main/AndroidManifest.xml:2:1-28:12
+	package
+		ADDED from /home/bharat/Downloads/exercise-android-Gallery12/app/src/main/AndroidManifest.xml:3:5-35
+		INJECTED from /home/bharat/Downloads/exercise-android-Gallery12/app/src/main/AndroidManifest.xml
+		INJECTED from /home/bharat/Downloads/exercise-android-Gallery12/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /home/bharat/Downloads/exercise-android-Gallery12/app/src/main/AndroidManifest.xml
+		ADDED from /home/bharat/Downloads/exercise-android-Gallery12/app/src/main/AndroidManifest.xml:2:1-28:12
+		INJECTED from /home/bharat/Downloads/exercise-android-Gallery12/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /home/bharat/Downloads/exercise-android-Gallery12/app/src/main/AndroidManifest.xml
+		ADDED from /home/bharat/Downloads/exercise-android-Gallery12/app/src/main/AndroidManifest.xml:2:1-28:12
+		INJECTED from /home/bharat/Downloads/exercise-android-Gallery12/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/bharat/Downloads/exercise-android-Gallery12/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from /home/bharat/Downloads/exercise-android-Gallery12/app/src/main/AndroidManifest.xml:5:5-83
+MERGED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:13:5-67
+MERGED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:13:5-67
+MERGED from [com.firebaseui:firebase-ui-firestore:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/90fa9b0a97da4c7db803e472565f5f97/jetified-firebase-ui-firestore-6.2.1/AndroidManifest.xml:11:5-67
+MERGED from [com.firebaseui:firebase-ui-firestore:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/90fa9b0a97da4c7db803e472565f5f97/jetified-firebase-ui-firestore-6.2.1/AndroidManifest.xml:11:5-67
+MERGED from [com.google.firebase:firebase-database:16.0.4] /home/bharat/.gradle/caches/transforms-2/files-2.1/941ee25f79e46f7160b0f1186beb47ce/jetified-firebase-database-16.0.4/AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-database:16.0.4] /home/bharat/.gradle/caches/transforms-2/files-2.1/941ee25f79e46f7160b0f1186beb47ce/jetified-firebase-database-16.0.4/AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-firestore:21.4.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/b950f19b1695ba44199d562ffb81b069/jetified-firebase-firestore-21.4.1/AndroidManifest.xml:14:5-67
+MERGED from [com.google.firebase:firebase-firestore:21.4.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/b950f19b1695ba44199d562ffb81b069/jetified-firebase-firestore-21.4.1/AndroidManifest.xml:14:5-67
+MERGED from [com.google.firebase:firebase-storage:19.1.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/36bf625173d90381f596961cb1b8c961/jetified-firebase-storage-19.1.1/AndroidManifest.xml:27:5-67
+MERGED from [com.google.firebase:firebase-storage:19.1.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/36bf625173d90381f596961cb1b8c961/jetified-firebase-storage-19.1.1/AndroidManifest.xml:27:5-67
+	android:name
+		ADDED from /home/bharat/Downloads/exercise-android-Gallery12/app/src/main/AndroidManifest.xml:5:22-64
+application
+ADDED from /home/bharat/Downloads/exercise-android-Gallery12/app/src/main/AndroidManifest.xml:7:5-26:19
+MERGED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:15:5-107:19
+MERGED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:15:5-107:19
+MERGED from [com.google.android.material:material:1.1.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/4c120aac66944036d205430256c40dab/material-1.1.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.1.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/4c120aac66944036d205430256c40dab/material-1.1.0/AndroidManifest.xml:22:5-20
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/2af19ff859e4658b9bc23bde4ec3572c/lifecycle-extensions-2.2.0/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/2af19ff859e4658b9bc23bde4ec3572c/lifecycle-extensions-2.2.0/AndroidManifest.xml:24:5-25:19
+MERGED from [com.github.bumptech.glide:glide:4.11.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/29e7b1a4be0816e1ed63f26919f2bbe3/jetified-glide-4.11.0/AndroidManifest.xml:10:5-20
+MERGED from [com.github.bumptech.glide:glide:4.11.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/29e7b1a4be0816e1ed63f26919f2bbe3/jetified-glide-4.11.0/AndroidManifest.xml:10:5-20
+MERGED from [com.google.firebase:firebase-auth:19.3.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/7a5ab03f61b35f6e42f6aa98c7818d25/jetified-firebase-auth-19.3.0/AndroidManifest.xml:23:5-40:19
+MERGED from [com.google.firebase:firebase-auth:19.3.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/7a5ab03f61b35f6e42f6aa98c7818d25/jetified-firebase-auth-19.3.0/AndroidManifest.xml:23:5-40:19
+MERGED from [com.google.android.gms:play-services-auth:17.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/68a9637428836bf99df4e84ac7e7bf81/jetified-play-services-auth-17.0.0/AndroidManifest.xml:22:5-37:19
+MERGED from [com.google.android.gms:play-services-auth:17.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/68a9637428836bf99df4e84ac7e7bf81/jetified-play-services-auth-17.0.0/AndroidManifest.xml:22:5-37:19
+MERGED from [com.google.firebase:firebase-firestore:21.4.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/b950f19b1695ba44199d562ffb81b069/jetified-firebase-firestore-21.4.1/AndroidManifest.xml:16:5-24:19
+MERGED from [com.google.firebase:firebase-firestore:21.4.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/b950f19b1695ba44199d562ffb81b069/jetified-firebase-firestore-21.4.1/AndroidManifest.xml:16:5-24:19
+MERGED from [com.google.firebase:firebase-storage:19.1.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/36bf625173d90381f596961cb1b8c961/jetified-firebase-storage-19.1.1/AndroidManifest.xml:29:5-37:19
+MERGED from [com.google.firebase:firebase-storage:19.1.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/36bf625173d90381f596961cb1b8c961/jetified-firebase-storage-19.1.1/AndroidManifest.xml:29:5-37:19
+MERGED from [com.google.firebase:firebase-auth-interop:19.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/406b86bc81f9f293355da138dc805e14/jetified-firebase-auth-interop-19.0.0/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-auth-interop:19.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/406b86bc81f9f293355da138dc805e14/jetified-firebase-auth-interop-19.0.0/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-common:19.3.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/4f432a4dc09d73f3927f13339c1ebc43/jetified-firebase-common-19.3.0/AndroidManifest.xml:25:5-37:19
+MERGED from [com.google.firebase:firebase-common:19.3.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/4f432a4dc09d73f3927f13339c1ebc43/jetified-firebase-common-19.3.0/AndroidManifest.xml:25:5-37:19
+MERGED from [com.google.android.gms:play-services-base:17.1.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/2317652f40cbb9b67f589bf0e58e9b50/jetified-play-services-base-17.1.0/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:17.1.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/2317652f40cbb9b67f589bf0e58e9b50/jetified-play-services-base-17.1.0/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/1212bf71a8628a0de7c585079031572a/jetified-play-services-tasks-17.0.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/1212bf71a8628a0de7c585079031572a/jetified-play-services-tasks-17.0.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/c9226bcce0603e376e4c3a2ee3e26ab8/jetified-play-services-basement-17.0.0/AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/c9226bcce0603e376e4c3a2ee3e26ab8/jetified-play-services-basement-17.0.0/AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.2.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/917d211bfa649b8350bdc73a0e08e349/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:24:5-30:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.2.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/917d211bfa649b8350bdc73a0e08e349/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:24:5-30:19
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /home/bharat/.gradle/caches/transforms-2/files-2.1/664e197c43589ac7f4d401459747b14e/constraintlayout-1.1.3/AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /home/bharat/.gradle/caches/transforms-2/files-2.1/664e197c43589ac7f4d401459747b14e/constraintlayout-1.1.3/AndroidManifest.xml:9:5-20
+MERGED from [com.squareup.picasso:picasso:2.71828] /home/bharat/.gradle/caches/transforms-2/files-2.1/1b9df76ff9d730e6d4e5c27ade08bb4e/jetified-picasso-2.71828/AndroidManifest.xml:7:5-12:19
+MERGED from [com.squareup.picasso:picasso:2.71828] /home/bharat/.gradle/caches/transforms-2/files-2.1/1b9df76ff9d730e6d4e5c27ade08bb4e/jetified-picasso-2.71828/AndroidManifest.xml:7:5-12:19
+MERGED from [androidx.core:core:1.2.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/d5c7c2e1f24da82eb648a8ab04b38491/core-1.2.0/AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.2.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/d5c7c2e1f24da82eb648a8ab04b38491/core-1.2.0/AndroidManifest.xml:24:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/3d77c72b136d2a8fb69f007d6c5d7a28/versionedparcelable-1.1.0/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/3d77c72b136d2a8fb69f007d6c5d7a28/versionedparcelable-1.1.0/AndroidManifest.xml:24:5-25:19
+MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/4a2adaaa7f6a7bb779f05d3d1be963ec/jetified-gifdecoder-4.11.0/AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/4a2adaaa7f6a7bb779f05d3d1be963ec/jetified-gifdecoder-4.11.0/AndroidManifest.xml:9:5-20
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.2.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/d5c7c2e1f24da82eb648a8ab04b38491/core-1.2.0/AndroidManifest.xml:24:18-86
+	android:supportsRtl
+		ADDED from /home/bharat/Downloads/exercise-android-Gallery12/app/src/main/AndroidManifest.xml:12:9-35
+	android:label
+		ADDED from /home/bharat/Downloads/exercise-android-Gallery12/app/src/main/AndroidManifest.xml:10:9-41
+	android:roundIcon
+		ADDED from /home/bharat/Downloads/exercise-android-Gallery12/app/src/main/AndroidManifest.xml:11:9-54
+	android:icon
+		ADDED from /home/bharat/Downloads/exercise-android-Gallery12/app/src/main/AndroidManifest.xml:9:9-43
+	android:allowBackup
+		ADDED from /home/bharat/Downloads/exercise-android-Gallery12/app/src/main/AndroidManifest.xml:8:9-35
+	android:theme
+		ADDED from /home/bharat/Downloads/exercise-android-Gallery12/app/src/main/AndroidManifest.xml:13:9-40
+activity#com.example.gallery1.Gallery1Activity
+ADDED from /home/bharat/Downloads/exercise-android-Gallery12/app/src/main/AndroidManifest.xml:14:9-18:20
+	android:label
+		ADDED from /home/bharat/Downloads/exercise-android-Gallery12/app/src/main/AndroidManifest.xml:16:13-60
+	android:theme
+		ADDED from /home/bharat/Downloads/exercise-android-Gallery12/app/src/main/AndroidManifest.xml:17:13-56
+	android:name
+		ADDED from /home/bharat/Downloads/exercise-android-Gallery12/app/src/main/AndroidManifest.xml:15:13-45
+activity#com.example.gallery1.MainActivity
+ADDED from /home/bharat/Downloads/exercise-android-Gallery12/app/src/main/AndroidManifest.xml:19:9-25:20
+	android:name
+		ADDED from /home/bharat/Downloads/exercise-android-Gallery12/app/src/main/AndroidManifest.xml:19:19-47
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /home/bharat/Downloads/exercise-android-Gallery12/app/src/main/AndroidManifest.xml:20:13-24:29
+action#android.intent.action.MAIN
+ADDED from /home/bharat/Downloads/exercise-android-Gallery12/app/src/main/AndroidManifest.xml:21:17-69
+	android:name
+		ADDED from /home/bharat/Downloads/exercise-android-Gallery12/app/src/main/AndroidManifest.xml:21:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/bharat/Downloads/exercise-android-Gallery12/app/src/main/AndroidManifest.xml:23:17-77
+	android:name
+		ADDED from /home/bharat/Downloads/exercise-android-Gallery12/app/src/main/AndroidManifest.xml:23:27-74
+uses-sdk
+INJECTED from /home/bharat/Downloads/exercise-android-Gallery12/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/bharat/Downloads/exercise-android-Gallery12/app/src/main/AndroidManifest.xml
+INJECTED from /home/bharat/Downloads/exercise-android-Gallery12/app/src/main/AndroidManifest.xml
+MERGED from [androidx.databinding:databinding-adapters:3.6.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/53825a7badda568fbb21397ee2a137de/databinding-adapters-3.6.1/AndroidManifest.xml:22:5-44
+MERGED from [androidx.databinding:databinding-adapters:3.6.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/53825a7badda568fbb21397ee2a137de/databinding-adapters-3.6.1/AndroidManifest.xml:22:5-44
+MERGED from [androidx.databinding:databinding-runtime:3.6.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/979aca2a1b76a9a72dee18228748ada5/databinding-runtime-3.6.1/AndroidManifest.xml:22:5-44
+MERGED from [androidx.databinding:databinding-runtime:3.6.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/979aca2a1b76a9a72dee18228748ada5/databinding-runtime-3.6.1/AndroidManifest.xml:22:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/671e9e12fc49f3e7191a1987361bc991/jetified-lifecycle-viewmodel-ktx-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/671e9e12fc49f3e7191a1987361bc991/jetified-lifecycle-viewmodel-ktx-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.2.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/9cd3855edcf7df9068c25c66cc5eb002/jetified-lifecycle-livedata-ktx-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.2.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/9cd3855edcf7df9068c25c66cc5eb002/jetified-lifecycle-livedata-ktx-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.2.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/c57f642dd4db1f43c3176fd315ebe0a0/jetified-lifecycle-runtime-ktx-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.2.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/c57f642dd4db1f43c3176fd315ebe0a0/jetified-lifecycle-runtime-ktx-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-ui-ktx:2.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/895a2a11f4c0445d64adb0d82909a7cd/navigation-ui-ktx-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-ui-ktx:2.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/895a2a11f4c0445d64adb0d82909a7cd/navigation-ui-ktx-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-ui:2.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/8dc558927c19db4da8e455e6b12b5ac2/navigation-ui-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-ui:2.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/8dc558927c19db4da8e455e6b12b5ac2/navigation-ui-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:8:5-10:41
+MERGED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:8:5-10:41
+MERGED from [com.google.android.material:material:1.1.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/4c120aac66944036d205430256c40dab/material-1.1.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.1.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/4c120aac66944036d205430256c40dab/material-1.1.0/AndroidManifest.xml:20:5-44
+MERGED from [me.zhanghai.android.materialprogressbar:library:1.6.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/dba280b8d792de3cb6e44ebe321c3539/jetified-library-1.6.1/AndroidManifest.xml:11:5-13:41
+MERGED from [me.zhanghai.android.materialprogressbar:library:1.6.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/dba280b8d792de3cb6e44ebe321c3539/jetified-library-1.6.1/AndroidManifest.xml:11:5-13:41
+MERGED from [androidx.appcompat:appcompat:1.1.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/1cc89dd2886756a3739028f219b3eafe/appcompat-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.1.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/1cc89dd2886756a3739028f219b3eafe/appcompat-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.firebaseui:firebase-ui-firestore:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/90fa9b0a97da4c7db803e472565f5f97/jetified-firebase-ui-firestore-6.2.1/AndroidManifest.xml:7:5-9:41
+MERGED from [com.firebaseui:firebase-ui-firestore:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/90fa9b0a97da4c7db803e472565f5f97/jetified-firebase-ui-firestore-6.2.1/AndroidManifest.xml:7:5-9:41
+MERGED from [com.firebaseui:firebase-ui-storage:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/8212e70ba6d9a35902701a3b650b5a07/jetified-firebase-ui-storage-6.2.1/AndroidManifest.xml:7:5-9:41
+MERGED from [com.firebaseui:firebase-ui-storage:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/8212e70ba6d9a35902701a3b650b5a07/jetified-firebase-ui-storage-6.2.1/AndroidManifest.xml:7:5-9:41
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/bd45863f9a1d4b55a0531eb1c9163c01/legacy-support-v4-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/bd45863f9a1d4b55a0531eb1c9163c01/legacy-support-v4-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-fragment-ktx:2.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/8e5562e9def55dec4dd20c035e2100ec/navigation-fragment-ktx-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-fragment-ktx:2.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/8e5562e9def55dec4dd20c035e2100ec/navigation-fragment-ktx-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-fragment:2.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/4d6b61058371f941717f7da5f6c6cf8a/navigation-fragment-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-fragment:2.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/4d6b61058371f941717f7da5f6c6cf8a/navigation-fragment-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/2af19ff859e4658b9bc23bde4ec3572c/lifecycle-extensions-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/2af19ff859e4658b9bc23bde4ec3572c/lifecycle-extensions-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.github.bumptech.glide:glide:4.11.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/29e7b1a4be0816e1ed63f26919f2bbe3/jetified-glide-4.11.0/AndroidManifest.xml:6:5-8:41
+MERGED from [com.github.bumptech.glide:glide:4.11.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/29e7b1a4be0816e1ed63f26919f2bbe3/jetified-glide-4.11.0/AndroidManifest.xml:6:5-8:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/edb5a23054e32f0e4c59c8fa58834626/jetified-viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/edb5a23054e32f0e4c59c8fa58834626/jetified-viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-auth:19.3.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/7a5ab03f61b35f6e42f6aa98c7818d25/jetified-firebase-auth-19.3.0/AndroidManifest.xml:21:5-44
+MERGED from [com.google.firebase:firebase-auth:19.3.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/7a5ab03f61b35f6e42f6aa98c7818d25/jetified-firebase-auth-19.3.0/AndroidManifest.xml:21:5-44
+MERGED from [com.google.android.gms:play-services-auth:17.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/68a9637428836bf99df4e84ac7e7bf81/jetified-play-services-auth-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-auth:17.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/68a9637428836bf99df4e84ac7e7bf81/jetified-play-services-auth-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-database:16.0.4] /home/bharat/.gradle/caches/transforms-2/files-2.1/941ee25f79e46f7160b0f1186beb47ce/jetified-firebase-database-16.0.4/AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.firebase:firebase-database:16.0.4] /home/bharat/.gradle/caches/transforms-2/files-2.1/941ee25f79e46f7160b0f1186beb47ce/jetified-firebase-database-16.0.4/AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.firebase:firebase-firestore:21.4.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/b950f19b1695ba44199d562ffb81b069/jetified-firebase-firestore-21.4.1/AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.firebase:firebase-firestore:21.4.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/b950f19b1695ba44199d562ffb81b069/jetified-firebase-firestore-21.4.1/AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.firebase:firebase-storage:19.1.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/36bf625173d90381f596961cb1b8c961/jetified-firebase-storage-19.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-storage:19.1.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/36bf625173d90381f596961cb1b8c961/jetified-firebase-storage-19.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-auth-interop:19.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/406b86bc81f9f293355da138dc805e14/jetified-firebase-auth-interop-19.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-auth-interop:19.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/406b86bc81f9f293355da138dc805e14/jetified-firebase-auth-interop-19.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-common:19.3.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/4f432a4dc09d73f3927f13339c1ebc43/jetified-firebase-common-19.3.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-common:19.3.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/4f432a4dc09d73f3927f13339c1ebc43/jetified-firebase-common-19.3.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-database-collection:17.0.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/c23cd76c8f4e07ff6b40cf238bceefb0/jetified-firebase-database-collection-17.0.1/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-database-collection:17.0.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/c23cd76c8f4e07ff6b40cf238bceefb0/jetified-firebase-database-collection-17.0.1/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.gms:play-services-auth-api-phone:17.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/9384affad05711eee0ad56765f2e78e1/jetified-play-services-auth-api-phone-17.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-api-phone:17.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/9384affad05711eee0ad56765f2e78e1/jetified-play-services-auth-api-phone-17.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-base:17.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/0f844977c11bce2ce984ae74cf82bd87/jetified-play-services-auth-base-17.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-base:17.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/0f844977c11bce2ce984ae74cf82bd87/jetified-play-services-auth-base-17.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-base:17.1.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/2317652f40cbb9b67f589bf0e58e9b50/jetified-play-services-base-17.1.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:17.1.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/2317652f40cbb9b67f589bf0e58e9b50/jetified-play-services-base-17.1.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/1212bf71a8628a0de7c585079031572a/jetified-play-services-tasks-17.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/1212bf71a8628a0de7c585079031572a/jetified-play-services-tasks-17.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/c9226bcce0603e376e4c3a2ee3e26ab8/jetified-play-services-basement-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/c9226bcce0603e376e4c3a2ee3e26ab8/jetified-play-services-basement-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.2.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/6c932ab469a17e735076dc7059e88e8b/fragment-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.2.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/6c932ab469a17e735076dc7059e88e8b/fragment-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.1.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/e8d354520fe076a825de066868c11b9b/jetified-activity-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.1.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/e8d354520fe076a825de066868c11b9b/jetified-activity-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/e71b6a3d6ee12ef8980e869f7fef2df8/jetified-lifecycle-viewmodel-savedstate-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/e71b6a3d6ee12ef8980e869f7fef2df8/jetified-lifecycle-viewmodel-savedstate-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-service:2.2.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/4df31b61064278e89f816c3f9868f463/jetified-lifecycle-service-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-service:2.2.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/4df31b61064278e89f816c3f9868f463/jetified-lifecycle-service-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-process:2.2.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/917d211bfa649b8350bdc73a0e08e349/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-process:2.2.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/917d211bfa649b8350bdc73a0e08e349/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-reactivestreams-ktx:2.2.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/16e60143f57043dffa802ef306e87ab6/jetified-lifecycle-reactivestreams-ktx-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-reactivestreams-ktx:2.2.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/16e60143f57043dffa802ef306e87ab6/jetified-lifecycle-reactivestreams-ktx-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core-ktx:1.2.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/58ee90ef48c2cd7d73f44d94f6b42070/jetified-core-ktx-1.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.core:core-ktx:1.2.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/58ee90ef48c2cd7d73f44d94f6b42070/jetified-core-ktx-1.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /home/bharat/.gradle/caches/transforms-2/files-2.1/664e197c43589ac7f4d401459747b14e/constraintlayout-1.1.3/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /home/bharat/.gradle/caches/transforms-2/files-2.1/664e197c43589ac7f4d401459747b14e/constraintlayout-1.1.3/AndroidManifest.xml:5:5-7:41
+MERGED from [com.squareup.picasso:picasso:2.71828] /home/bharat/.gradle/caches/transforms-2/files-2.1/1b9df76ff9d730e6d4e5c27ade08bb4e/jetified-picasso-2.71828/AndroidManifest.xml:5:5-44
+MERGED from [com.squareup.picasso:picasso:2.71828] /home/bharat/.gradle/caches/transforms-2/files-2.1/1b9df76ff9d730e6d4e5c27ade08bb4e/jetified-picasso-2.71828/AndroidManifest.xml:5:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/6b72b7b5be52d6d9253094210efea978/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/6b72b7b5be52d6d9253094210efea978/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.databinding:viewbinding:3.6.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/f959661231fd8ee306f4497d242956d8/jetified-viewbinding-3.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.databinding:viewbinding:3.6.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/f959661231fd8ee306f4497d242956d8/jetified-viewbinding-3.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-reactivestreams:2.2.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/55fbf75397f218fc781c37770fcdaf22/lifecycle-reactivestreams-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-reactivestreams:2.2.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/55fbf75397f218fc781c37770fcdaf22/lifecycle-reactivestreams-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/0244558192f8c51a4554b44c0e8edc79/jetified-appcompat-resources-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/0244558192f8c51a4554b44c0e8edc79/jetified-appcompat-resources-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.browser:browser:1.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/9e95ac7a8f8f5f63a084efea3f114fd3/browser-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.browser:browser:1.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/9e95ac7a8f8f5f63a084efea3f114fd3/browser-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/f8045d72faf575f92a4463c4384a96c0/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/f8045d72faf575f92a4463c4384a96c0/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/caa7805d709c3ed5bcbf83c512b0253a/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/caa7805d709c3ed5bcbf83c512b0253a/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/547eeb99ca3844306cd27029448fc236/media-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/547eeb99ca3844306cd27029448fc236/media-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/752ced6894e3ffb6ad9b513e0f267a96/navigation-runtime-ktx-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/752ced6894e3ffb6ad9b513e0f267a96/navigation-runtime-ktx-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-runtime:2.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/f983c85e6593b2317240a3c154eac5e4/navigation-runtime-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-runtime:2.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/f983c85e6593b2317240a3c154eac5e4/navigation-runtime-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/9f98a69a0db79257cf2d76d3ff8feb32/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/9f98a69a0db79257cf2d76d3ff8feb32/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/1c528b6c484e5dc20ed89d88ed8b83f6/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/1c528b6c484e5dc20ed89d88ed8b83f6/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/d77b42c081462e9bddd463a95928bb0a/transition-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/d77b42c081462e9bddd463a95928bb0a/transition-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/722736b6421c929687a1bf26a0032727/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/722736b6421c929687a1bf26a0032727/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/d20e979ba9bc6c586a9b8629a4f55416/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/d20e979ba9bc6c586a9b8629a4f55416/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/74a6d1569031722977f706c47894a1e2/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/74a6d1569031722977f706c47894a1e2/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/87c5fa5b1ba5b8b21f3236c88f140f39/slidingpanelayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/87c5fa5b1ba5b8b21f3236c88f140f39/slidingpanelayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/bdd2755e8cac4c641303b24ab0f1a763/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/bdd2755e8cac4c641303b24ab0f1a763/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/a626f14fe638abba415ad85a1ed9ecff/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/a626f14fe638abba415ad85a1ed9ecff/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/7854609361ffc28d7835d4dc19b4b48a/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/7854609361ffc28d7835d4dc19b4b48a/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/b39acbd3aef64c89e1714e4d0d01f6a6/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/b39acbd3aef64c89e1714e4d0d01f6a6/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/38384da82ed07f4a03073be1e8a67f4d/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/38384da82ed07f4a03073be1e8a67f4d/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-common-ktx:2.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/1759f9526fbd93f8bcde8033bc986dd9/navigation-common-ktx-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-common-ktx:2.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/1759f9526fbd93f8bcde8033bc986dd9/navigation-common-ktx-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-common:2.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/0c7b01f02808cdf79497f365e7c1d011/navigation-common-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-common:2.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/0c7b01f02808cdf79497f365e7c1d011/navigation-common-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.2.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/d5c7c2e1f24da82eb648a8ab04b38491/core-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.2.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/d5c7c2e1f24da82eb648a8ab04b38491/core-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.firebaseui:firebase-ui-common:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/52085c5023d2d265fa8b48cb23747bcd/jetified-firebase-ui-common-6.2.1/AndroidManifest.xml:7:5-9:41
+MERGED from [com.firebaseui:firebase-ui-common:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/52085c5023d2d265fa8b48cb23747bcd/jetified-firebase-ui-common-6.2.1/AndroidManifest.xml:7:5-9:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/8dc9a870c4d3be0b6e9170f1aa31ed7f/lifecycle-runtime-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/8dc9a870c4d3be0b6e9170f1aa31ed7f/lifecycle-runtime-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/3d77c72b136d2a8fb69f007d6c5d7a28/versionedparcelable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/3d77c72b136d2a8fb69f007d6c5d7a28/versionedparcelable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.2.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/710c3eb43c9abcbbd1e0bd3aa549c716/jetified-lifecycle-livedata-core-ktx-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.2.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/710c3eb43c9abcbbd1e0bd3aa549c716/jetified-lifecycle-livedata-core-ktx-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/b32fca1670e8383470a04e1fbb890a2c/lifecycle-viewmodel-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/b32fca1670e8383470a04e1fbb890a2c/lifecycle-viewmodel-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.2.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/7013b98beaad5ff54ad1fbacea23f92f/lifecycle-livedata-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.2.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/7013b98beaad5ff54ad1fbacea23f92f/lifecycle-livedata-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/d132d2501625654b2df8e9ee06c95716/jetified-savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/d132d2501625654b2df8e9ee06c95716/jetified-savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/001400d766a002ddeb4e1b1a6c46fe99/lifecycle-livedata-core-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/001400d766a002ddeb4e1b1a6c46fe99/lifecycle-livedata-core-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/c22ac60da7e2ef5d34c61526ed43c134/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/c22ac60da7e2ef5d34c61526ed43c134/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/754ab2deaa914910cd171039990477a9/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/754ab2deaa914910cd171039990477a9/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/4a2adaaa7f6a7bb779f05d3d1be963ec/jetified-gifdecoder-4.11.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/4a2adaaa7f6a7bb779f05d3d1be963ec/jetified-gifdecoder-4.11.0/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/3470a2cba11ccc63b6e054d7a623d4da/exifinterface-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/3470a2cba11ccc63b6e054d7a623d4da/exifinterface-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/5f7b1314b5260660cdc7f761861c00a4/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/5f7b1314b5260660cdc7f761861c00a4/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/c90ddb0c7fabd540e0e297088c2bde8d/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/c90ddb0c7fabd540e0e297088c2bde8d/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/8932480437d4f3145cc8626eaa81ff39/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/8932480437d4f3145cc8626eaa81ff39/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/85b606b059eb2b1909be84bf4f28389d/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/85b606b059eb2b1909be84bf4f28389d/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-components:16.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/b1780a0b8e05bc085eda1424cdfe4058/jetified-firebase-components-16.0.0/AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-components:16.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/b1780a0b8e05bc085eda1424cdfe4058/jetified-firebase-components-16.0.0/AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:protolite-well-known-types:17.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/0447b2c7a08def29e814c371f8b74c36/jetified-protolite-well-known-types-17.0.0/AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.firebase:protolite-well-known-types:17.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/0447b2c7a08def29e814c371f8b74c36/jetified-protolite-well-known-types-17.0.0/AndroidManifest.xml:7:5-9:41
+MERGED from [io.grpc:grpc-android:1.21.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/3eab5b4b744125a31a4377b0ccf693e3/jetified-grpc-android-1.21.0/AndroidManifest.xml:7:5-9:41
+MERGED from [io.grpc:grpc-android:1.21.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/3eab5b4b744125a31a4377b0ccf693e3/jetified-grpc-android-1.21.0/AndroidManifest.xml:7:5-9:41
+INJECTED from /home/bharat/Downloads/exercise-android-Gallery12/app/src/main/AndroidManifest.xml
+INJECTED from /home/bharat/Downloads/exercise-android-Gallery12/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /home/bharat/Downloads/exercise-android-Gallery12/app/src/main/AndroidManifest.xml
+		ADDED from /home/bharat/Downloads/exercise-android-Gallery12/app/src/main/AndroidManifest.xml
+		INJECTED from /home/bharat/Downloads/exercise-android-Gallery12/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/bharat/Downloads/exercise-android-Gallery12/app/src/main/AndroidManifest.xml
+		ADDED from /home/bharat/Downloads/exercise-android-Gallery12/app/src/main/AndroidManifest.xml
+		INJECTED from /home/bharat/Downloads/exercise-android-Gallery12/app/src/main/AndroidManifest.xml
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:12:5-79
+MERGED from [com.google.firebase:firebase-database:16.0.4] /home/bharat/.gradle/caches/transforms-2/files-2.1/941ee25f79e46f7160b0f1186beb47ce/jetified-firebase-database-16.0.4/AndroidManifest.xml:22:5-79
+MERGED from [com.google.firebase:firebase-database:16.0.4] /home/bharat/.gradle/caches/transforms-2/files-2.1/941ee25f79e46f7160b0f1186beb47ce/jetified-firebase-database-16.0.4/AndroidManifest.xml:22:5-79
+MERGED from [com.google.firebase:firebase-firestore:21.4.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/b950f19b1695ba44199d562ffb81b069/jetified-firebase-firestore-21.4.1/AndroidManifest.xml:13:5-79
+MERGED from [com.google.firebase:firebase-firestore:21.4.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/b950f19b1695ba44199d562ffb81b069/jetified-firebase-firestore-21.4.1/AndroidManifest.xml:13:5-79
+MERGED from [com.google.firebase:firebase-storage:19.1.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/36bf625173d90381f596961cb1b8c961/jetified-firebase-storage-19.1.1/AndroidManifest.xml:26:5-79
+MERGED from [com.google.firebase:firebase-storage:19.1.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/36bf625173d90381f596961cb1b8c961/jetified-firebase-storage-19.1.1/AndroidManifest.xml:26:5-79
+MERGED from [io.grpc:grpc-android:1.21.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/3eab5b4b744125a31a4377b0ccf693e3/jetified-grpc-android-1.21.0/AndroidManifest.xml:11:5-79
+MERGED from [io.grpc:grpc-android:1.21.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/3eab5b4b744125a31a4377b0ccf693e3/jetified-grpc-android-1.21.0/AndroidManifest.xml:11:5-79
+	android:name
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:12:22-76
+meta-data#com.google.android.gms.version
+ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:16:9-18:69
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/c9226bcce0603e376e4c3a2ee3e26ab8/jetified-play-services-basement-17.0.0/AndroidManifest.xml:23:9-25:69
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/c9226bcce0603e376e4c3a2ee3e26ab8/jetified-play-services-basement-17.0.0/AndroidManifest.xml:23:9-25:69
+	android:value
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:18:13-66
+	android:name
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:17:13-58
+meta-data#com.facebook.sdk.ApplicationId
+ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:19:9-21:63
+	android:value
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:21:13-60
+	android:name
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:20:13-58
+activity#com.firebase.ui.auth.KickoffActivity
+ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:23:9-27:61
+	android:label
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:26:13-29
+	android:exported
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:25:13-37
+	android:theme
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:27:13-58
+	android:name
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:24:13-64
+activity#com.firebase.ui.auth.ui.idp.SingleSignInActivity
+ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:28:9-32:61
+	android:label
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:31:13-29
+	android:exported
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:30:13-37
+	android:theme
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:32:13-58
+	android:name
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:29:13-76
+activity#com.firebase.ui.auth.ui.credentials.CredentialSaveActivity
+ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:33:9-37:61
+	android:label
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:36:13-29
+	android:exported
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:35:13-37
+	android:theme
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:37:13-58
+	android:name
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:34:13-86
+activity#com.firebase.ui.auth.ui.email.RecoverPasswordActivity
+ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:38:9-42:58
+	android:label
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:41:13-72
+	android:windowSoftInputMode
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:42:13-55
+	android:exported
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:40:13-37
+	android:name
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:39:13-81
+activity#com.firebase.ui.auth.ui.email.EmailActivity
+ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:43:9-47:58
+	android:label
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:46:13-56
+	android:windowSoftInputMode
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:47:13-55
+	android:exported
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:45:13-37
+	android:name
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:44:13-71
+activity#com.firebase.ui.auth.ui.phone.PhoneActivity
+ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:48:9-52:77
+	android:label
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:51:13-66
+	android:windowSoftInputMode
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:52:13-74
+	android:exported
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:50:13-37
+	android:name
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:49:13-71
+activity#com.firebase.ui.auth.ui.idp.WelcomeBackIdpPrompt
+ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:53:9-57:58
+	android:label
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:56:13-70
+	android:windowSoftInputMode
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:57:13-55
+	android:exported
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:55:13-37
+	android:name
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:54:13-76
+activity#com.firebase.ui.auth.ui.email.WelcomeBackPasswordPrompt
+ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:58:9-62:58
+	android:label
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:61:13-75
+	android:windowSoftInputMode
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:62:13-55
+	android:exported
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:60:13-37
+	android:name
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:59:13-83
+activity#com.firebase.ui.auth.ui.email.WelcomeBackEmailLinkPrompt
+ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:63:9-67:58
+	android:label
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:66:13-75
+	android:windowSoftInputMode
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:67:13-55
+	android:exported
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:65:13-37
+	android:name
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:64:13-84
+activity#com.firebase.ui.auth.ui.email.EmailLinkCatcherActivity
+ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:68:9-73:58
+	android:label
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:71:13-29
+	android:windowSoftInputMode
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:73:13-55
+	android:exported
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:70:13-37
+	android:theme
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:72:13-58
+	android:name
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:69:13-82
+activity#com.firebase.ui.auth.ui.email.EmailLinkErrorRecoveryActivity
+ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:74:9-78:58
+	android:label
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:77:13-56
+	android:windowSoftInputMode
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:78:13-55
+	android:exported
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:76:13-37
+	android:name
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:75:13-88
+activity#com.firebase.ui.auth.ui.idp.AuthMethodPickerActivity
+ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:79:9-82:65
+	android:label
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:82:13-62
+	android:exported
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:81:13-37
+	android:name
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:80:13-80
+activity#com.facebook.FacebookActivity
+ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:83:9-87:48
+	android:label
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:86:13-45
+	tools:ignore
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:87:13-45
+	android:configChanges
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:85:13-96
+	android:name
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:84:13-57
+activity#com.facebook.CustomTabActivity
+ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:88:9-100:20
+	android:exported
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:90:13-36
+	tools:ignore
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:91:13-45
+	android:name
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:89:13-58
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:scheme:@string/facebook_login_protocol_scheme
+ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:92:13-99:29
+action#android.intent.action.VIEW
+ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:93:17-69
+	android:name
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:93:25-66
+category#android.intent.category.DEFAULT
+ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:95:17-76
+	android:name
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:95:27-73
+category#android.intent.category.BROWSABLE
+ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:96:17-78
+	android:name
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:96:27-75
+data
+ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:98:17-81
+	android:scheme
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:98:23-78
+provider#com.firebase.ui.auth.data.client.AuthUiInitProvider
+ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:102:9-106:38
+	android:authorities
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:104:13-70
+	android:exported
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:105:13-37
+	android:initOrder
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:106:13-35
+	android:name
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/14de8c41398f31551575eb6fdb0c5fa8/jetified-firebase-ui-auth-6.2.1/AndroidManifest.xml:103:13-79
+activity#com.google.firebase.auth.internal.FederatedSignInActivity
+ADDED from [com.google.firebase:firebase-auth:19.3.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/7a5ab03f61b35f6e42f6aa98c7818d25/jetified-firebase-auth-19.3.0/AndroidManifest.xml:24:9-31:50
+	android:excludeFromRecents
+		ADDED from [com.google.firebase:firebase-auth:19.3.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/7a5ab03f61b35f6e42f6aa98c7818d25/jetified-firebase-auth-19.3.0/AndroidManifest.xml:26:13-46
+	android:launchMode
+		ADDED from [com.google.firebase:firebase-auth:19.3.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/7a5ab03f61b35f6e42f6aa98c7818d25/jetified-firebase-auth-19.3.0/AndroidManifest.xml:28:13-44
+	android:exported
+		ADDED from [com.google.firebase:firebase-auth:19.3.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/7a5ab03f61b35f6e42f6aa98c7818d25/jetified-firebase-auth-19.3.0/AndroidManifest.xml:27:13-36
+	android:permission
+		ADDED from [com.google.firebase:firebase-auth:19.3.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/7a5ab03f61b35f6e42f6aa98c7818d25/jetified-firebase-auth-19.3.0/AndroidManifest.xml:29:13-102
+	android:theme
+		ADDED from [com.google.firebase:firebase-auth:19.3.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/7a5ab03f61b35f6e42f6aa98c7818d25/jetified-firebase-auth-19.3.0/AndroidManifest.xml:30:13-72
+	tools:replace
+		ADDED from [com.google.firebase:firebase-auth:19.3.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/7a5ab03f61b35f6e42f6aa98c7818d25/jetified-firebase-auth-19.3.0/AndroidManifest.xml:31:13-47
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:19.3.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/7a5ab03f61b35f6e42f6aa98c7818d25/jetified-firebase-auth-19.3.0/AndroidManifest.xml:25:13-85
+service#com.google.firebase.components.ComponentDiscoveryService
+ADDED from [com.google.firebase:firebase-auth:19.3.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/7a5ab03f61b35f6e42f6aa98c7818d25/jetified-firebase-auth-19.3.0/AndroidManifest.xml:33:9-39:19
+MERGED from [com.google.firebase:firebase-firestore:21.4.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/b950f19b1695ba44199d562ffb81b069/jetified-firebase-firestore-21.4.1/AndroidManifest.xml:17:9-23:19
+MERGED from [com.google.firebase:firebase-firestore:21.4.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/b950f19b1695ba44199d562ffb81b069/jetified-firebase-firestore-21.4.1/AndroidManifest.xml:17:9-23:19
+MERGED from [com.google.firebase:firebase-storage:19.1.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/36bf625173d90381f596961cb1b8c961/jetified-firebase-storage-19.1.1/AndroidManifest.xml:30:9-36:19
+MERGED from [com.google.firebase:firebase-storage:19.1.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/36bf625173d90381f596961cb1b8c961/jetified-firebase-storage-19.1.1/AndroidManifest.xml:30:9-36:19
+MERGED from [com.google.firebase:firebase-common:19.3.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/4f432a4dc09d73f3927f13339c1ebc43/jetified-firebase-common-19.3.0/AndroidManifest.xml:32:9-36:35
+MERGED from [com.google.firebase:firebase-common:19.3.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/4f432a4dc09d73f3927f13339c1ebc43/jetified-firebase-common-19.3.0/AndroidManifest.xml:32:9-36:35
+	android:exported
+		ADDED from [com.google.firebase:firebase-auth:19.3.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/7a5ab03f61b35f6e42f6aa98c7818d25/jetified-firebase-auth-19.3.0/AndroidManifest.xml:35:13-37
+	tools:targetApi
+		ADDED from [com.google.firebase:firebase-common:19.3.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/4f432a4dc09d73f3927f13339c1ebc43/jetified-firebase-common-19.3.0/AndroidManifest.xml:36:13-32
+	android:directBootAware
+		ADDED from [com.google.firebase:firebase-common:19.3.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/4f432a4dc09d73f3927f13339c1ebc43/jetified-firebase-common-19.3.0/AndroidManifest.xml:34:13-43
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:19.3.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/7a5ab03f61b35f6e42f6aa98c7818d25/jetified-firebase-auth-19.3.0/AndroidManifest.xml:34:13-84
+meta-data#com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar
+ADDED from [com.google.firebase:firebase-auth:19.3.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/7a5ab03f61b35f6e42f6aa98c7818d25/jetified-firebase-auth-19.3.0/AndroidManifest.xml:36:13-38:85
+	android:value
+		ADDED from [com.google.firebase:firebase-auth:19.3.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/7a5ab03f61b35f6e42f6aa98c7818d25/jetified-firebase-auth-19.3.0/AndroidManifest.xml:38:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:19.3.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/7a5ab03f61b35f6e42f6aa98c7818d25/jetified-firebase-auth-19.3.0/AndroidManifest.xml:37:17-109
+activity#com.google.android.gms.auth.api.signin.internal.SignInHubActivity
+ADDED from [com.google.android.gms:play-services-auth:17.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/68a9637428836bf99df4e84ac7e7bf81/jetified-play-services-auth-17.0.0/AndroidManifest.xml:23:9-27:75
+	android:excludeFromRecents
+		ADDED from [com.google.android.gms:play-services-auth:17.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/68a9637428836bf99df4e84ac7e7bf81/jetified-play-services-auth-17.0.0/AndroidManifest.xml:25:13-46
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:17.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/68a9637428836bf99df4e84ac7e7bf81/jetified-play-services-auth-17.0.0/AndroidManifest.xml:26:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-auth:17.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/68a9637428836bf99df4e84ac7e7bf81/jetified-play-services-auth-17.0.0/AndroidManifest.xml:27:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:17.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/68a9637428836bf99df4e84ac7e7bf81/jetified-play-services-auth-17.0.0/AndroidManifest.xml:24:13-93
+service#com.google.android.gms.auth.api.signin.RevocationBoundService
+ADDED from [com.google.android.gms:play-services-auth:17.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/68a9637428836bf99df4e84ac7e7bf81/jetified-play-services-auth-17.0.0/AndroidManifest.xml:33:9-36:110
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:17.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/68a9637428836bf99df4e84ac7e7bf81/jetified-play-services-auth-17.0.0/AndroidManifest.xml:35:13-36
+	android:permission
+		ADDED from [com.google.android.gms:play-services-auth:17.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/68a9637428836bf99df4e84ac7e7bf81/jetified-play-services-auth-17.0.0/AndroidManifest.xml:36:13-107
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:17.0.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/68a9637428836bf99df4e84ac7e7bf81/jetified-play-services-auth-17.0.0/AndroidManifest.xml:34:13-89
+meta-data#com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar
+ADDED from [com.google.firebase:firebase-firestore:21.4.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/b950f19b1695ba44199d562ffb81b069/jetified-firebase-firestore-21.4.1/AndroidManifest.xml:20:13-22:85
+	android:value
+		ADDED from [com.google.firebase:firebase-firestore:21.4.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/b950f19b1695ba44199d562ffb81b069/jetified-firebase-firestore-21.4.1/AndroidManifest.xml:22:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-firestore:21.4.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/b950f19b1695ba44199d562ffb81b069/jetified-firebase-firestore-21.4.1/AndroidManifest.xml:21:17-111
+meta-data#com.google.firebase.components:com.google.firebase.storage.StorageRegistrar
+ADDED from [com.google.firebase:firebase-storage:19.1.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/36bf625173d90381f596961cb1b8c961/jetified-firebase-storage-19.1.1/AndroidManifest.xml:33:13-35:85
+	android:value
+		ADDED from [com.google.firebase:firebase-storage:19.1.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/36bf625173d90381f596961cb1b8c961/jetified-firebase-storage-19.1.1/AndroidManifest.xml:35:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-storage:19.1.1] /home/bharat/.gradle/caches/transforms-2/files-2.1/36bf625173d90381f596961cb1b8c961/jetified-firebase-storage-19.1.1/AndroidManifest.xml:34:17-107
+provider#com.google.firebase.provider.FirebaseInitProvider
+ADDED from [com.google.firebase:firebase-common:19.3.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/4f432a4dc09d73f3927f13339c1ebc43/jetified-firebase-common-19.3.0/AndroidManifest.xml:26:9-30:39
+	android:authorities
+		ADDED from [com.google.firebase:firebase-common:19.3.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/4f432a4dc09d73f3927f13339c1ebc43/jetified-firebase-common-19.3.0/AndroidManifest.xml:28:13-72
+	android:exported
+		ADDED from [com.google.firebase:firebase-common:19.3.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/4f432a4dc09d73f3927f13339c1ebc43/jetified-firebase-common-19.3.0/AndroidManifest.xml:29:13-37
+	android:initOrder
+		ADDED from [com.google.firebase:firebase-common:19.3.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/4f432a4dc09d73f3927f13339c1ebc43/jetified-firebase-common-19.3.0/AndroidManifest.xml:30:13-36
+	android:name
+		ADDED from [com.google.firebase:firebase-common:19.3.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/4f432a4dc09d73f3927f13339c1ebc43/jetified-firebase-common-19.3.0/AndroidManifest.xml:27:13-77
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:17.1.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/2317652f40cbb9b67f589bf0e58e9b50/jetified-play-services-base-17.1.0/AndroidManifest.xml:23:9-26:75
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:17.1.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/2317652f40cbb9b67f589bf0e58e9b50/jetified-play-services-base-17.1.0/AndroidManifest.xml:25:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:17.1.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/2317652f40cbb9b67f589bf0e58e9b50/jetified-play-services-base-17.1.0/AndroidManifest.xml:26:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:17.1.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/2317652f40cbb9b67f589bf0e58e9b50/jetified-play-services-base-17.1.0/AndroidManifest.xml:24:13-79
+provider#androidx.lifecycle.ProcessLifecycleOwnerInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.2.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/917d211bfa649b8350bdc73a0e08e349/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:25:9-29:43
+	android:authorities
+		ADDED from [androidx.lifecycle:lifecycle-process:2.2.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/917d211bfa649b8350bdc73a0e08e349/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:27:13-69
+	android:multiprocess
+		ADDED from [androidx.lifecycle:lifecycle-process:2.2.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/917d211bfa649b8350bdc73a0e08e349/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:29:13-40
+	android:exported
+		ADDED from [androidx.lifecycle:lifecycle-process:2.2.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/917d211bfa649b8350bdc73a0e08e349/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:28:13-37
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.2.0] /home/bharat/.gradle/caches/transforms-2/files-2.1/917d211bfa649b8350bdc73a0e08e349/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:26:13-79
+provider#com.squareup.picasso.PicassoProvider
+ADDED from [com.squareup.picasso:picasso:2.71828] /home/bharat/.gradle/caches/transforms-2/files-2.1/1b9df76ff9d730e6d4e5c27ade08bb4e/jetified-picasso-2.71828/AndroidManifest.xml:8:9-11:40
+	android:authorities
+		ADDED from [com.squareup.picasso:picasso:2.71828] /home/bharat/.gradle/caches/transforms-2/files-2.1/1b9df76ff9d730e6d4e5c27ade08bb4e/jetified-picasso-2.71828/AndroidManifest.xml:10:13-72
+	android:exported
+		ADDED from [com.squareup.picasso:picasso:2.71828] /home/bharat/.gradle/caches/transforms-2/files-2.1/1b9df76ff9d730e6d4e5c27ade08bb4e/jetified-picasso-2.71828/AndroidManifest.xml:11:13-37
+	android:name
+		ADDED from [com.squareup.picasso:picasso:2.71828] /home/bharat/.gradle/caches/transforms-2/files-2.1/1b9df76ff9d730e6d4e5c27ade08bb4e/jetified-picasso-2.71828/AndroidManifest.xml:9:13-64

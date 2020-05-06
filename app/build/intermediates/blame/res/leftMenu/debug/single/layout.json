@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/build/intermediates/incremental/mergeLeftMenuDebugResources/stripped.dir/layout/timeline_list.xml",
+        "source": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/src/main/res/layout/timeline_list.xml"
+    },
+    {
+        "merged": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/build/intermediates/incremental/mergeLeftMenuDebugResources/stripped.dir/layout/category_list1.xml",
+        "source": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/src/main/res/layout/category_list1.xml"
+    },
+    {
+        "merged": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/build/intermediates/incremental/mergeLeftMenuDebugResources/stripped.dir/layout/image_list.xml",
+        "source": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/src/main/res/layout/image_list.xml"
+    }
+]

@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/home/bharat/Downloads/exercise-android-Gallery12/app/build/intermediates/incremental/mergeBottomNavDebugResources/stripped.dir/layout/category_list1.xml",
+        "source": "/home/bharat/Downloads/exercise-android-Gallery12/app/src/main/res/layout/category_list1.xml"
+    },
+    {
+        "merged": "/home/bharat/Downloads/exercise-android-Gallery12/app/build/intermediates/incremental/mergeBottomNavDebugResources/stripped.dir/layout/image_list.xml",
+        "source": "/home/bharat/Downloads/exercise-android-Gallery12/app/src/main/res/layout/image_list.xml"
+    },
+    {
+        "merged": "/home/bharat/Downloads/exercise-android-Gallery12/app/build/intermediates/incremental/mergeBottomNavDebugResources/stripped.dir/layout/timeline_list.xml",
+        "source": "/home/bharat/Downloads/exercise-android-Gallery12/app/src/main/res/layout/timeline_list.xml"
+    }
+]
