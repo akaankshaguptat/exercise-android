@@ -6,7 +6,22 @@
     </shared>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00a53f97-bad3-4277-a3bc-c4f80a9bdb0c" name="Default Changelist" comment="" />
+    <list default="true" id="00a53f97-bad3-4277-a3bc-c4f80a9bdb0c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/dex/leftMenuDebug/mergeExtDexLeftMenuDebug/out/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/leftMenuDebug/mergeExtDexLeftMenuDebug/out/classes.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/dex/leftMenuDebug/mergeExtDexLeftMenuDebug/out/classes2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/leftMenuDebug/mergeExtDexLeftMenuDebug/out/classes2.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/dex/leftMenuDebug/mergeProjectDexLeftMenuDebug/out/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/leftMenuDebug/mergeProjectDexLeftMenuDebug/out/classes.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageLeftMenuDebug/tmp/leftMenuDebug/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageLeftMenuDebug/tmp/leftMenuDebug/dex-renamer-state.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageLeftMenuDebug/tmp/leftMenuDebug/zip-cache/androidResources" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageLeftMenuDebug/tmp/leftMenuDebug/zip-cache/androidResources" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/processed_res/leftMenuDebug/out/resources-leftMenuDebug.ap_" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/processed_res/leftMenuDebug/out/resources-leftMenuDebug.ap_" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/leftMenuDebug/out/853e0256b8bdaec0b09cd722501cc2106f5515a33d09a986b0ed216b7d6ec721_0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/leftMenuDebug/out/853e0256b8bdaec0b09cd722501cc2106f5515a33d09a986b0ed216b7d6ec721_0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/leftMenuDebug/out/853e0256b8bdaec0b09cd722501cc2106f5515a33d09a986b0ed216b7d6ec721_1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/leftMenuDebug/out/853e0256b8bdaec0b09cd722501cc2106f5515a33d09a986b0ed216b7d6ec721_1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/leftMenuDebug/out/853e0256b8bdaec0b09cd722501cc2106f5515a33d09a986b0ed216b7d6ec721_2.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/leftMenuDebug/out/853e0256b8bdaec0b09cd722501cc2106f5515a33d09a986b0ed216b7d6ec721_2.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/leftMenuDebug/out/853e0256b8bdaec0b09cd722501cc2106f5515a33d09a986b0ed216b7d6ec721_3.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/leftMenuDebug/out/853e0256b8bdaec0b09cd722501cc2106f5515a33d09a986b0ed216b7d6ec721_3.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/outputs/apk/leftMenu/debug/app-leftMenu-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/outputs/apk/leftMenu/debug/app-leftMenu-debug.apk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/gallery1/model/data/FireBaseData.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/gallery1/model/data/FireBaseData.kt" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
