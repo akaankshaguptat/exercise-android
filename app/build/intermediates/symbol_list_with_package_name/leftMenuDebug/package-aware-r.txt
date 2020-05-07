@@ -1844,6 +1844,7 @@ id phone_layout
 id phone_number
 id pin
 id progressBar
+id progressBar_addcategory
 id progressBar_pic
 id progress_circular
 id progress_horizontal

@@ -14,6 +14,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
+import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -23,6 +24,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.storage.FirebaseStorage
 import kotlinx.android.synthetic.main.fragment_add_category.*
+import kotlinx.android.synthetic.main.fragment_signup.*
 import java.io.ByteArrayOutputStream
 
 // TODO: Rename parameter arguments, choose names that match
@@ -77,6 +79,7 @@ class AddCategoryFragment : Fragment() {
      override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+
          imageView_category.setOnClickListener {
              var title=mTitle.text.toString()
              if(TextUtils.isEmpty(title)){
@@ -91,6 +94,7 @@ class AddCategoryFragment : Fragment() {
     }
 
     private fun takepictureIntent() {
+        progressBar_addcategory.visibility=View.VISIBLE
         Intent(MediaStore.ACTION_IMAGE_CAPTURE).also { pictureIntent->
             pictureIntent.resolveActivity(activity?.packageManager!!)?.also {
                 startActivityForResult(pictureIntent,REQUEST_IMAGE_CAPTURE)
@@ -102,79 +106,85 @@ class AddCategoryFragment : Fragment() {
         if(requestCode==REQUEST_IMAGE_CAPTURE && resultCode== Activity.RESULT_OK){
             val imageBitmap= data?.extras?.get("data") as Bitmap
             var loginViewModel: AddCategoryViewModel = ViewModelProvider(this)[AddCategoryViewModel::class.java]
+            var progressBar= view?.findViewById(R.id.progressBar_addcategory) as ProgressBar
+
             loginViewModel.uploadData(mTitle.text.toString(),imageBitmap,activity!!).observe(activity!!,
                 Observer {
                     imageView_category.setImageBitmap(imageBitmap)
-                    val category= Category1()
-                    activity?.supportFragmentManager?.beginTransaction()
-                        ?.replace(R.id.home_frag,category)
-                        ?.addToBackStack(null)?.commit()
+                    progressBar.visibility=View.INVISIBLE
+                    btn_save_category.setOnClickListener {
+                        val category= Category1()
+                        activity?.supportFragmentManager?.beginTransaction()
+                            ?.replace(R.id.home_frag,category)
+                            ?.addToBackStack(null)?.commit()
+                    }
+
                 })
          //   uplaodImageAndSaveUri(imageBitmap)
 
         }
     }
 
-    private fun uplaodImageAndSaveUri(imageBitmap: Bitmap) {
+//    private fun uplaodImageAndSaveUri(imageBitmap: Bitmap) {
+//
+//        val baos=ByteArrayOutputStream()
+//        var title=mTitle.text.toString()
+//
+//        val storafgeRef=FirebaseStorage.getInstance()
+//            .reference.child("categoryImage/${FirebaseAuth.getInstance().currentUser?.uid}/${title}")
+//        imageBitmap.compress(Bitmap.CompressFormat.JPEG,100,baos)
+//        val image=baos.toByteArray()
+//        val uplaod=storafgeRef.putBytes(image)
+//        uplaod.addOnCompleteListener{uplaodTask->
+//            if(uplaodTask.isSuccessful){
+//                storafgeRef.downloadUrl.addOnCompleteListener { urlTask->
+//                    urlTask.result?.let {
+//                        imageUri=it
+//                        imageView_category.setImageBitmap(imageBitmap)
+//                        Toast.makeText(activity,imageUri.toString(),Toast.LENGTH_SHORT).show()
+//                        var title=mTitle.text.toString()
+//                        uplaodImageAndTitle(imageUri,title)
+//
+//
+//
+//
+//                    }
+//                }
+//            }else{
+//                uplaodTask.exception?.let {
+//                    Toast.makeText(activity,it.message,Toast.LENGTH_SHORT).show()
+//                }
+//            }
+//
+//        }
+//    }
 
-        val baos=ByteArrayOutputStream()
-        var title=mTitle.text.toString()
-
-        val storafgeRef=FirebaseStorage.getInstance()
-            .reference.child("categoryImage/${FirebaseAuth.getInstance().currentUser?.uid}/${title}")
-        imageBitmap.compress(Bitmap.CompressFormat.JPEG,100,baos)
-        val image=baos.toByteArray()
-        val uplaod=storafgeRef.putBytes(image)
-        uplaod.addOnCompleteListener{uplaodTask->
-            if(uplaodTask.isSuccessful){
-                storafgeRef.downloadUrl.addOnCompleteListener { urlTask->
-                    urlTask.result?.let {
-                        imageUri=it
-                        imageView_category.setImageBitmap(imageBitmap)
-                        Toast.makeText(activity,imageUri.toString(),Toast.LENGTH_SHORT).show()
-                        var title=mTitle.text.toString()
-                        uplaodImageAndTitle(imageUri,title)
-
-
-
-
-                    }
-                }
-            }else{
-                uplaodTask.exception?.let {
-                    Toast.makeText(activity,it.message,Toast.LENGTH_SHORT).show()
-                }
-            }
-
-        }
-    }
-
-    private fun uplaodImageAndTitle(imageUri: Uri, title: String) {
-        btn_save_category.setOnClickListener {
-
-            val user = hashMapOf(
-                "imageUrl" to imageUri.toString(),
-                "title" to  title
-            )
-
-// Add a new document with a generated ID
-            db.collection("users").document(userId).collection("category").add(user as Map<String, Any>)
-                .addOnSuccessListener { documentReference ->
-                    Log.d(ContentValues.TAG, "DocumentSnapshot added with ID: ${documentReference.id}")
-                }
-                .addOnFailureListener { e ->
-                    Log.w(ContentValues.TAG, "Error adding document", e)
-                }
-            Toast.makeText(activity,"category data saved",Toast.LENGTH_SHORT).show()
-            val category= Category1()
-            activity?.supportFragmentManager?.beginTransaction()
-                ?.replace(R.id.home_frag,category)
-                ?.addToBackStack(null)?.commit()
-        }
-
-
-
-        }
+//    private fun uplaodImageAndTitle(imageUri: Uri, title: String) {
+//        btn_save_category.setOnClickListener {
+//
+//            val user = hashMapOf(
+//                "imageUrl" to imageUri.toString(),
+//                "title" to  title
+//            )
+//
+//// Add a new document with a generated ID
+//            db.collection("users").document(userId).collection("category").add(user as Map<String, Any>)
+//                .addOnSuccessListener { documentReference ->
+//                    Log.d(ContentValues.TAG, "DocumentSnapshot added with ID: ${documentReference.id}")
+//                }
+//                .addOnFailureListener { e ->
+//                    Log.w(ContentValues.TAG, "Error adding document", e)
+//                }
+//            Toast.makeText(activity,"category data saved",Toast.LENGTH_SHORT).show()
+//            val category= Category1()
+//            activity?.supportFragmentManager?.beginTransaction()
+//                ?.replace(R.id.home_frag,category)
+//                ?.addToBackStack(null)?.commit()
+//        }
+//
+//
+//
+//        }
 
 
 

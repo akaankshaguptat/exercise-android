@@ -47,10 +47,10 @@ class FireBaseData {
         var arraylistmutablelivedata = MutableLiveData<ArrayList<CategoryList1ViewModel>>()
 
 
-        val db = FirebaseFirestore.getInstance()
+        //val db = FirebaseFirestore.getInstance()
 
         var userId = firebaseAuth.currentUser?.uid!!
-        db.collection("users").document(userId).collection("category")
+        firebasedb.collection("users").document(userId).collection("category")
             .get()
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
@@ -80,12 +80,12 @@ class FireBaseData {
     /*for getting timeline data from the firebase server*/
 
     fun getTimeLineArrayList(): MutableLiveData<ArrayList<TimelineViewModel>> {
-        val db = FirebaseFirestore.getInstance()
+       // val db = FirebaseFirestore.getInstance()
         var fAuth = firebaseAuth
         var userId = fAuth.currentUser?.uid!!
         var arraylistmutablelivedata = MutableLiveData<ArrayList<TimelineViewModel>>()
 
-        db.collection("users").document(userId).collection("timeline")
+        firebasedb.collection("users").document(userId).collection("timeline")
             .get()
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
@@ -121,13 +121,13 @@ class FireBaseData {
     fun getImagesArrayList(id1: String): MutableLiveData<ArrayList<ImageListViewModel>> {
 
 
-        val db = FirebaseFirestore.getInstance()
+       // val db = FirebaseFirestore.getInstance()
         var userId = firebaseAuth.currentUser?.uid!!
         // Log.d(TAG,id1)
         var arraylistmutablelivedata = MutableLiveData<ArrayList<ImageListViewModel>>()
 //        val source = Source.CACHE
 
-        db.collection("users").document(userId).collection("category").document(id1)
+        firebasedb.collection("users").document(userId).collection("category").document(id1)
             .collection("CategoryImages")
             .get()
             .addOnCompleteListener { task ->
@@ -168,8 +168,8 @@ class FireBaseData {
     fun getSingleImageData(id: String): MutableLiveData<String> {
         var liveData: MutableLiveData<String> = MutableLiveData()
         var userId = firebaseAuth.currentUser?.uid!!
-        val db = FirebaseFirestore.getInstance()
-        var documentReference = db.collection("users").document(userId)
+        //val db = FirebaseFirestore.getInstance()
+        var documentReference = firebasedb.collection("users").document(userId)
             .collection("timeline").document(id)
         documentReference.addSnapshotListener { documentSnapshot, firebaseFirestoreException ->
             var imageurl1 = documentSnapshot?.getString("imageUrl")
@@ -301,7 +301,7 @@ class FireBaseData {
         var image1: String = ""
         var userId = firebaseAuth.currentUser?.uid!!
         val baos = ByteArrayOutputStream()
-        var db = FirebaseFirestore.getInstance()
+        //var db = FirebaseFirestore.getInstance()
 
         val storafgeRef = FirebaseStorage.getInstance()
             .reference.child("profileImages/${FirebaseAuth.getInstance().currentUser?.uid}")
@@ -327,7 +327,7 @@ class FireBaseData {
                         )
 
 // Add a new document with a generated ID
-                        db.collection("users").document(userId).set(user as Map<String, Any>)
+                        firebasedb.collection("users").document(userId).set(user as Map<String, Any>)
                             .addOnSuccessListener { documentReference ->
 
                                 // Log.d(TAG, "DocumentSnapshot added with ID: ${documentReference.id}")
