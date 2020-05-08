@@ -12,6 +12,7 @@ class LoginViewModel: ViewModel() {
     private var repo= Repository(firebase)
 
     fun loginStatus(email:String,password:String,activity: Activity):MutableLiveData<Boolean>{
+
         var status=repo.login(email,password,activity)
         return status
     }

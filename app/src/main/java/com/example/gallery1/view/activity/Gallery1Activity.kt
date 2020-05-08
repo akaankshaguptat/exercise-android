@@ -157,12 +157,7 @@ class Gallery1Activity : AppCompatActivity() {
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
 
-    override fun onBackPressed() {
-        var count=supportFragmentManager.backStackEntryCount
-        Log.d("count",count.toString())
-        super.onBackPressed()
 
-    }
 
     fun logout(item: MenuItem) {
         FirebaseAuth.getInstance().signOut()

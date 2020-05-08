@@ -67,10 +67,6 @@ class ProfileFragment : Fragment() {
         }
 
 
-
-
-
-
         var profileViewModel: ProfileViewModel =
             ViewModelProvider(this)[ProfileViewModel::class.java]
         profileViewModel.profiileData().observe(activity!!, Observer {
