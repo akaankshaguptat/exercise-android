@@ -20,6 +20,10 @@
         "source": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
     },
     {
+        "merged": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/build/intermediates/res/merged/leftMenu/debug/drawable_ic_group_work_black_24dp.xml.flat",
+        "source": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/src/main/res/drawable/ic_group_work_black_24dp.xml"
+    },
+    {
         "merged": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/build/intermediates/res/merged/leftMenu/debug/drawable_button_background.xml.flat",
         "source": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/src/main/res/drawable/button_background.xml"
     },

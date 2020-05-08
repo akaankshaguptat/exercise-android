@@ -38,32 +38,7 @@ class CategoryList1ViewModel:ViewModel {
 
         return  list
 
-       /* var arraylistmutablelivedata= MutableLiveData<ArrayList<CategoryList1ViewModel>>()
 
-
-        val db = FirebaseFirestore.getInstance()
-        fAuth = FirebaseAuth.getInstance()
-        userId = fAuth.currentUser?.uid!!
-        db.collection("users").document(userId).collection("category")
-            .get()
-            .addOnCompleteListener { task ->
-                if (task.isSuccessful) {
-                    var arrayList=ArrayList<CategoryList1ViewModel>()
-                    for (document in task.result!!) {
-                        Log.d("test", document.id)
-                        var id = document.id
-
-                        var imageUrl = document.data.get("imageUrl").toString()
-                        var title = document.data.getValue("title").toString()
-
-                        var categoryList1Model=CategoryList1Model(imageUrl,title,id)
-                        var categoryList1ViewModel: CategoryList1ViewModel =CategoryList1ViewModel(categoryList1Model)
-                        arrayList!!.add(categoryList1ViewModel)
-                        arraylistmutablelivedata.value=arrayList
-                    }
-                }
-            }
-        return arraylistmutablelivedata*/
     }
 
 }

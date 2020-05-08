@@ -1494,6 +1494,7 @@ drawable ic_delete
 drawable ic_edit_black_24dp
 drawable ic_email_black_24dp
 drawable ic_exit
+drawable ic_group_work_black_24dp
 drawable ic_keyboard_arrow_left_black_24dp
 drawable ic_keyboard_arrow_right_black_24dp
 drawable ic_launcher_background
@@ -1558,7 +1559,6 @@ id TOP_END
 id TOP_START
 id Text_email
 id Text_name
-id Text_pass
 id accessibility_action_clickable_span
 id accessibility_custom_action_0
 id accessibility_custom_action_1

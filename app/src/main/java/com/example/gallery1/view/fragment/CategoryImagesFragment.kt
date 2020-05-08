@@ -103,8 +103,7 @@ class CategoryImagesFragment : Fragment() {
 
         recyclerView=root.findViewById(R.id.recyler) as RecyclerView
         btn_takepic=root.findViewById(R.id.btn_takepic)
-       // var imageListViewModel:ImageListViewModel= ViewModelProviders.of(activity!!).get(ImageListViewModel::class.java)
-       // imageListViewModel.getdata(id)
+
         var imageListViewModel:ImageListViewModel=ViewModelProvider(this)[ImageListViewModel::class.java]
         imageListViewModel.getArrayList(id).observe(activity!!, Observer {imageListViewModel->
             Log.v("exe","inside view model")
@@ -128,23 +127,7 @@ class CategoryImagesFragment : Fragment() {
     }
 
 
-//    override fun onResume() {
-//        super.onResume()
-//        Log.v("exe","onResume")
-//        var imageListViewModel:ImageListViewModel= ViewModelProviders.of(activity!!).get(ImageListViewModel::class.java)
-//        imageListViewModel.getdata(id)
-//        //var imageListViewModel:ImageListViewModel=ViewModelProvider(this)[ImageListViewModel::class.java]
-//        imageListViewModel.getArrayList(id).observe(activity!!, Observer {imageListViewModel->
-//            Log.v("exe","inside view model")
-//            Log.v("exe12345",imageListViewModel.size.toString())
-//            imageListAdapter=context?.let { ImageListAdapter(it, imageListViewModel!!,id) }
-//            gridLayoutManager = GridLayoutManager(context, 2, LinearLayoutManager.VERTICAL, false)
-//            recyclerView?.layoutManager = gridLayoutManager
-//            recyclerView!!.adapter=imageListAdapter
-//
-//
-//        })
-//    }
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -171,6 +154,7 @@ class CategoryImagesFragment : Fragment() {
     }
 
     private fun uplaodImageAndSaveUri1(imageBitmap: Bitmap) {
+        Log.d("call upload","call upload")
         val baos= ByteArrayOutputStream()
         var imageId=Math.random().toString()
         val storafgeRef= FirebaseStorage.getInstance()

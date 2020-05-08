@@ -17,13 +17,12 @@
             android:layout_width="match_parent"
             app:cardElevation="10dp"
             app:cardCornerRadius="5dp"
-            app:cardBackgroundColor="#FAF6F6"
             android:layout_margin="5dp"
             android:layout_height="match_parent">
             <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:background="#FAF6F6"
+                android:background="#FBF9F9"
                 android:layout_height="wrap_content">
 
                 <ImageView

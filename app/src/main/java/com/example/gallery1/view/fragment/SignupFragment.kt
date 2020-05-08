@@ -88,7 +88,7 @@ class SignupFragment : Fragment() {
 
 
         auth = FirebaseAuth.getInstance()
-        val db = FirebaseFirestore.getInstance()
+
         fstore= FirebaseFirestore.getInstance()
 
 
@@ -128,7 +128,7 @@ class SignupFragment : Fragment() {
                 signUpViewModel.signupStatus(email,password,name,it1,imageView_progilesignup).observe(activity!!,
                     Observer { it->
                         if(it)
-                        {
+                        {   Log.d("it",it.toString())
                             var intent=Intent(activity,
                                 Gallery1Activity::class.java)
                             startActivity(intent)
@@ -139,39 +139,11 @@ class SignupFragment : Fragment() {
                         }
                     })
 
-           /*     auth.createUserWithEmailAndPassword(email, password)
-                    .addOnCompleteListener(it1) { task ->
-                        if (task.isSuccessful) {
-                            // Sign in success, update UI with the signed-in user's information
-                            Log.d(TAG, "createUserWithEmail:success")
-                           // val user = auth.currentUser
-
-
-                            userId= auth.currentUser?.uid!!
-
-                            var imageBitmap=imageView_progilesignup.drawable.toBitmap()
-
-                           uplaodImageAndSaveUri(imageBitmap,email,password,name)
-//
-                        } else {
-                            if(task.exception is FirebaseAuthUserCollisionException){
-                                Log.w(TAG, "user already exists", task.exception)
-                                Toast.makeText(activity,"user already exists",Toast.LENGTH_SHORT).show()
-                            }else{
-                                // If sign in fails, display a message to the user.
-                                Log.w(TAG, "createUserWithEmail:failure", task.exception)
-
-                                Toast.makeText(context, "Authentication failed.", Toast.LENGTH_SHORT).show()
-                            }
-
-//
-                        }
-
-                        // ...
-                    }*/
             }
 
+
         }
+
         return view
     }
 

@@ -20,14 +20,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="124dp"
-        android:backgroundTint="#F37268"
+        android:background="@color/colorPrimary"
         android:clickable="true"
         android:src="@drawable/ic_delete"
-        app:backgroundTint="#F37268"
+        app:backgroundTint="@color/colorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.74"
-        app:layout_constraintStart_toStartOf="parent"
-        app:rippleColor="#F37268" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

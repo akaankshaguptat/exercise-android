@@ -1494,6 +1494,7 @@ drawable ic_delete
 drawable ic_edit_black_24dp
 drawable ic_email_black_24dp
 drawable ic_exit
+drawable ic_group_work_black_24dp
 drawable ic_keyboard_arrow_left_black_24dp
 drawable ic_keyboard_arrow_right_black_24dp
 drawable ic_launcher_background
@@ -1507,6 +1508,7 @@ drawable ic_menu_manage
 drawable ic_menu_send
 drawable ic_menu_share
 drawable ic_menu_slideshow
+drawable ic_mode_edit_white_24dp
 drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
@@ -1558,7 +1560,6 @@ id TOP_END
 id TOP_START
 id Text_email
 id Text_name
-id Text_pass
 id accessibility_action_clickable_span
 id accessibility_custom_action_0
 id accessibility_custom_action_1
@@ -1845,6 +1846,7 @@ id phone_layout
 id phone_number
 id pin
 id progressBar
+id progressBar_addcategory
 id progressBar_pic
 id progress_circular
 id progress_horizontal
@@ -2057,10 +2059,10 @@ layout fragment_add_category
 layout fragment_category
 layout fragment_category1
 layout fragment_category_images
-layout fragment_gallery
 layout fragment_home
 layout fragment_image_display
 layout fragment_login
+layout fragment_profile
 layout fragment_signup
 layout fragment_slideshow
 layout fragment_timeline

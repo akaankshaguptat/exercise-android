@@ -1,9 +1,9 @@
 package com.example.gallery1.model.pojo
 
 class ImageListModel {
-    var id:String =""
-    var imageUrl1:String = ""
-    var timeStamp=""
+    var id: String = ""
+    var imageUrl1: String = ""
+    var timeStamp = ""
 
     constructor(id: String, imageUrl1: String, timeStamp: String) {
         this.id = id

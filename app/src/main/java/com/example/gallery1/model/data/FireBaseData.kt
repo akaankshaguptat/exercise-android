@@ -2,6 +2,8 @@ package com.example.gallery1.data
 
 import android.app.Activity
 import android.content.ContentValues
+import android.content.ContentValues.TAG
+import android.content.Intent
 import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Bundle
@@ -47,8 +49,6 @@ class FireBaseData {
         var arraylistmutablelivedata = MutableLiveData<ArrayList<CategoryList1ViewModel>>()
 
 
-        //val db = FirebaseFirestore.getInstance()
-
         var userId = firebaseAuth.currentUser?.uid!!
         firebasedb.collection("users").document(userId).collection("category")
             .get()
@@ -69,7 +69,7 @@ class FireBaseData {
                                 id
                             )
                         var categoryList1ViewModel = CategoryList1ViewModel(categoryList1Model)
-                        arrayList!!.add(categoryList1ViewModel)
+                        arrayList.add(categoryList1ViewModel)
                         arraylistmutablelivedata.value = arrayList
                     }
                 }
@@ -80,7 +80,7 @@ class FireBaseData {
     /*for getting timeline data from the firebase server*/
 
     fun getTimeLineArrayList(): MutableLiveData<ArrayList<TimelineViewModel>> {
-       // val db = FirebaseFirestore.getInstance()
+
         var fAuth = firebaseAuth
         var userId = fAuth.currentUser?.uid!!
         var arraylistmutablelivedata = MutableLiveData<ArrayList<TimelineViewModel>>()
@@ -101,7 +101,7 @@ class FireBaseData {
                                 timestamp1
                             )
                         var timelineViewModel = TimelineViewModel(imageListModel1)
-                        arrayList!!.add(timelineViewModel)
+                        arrayList.add(timelineViewModel)
                         arrayList.sortByDescending({ selector(it) })
                         arraylistmutablelivedata.value = arrayList
                     }
@@ -120,12 +120,10 @@ class FireBaseData {
 
     fun getImagesArrayList(id1: String): MutableLiveData<ArrayList<ImageListViewModel>> {
 
-
-       // val db = FirebaseFirestore.getInstance()
         var userId = firebaseAuth.currentUser?.uid!!
-        // Log.d(TAG,id1)
+
         var arraylistmutablelivedata = MutableLiveData<ArrayList<ImageListViewModel>>()
-//        val source = Source.CACHE
+
 
         firebasedb.collection("users").document(userId).collection("category").document(id1)
             .collection("CategoryImages")
@@ -134,13 +132,12 @@ class FireBaseData {
                 if (task.isSuccessful) {
                     var arrayList = ArrayList<ImageListViewModel>()
 
-//                    var a=task.result!!.size()
-//                    Log.v("a===",a.toString())
+
                     for (document in task.result!!) {
-                        // Log.d(TAG,document.id)
+
                         var id = document.id
                         var imageUrl = document.data.get("imageUrl").toString()
-//                        Log.v("data--",id)
+
                         var timeStamp = document.data.get("timeStamp").toString()
                         var imageListModel1 =
                             ImageListModel(
@@ -150,7 +147,7 @@ class FireBaseData {
                             )
                         var imageListViewModel1: ImageListViewModel =
                             ImageListViewModel(imageListModel1)
-                        arrayList!!.add(imageListViewModel1)
+                        arrayList.add(imageListViewModel1)
                         arraylistmutablelivedata.value = arrayList
 
 
@@ -168,14 +165,11 @@ class FireBaseData {
     fun getSingleImageData(id: String): MutableLiveData<String> {
         var liveData: MutableLiveData<String> = MutableLiveData()
         var userId = firebaseAuth.currentUser?.uid!!
-        //val db = FirebaseFirestore.getInstance()
         var documentReference = firebasedb.collection("users").document(userId)
             .collection("timeline").document(id)
         documentReference.addSnapshotListener { documentSnapshot, firebaseFirestoreException ->
             var imageurl1 = documentSnapshot?.getString("imageUrl")
             liveData.value = imageurl1
-//            var cat_id = documentSnapshot?.getString("cat_id").toString()
-//            Log.d("cat_id", cat_id)
             Log.v("imageUrl", imageurl1 + "url")
 
         }
@@ -226,18 +220,13 @@ class FireBaseData {
             .addOnCompleteListener(activity) { task ->
                 if (task.isSuccessful) {
                     liveData.value = true
-                    // Sign in success, update UI with the signed-in user's information
-                    //  Log.d(ContentValues.TAG, "user logged in: successful")
-                    // Toast.makeText(context, "login successful", Toast.LENGTH_SHORT).show()
-                    // val user = auth.currentUser
-                    /* var intent = Intent(activity, Gallery1Activity::class.java)
-                     startActivity(intent)*/
+
 
                 } else {
                     liveData.value = false
                     // If sign in fails, display a message to the user.
                     Log.w(ContentValues.TAG, "loginUserWithEmail:failure", task.exception)
-                    //  Toast.makeText(context, "login failed.", Toast.LENGTH_SHORT).show()
+
 
                 }
             }
@@ -260,15 +249,11 @@ class FireBaseData {
                 if (task.isSuccessful) {
                     // Sign in success, update UI with the signed-in user's information
                     Log.d(ContentValues.TAG, "createUserWithEmail:success")
-                    // val user = auth.currentUser
-
-
-                    var userId = firebaseAuth.currentUser?.uid!!
 
                     var imageBitmap: Bitmap = imageView_progilesignup.drawable.toBitmap()
 
-                    liveData = uplaodImageAndSaveUri(imageBitmap, email, password, name, activity)
-//
+                    uplaodImageAndSaveUri(imageBitmap, email, password, name, activity)
+                    liveData.value=true
                 } else {
                     if (task.exception is FirebaseAuthUserCollisionException) {
                         Log.w(ContentValues.TAG, "user already exists", task.exception)
@@ -298,10 +283,10 @@ class FireBaseData {
         name: String, activity: Activity
     ): MutableLiveData<Boolean> {
         var liveData: MutableLiveData<Boolean> = MutableLiveData()
-        var image1: String = ""
+        var image1: String
         var userId = firebaseAuth.currentUser?.uid!!
         val baos = ByteArrayOutputStream()
-        //var db = FirebaseFirestore.getInstance()
+
 
         val storafgeRef = FirebaseStorage.getInstance()
             .reference.child("profileImages/${FirebaseAuth.getInstance().currentUser?.uid}")
@@ -313,7 +298,7 @@ class FireBaseData {
                 storafgeRef.downloadUrl.addOnCompleteListener { urlTask ->
                     urlTask.result?.let {
                         liveData.value = true
-                        // var intent=Intent(activity,Gallery1Activity::class.java)
+                        var intent= Intent(activity,Gallery1Activity::class.java)
                         var imageUri = it
                         //   imageView_progilesignup.setImageBitmap(imageBitmap)
                         //   Toast.makeText(activity,imageUri.toString(),Toast.LENGTH_SHORT).show()
@@ -327,10 +312,11 @@ class FireBaseData {
                         )
 
 // Add a new document with a generated ID
-                        firebasedb.collection("users").document(userId).set(user as Map<String, Any>)
-                            .addOnSuccessListener { documentReference ->
+                        firebasedb.collection("users").document(userId)
+                            .set(user as Map<String, Any>)
+                            .addOnSuccessListener {
 
-                                // Log.d(TAG, "DocumentSnapshot added with ID: ${documentReference.id}")
+                                Log.d(TAG, "successfully saved user data")
                             }
                             .addOnFailureListener { e ->
                                 Log.w(ContentValues.TAG, "Error adding document", e)
@@ -356,16 +342,15 @@ class FireBaseData {
         var livedata: MutableLiveData<ProfileModelClass> = MutableLiveData<ProfileModelClass>()
         var userId = firebaseAuth.currentUser?.uid!!
         var documentReference = firebasedb.collection("users").document(userId)
-        documentReference.addSnapshotListener { documentSnapshot, firebaseFirestoreException ->
+        documentReference.addSnapshotListener { documentSnapshot,
+                                                firebaseFirestoreException ->
 
             if (documentSnapshot != null) {
-                var mEmail = documentSnapshot?.getString("email")!!
-                var mPassword = documentSnapshot?.getString("password")!!
-                var mName = documentSnapshot?.getString("name")!!
-                /* email.setText(mEmail)
-                 password.setText(mPassword)
-                 name.setText(mName)*/
-                var profile_image1 = documentSnapshot?.getString("profileImage")
+                var mEmail = documentSnapshot.getString("email")!!
+                var mPassword = documentSnapshot.getString("password")!!
+                var mName = documentSnapshot.getString("name")!!
+
+                var profile_image1 = documentSnapshot.getString("profileImage")
                 var profile = ProfileModelClass(
                     mEmail,
                     mPassword,
@@ -375,11 +360,6 @@ class FireBaseData {
                 livedata.value = profile
             }
 
-
-            //Toast.makeText(activity, profile_image1, Toast.LENGTH_SHORT).show()
-
-            /* Glide.with(this).load(profile_image1).apply(RequestOptions.circleCropTransform())
-                 .into(profile_image)*/
 
         }
         return livedata
@@ -447,11 +427,7 @@ class FireBaseData {
             .addOnFailureListener { e ->
                 Log.w(ContentValues.TAG, "Error adding document", e)
             }
-        //    Toast.makeText(activity,"category data saved",Toast.LENGTH_SHORT).show()
-        //  val category= Category1()
-        /*   activity?.supportFragmentManager?.beginTransaction()
-               ?.replace(R.id.home_frag,category)
-               ?.addToBackStack(null)?.commit()*/
+
     }
 
 

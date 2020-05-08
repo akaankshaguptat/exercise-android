@@ -23,12 +23,12 @@
         android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.example.gallery1.Gallery1Activity"
+            android:name="com.example.gallery1.view.activity.Gallery1Activity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/title_activity_gallery1"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
-        <activity android:name="com.example.gallery1.MainActivity" >
+        <activity android:name="com.example.gallery1.view.activity.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

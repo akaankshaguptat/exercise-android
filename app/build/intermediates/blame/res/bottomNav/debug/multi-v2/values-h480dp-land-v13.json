@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/bharat/Downloads/exercise-android-Gallery12/app/build/intermediates/incremental/mergeBottomNavDebugResources/merged.dir/values-h480dp-land-v13/values-h480dp-land-v13.xml",
+            "outputFile": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/build/intermediates/incremental/mergeBottomNavDebugResources/merged.dir/values-h480dp-land-v13/values-h480dp-land-v13.xml",
             "map": [
                 {
-                    "source": "/home/bharat/.gradle/caches/transforms-2/files-2.1/4c120aac66944036d205430256c40dab/material-1.1.0/res/values-h480dp-land-v13/values-h480dp-land-v13.xml",
+                    "source": "/home/akaanksha/.gradle/caches/transforms-2/files-2.1/4c120aac66944036d205430256c40dab/material-1.1.0/res/values-h480dp-land-v13/values-h480dp-land-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",

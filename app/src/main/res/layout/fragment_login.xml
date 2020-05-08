@@ -31,7 +31,7 @@
                 android:gravity="center"
                 android:text="Login"
                 android:textColor="#000"
-                android:textSize="30dp"
+                android:textSize="50dp"
                 app:layout_constraintBottom_toTopOf="@+id/EditText_emaillogin"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

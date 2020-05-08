@@ -12,9 +12,9 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import com.example.gallery1.R
 import com.example.gallery1.view.activity.Gallery1Activity
 import com.example.gallery1.view.activity.MainActivity.Companion.manager
-import com.example.gallery1.R
 import com.example.gallery1.viewmodel.LoginViewModel
 import com.google.firebase.auth.FirebaseAuth
 
@@ -92,40 +92,23 @@ class LoginFragment : Fragment() {
 
 
             activity?.let { it1 ->
-                var loginViewModel: LoginViewModel = ViewModelProvider(this)[LoginViewModel::class.java]
-                loginViewModel.loginStatus(email_login,password_login,it1).observe(activity!!, Observer { it ->
+                var loginViewModel: LoginViewModel =
+                    ViewModelProvider(this)[LoginViewModel::class.java]
+                loginViewModel.loginStatus(email_login, password_login, it1)
+                    .observe(activity!!, Observer { it ->
 
-                    if(it)
-                    {
-                        Toast.makeText(context, "login successful", Toast.LENGTH_SHORT).show()
-                        val user = auth.currentUser
-                        var intent = Intent(activity, Gallery1Activity::class.java)
-                        startActivity(intent)
-                    }
-                    else
-                    {
-                      //  Log.w(ContentValues.TAG, "loginUserWithEmail:failure", task.exception)
-                        Toast.makeText(context, "login failed.", Toast.LENGTH_SHORT).show()
-                    }
-
-                })
-               /* auth.signInWithEmailAndPassword(email_login, password_login)
-                    .addOnCompleteListener(it1) { task ->
-                        if (task.isSuccessful) {
-                            // Sign in success, update UI with the signed-in user's information
-                            Log.d(ContentValues.TAG, "user logged in: successful")
+                        if (it) {
                             Toast.makeText(context, "login successful", Toast.LENGTH_SHORT).show()
                             val user = auth.currentUser
                             var intent = Intent(activity, Gallery1Activity::class.java)
                             startActivity(intent)
-
                         } else {
-                            // If sign in fails, display a message to the user.
-                            Log.w(ContentValues.TAG, "loginUserWithEmail:failure", task.exception)
+                            //  Log.w(ContentValues.TAG, "loginUserWithEmail:failure", task.exception)
                             Toast.makeText(context, "login failed.", Toast.LENGTH_SHORT).show()
-
                         }
-                    }*/
+
+                    })
+
             }
 
 

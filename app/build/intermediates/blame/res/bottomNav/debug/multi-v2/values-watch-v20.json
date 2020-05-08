@@ -1,27 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/bharat/Downloads/exercise-android-Gallery12/app/build/intermediates/incremental/mergeBottomNavDebugResources/merged.dir/values-watch-v20/values-watch-v20.xml",
+            "outputFile": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/build/intermediates/incremental/mergeBottomNavDebugResources/merged.dir/values-watch-v20/values-watch-v20.xml",
             "map": [
                 {
-                    "source": "/home/bharat/.gradle/caches/transforms-2/files-2.1/68a9637428836bf99df4e84ac7e7bf81/jetified-play-services-auth-17.0.0/res/values-watch-v20/values.xml",
-                    "from": {
-                        "startLines": "4,5,6,7,8,9,10,11",
-                        "startColumns": "0,0,0,0,0,0,0,0",
-                        "startOffsets": "171,246,322,397,472,559,636,723",
-                        "endColumns": "74,75,74,74,86,76,86,75",
-                        "endOffsets": "245,321,396,471,558,635,722,798"
-                    },
-                    "to": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,134,214,293,372,463,544,635",
-                        "endColumns": "78,79,78,78,90,80,90,79",
-                        "endOffsets": "129,209,288,367,458,539,630,710"
-                    }
-                },
-                {
-                    "source": "/home/bharat/.gradle/caches/transforms-2/files-2.1/1cc89dd2886756a3739028f219b3eafe/appcompat-1.1.0/res/values-watch-v20/values-watch-v20.xml",
+                    "source": "/home/akaanksha/.gradle/caches/transforms-2/files-2.1/1cc89dd2886756a3739028f219b3eafe/appcompat-1.1.0/res/values-watch-v20/values-watch-v20.xml",
                     "from": {
                         "startLines": "2,5,8",
                         "startColumns": "4,4,4",
@@ -37,6 +20,23 @@
                         "endLines": "12,15,18",
                         "endColumns": "12,12,12",
                         "endOffsets": "869,1040,1213"
+                    }
+                },
+                {
+                    "source": "/home/akaanksha/.gradle/caches/transforms-2/files-2.1/68a9637428836bf99df4e84ac7e7bf81/jetified-play-services-auth-17.0.0/res/values-watch-v20/values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10,11",
+                        "startColumns": "0,0,0,0,0,0,0,0",
+                        "startOffsets": "171,246,322,397,472,559,636,723",
+                        "endColumns": "74,75,74,74,86,76,86,75",
+                        "endOffsets": "245,321,396,471,558,635,722,798"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,134,214,293,372,463,544,635",
+                        "endColumns": "78,79,78,78,90,80,90,79",
+                        "endOffsets": "129,209,288,367,458,539,630,710"
                     }
                 }
             ]

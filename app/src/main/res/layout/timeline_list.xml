@@ -20,13 +20,13 @@
             android:layout_height="match_parent"
             app:cardCornerRadius="5dp"
             android:layout_margin="10dp"
-            app:cardBackgroundColor="#FAF6F6"
+            app:cardBackgroundColor="#FBF9F9"
             app:cardElevation="10dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#FAF6F6"
+            android:background="#FBF9F9"
             android:orientation="vertical">
 
             <ImageView

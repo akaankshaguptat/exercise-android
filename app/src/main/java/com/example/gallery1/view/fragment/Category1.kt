@@ -1,19 +1,18 @@
 package com.example.gallery1.view.fragment
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.gallery1.model.Adapters.CategoryList1Adapter
-
 import com.example.gallery1.R
+import com.example.gallery1.model.Adapters.CategoryList1Adapter
 import com.example.gallery1.viewmodel.CategoryList1ViewModel
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
@@ -48,22 +47,24 @@ class Category1 : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        var root=inflater.inflate(R.layout.fragment_category1, container, false)
-       var recyclerView = root.findViewById(R.id.category_recyclerview) as RecyclerView
-        var categoryList1ViewModel:CategoryList1ViewModel=ViewModelProvider(this)[CategoryList1ViewModel::class.java]
-        categoryList1ViewModel.getArrayList().observe(this.viewLifecycleOwner, Observer { categoryList1ViewModel->
-        //Log.v("Category1",categoryList1ViewModel[0].cat_title)
-            categoryList1Adapter= context?.let {
-                CategoryList1Adapter(
-                    it,
-                    categoryList1ViewModel
-                )
-            }!!
-            gridLayoutManager = GridLayoutManager(context, 2, LinearLayoutManager.VERTICAL, false)
-            recyclerView?.layoutManager = gridLayoutManager
-            recyclerView!!.adapter=categoryList1Adapter
+        var root = inflater.inflate(R.layout.fragment_category1, container, false)
+        var recyclerView = root.findViewById(R.id.category_recyclerview) as RecyclerView
+        var categoryList1ViewModel: CategoryList1ViewModel =
+            ViewModelProvider(this)[CategoryList1ViewModel::class.java]
+        categoryList1ViewModel.getArrayList()
+            .observe(this.viewLifecycleOwner, Observer { categoryList1ViewModel ->
+                categoryList1Adapter = context?.let {
+                    CategoryList1Adapter(
+                        it,
+                        categoryList1ViewModel
+                    )
+                }!!
+                gridLayoutManager =
+                    GridLayoutManager(context, 2, LinearLayoutManager.VERTICAL, false)
+                recyclerView?.layoutManager = gridLayoutManager
+                recyclerView!!.adapter = categoryList1Adapter
 
-        })
+            })
         var btnAddCategory = root.findViewById<FloatingActionButton>(R.id.btnAddCategory)
         btnAddCategory.setOnClickListener {
             Toast.makeText(activity, "add btn clicked", Toast.LENGTH_SHORT).show()
