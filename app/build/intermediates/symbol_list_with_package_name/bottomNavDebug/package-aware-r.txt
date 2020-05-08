@@ -1488,6 +1488,7 @@ drawable googleg_standard_color_18
 drawable ic_add
 drawable ic_add_a_photo
 drawable ic_calendar_black_24dp
+drawable ic_camera_black_24dp
 drawable ic_camera_black_60dp
 drawable ic_clear_black_24dp
 drawable ic_delete

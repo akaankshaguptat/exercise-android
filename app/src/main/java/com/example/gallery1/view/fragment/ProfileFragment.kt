@@ -88,6 +88,9 @@ class ProfileFragment : Fragment() {
             ViewModelProvider(this)[ProfileViewModel::class.java]
         profileViewModel.profiileData().observe(activity!!, Observer {
             var profileData = it
+            mEmail= profileData.email.toString()
+            mName= profileData.name.toString()
+            mPassword=profileData.pasword.toString()
             email.setText(profileData.email)
             name.setText(profileData.name)
             Glide.with(this).load(profileData.image_url).apply(RequestOptions.circleCropTransform())
@@ -125,7 +128,7 @@ class ProfileFragment : Fragment() {
             imageView_profile.setImageBitmap(imageBitmap)
             var profileViewModel: ProfileViewModel =
                 ViewModelProvider(this)[ProfileViewModel::class.java]
-            profileViewModel.updateProfileData(imageBitmap, mEmail, mPassword, mName, activity!!)
+            profileViewModel.updateProfileData(imageBitmap,mEmail,mPassword, mName,activity!!)
                 .observe(activity!!,
                     Observer {
                         if (it) {

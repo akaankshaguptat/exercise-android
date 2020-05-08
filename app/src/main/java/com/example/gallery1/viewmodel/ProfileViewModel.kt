@@ -23,7 +23,7 @@ class ProfileViewModel : ViewModel()
     }
 
 
-    fun updateProfileData(bitmap: Bitmap,name:String,email:String,password:String,activity: Activity):MutableLiveData<Boolean>
+    fun updateProfileData(bitmap: Bitmap,email:String,password:String,name:String,activity: Activity):MutableLiveData<Boolean>
     {
         var data=repo.updateProfileData(bitmap,email,password,name,activity)
         return data

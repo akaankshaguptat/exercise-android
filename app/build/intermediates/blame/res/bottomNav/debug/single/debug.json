@@ -56,16 +56,16 @@
         "source": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/src/main/res/layout/image_list.xml"
     },
     {
-        "merged": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/build/intermediates/res/merged/bottomNav/debug/mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
+        "merged": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/build/intermediates/res/merged/bottomNav/debug/drawable_ic_camera_black_60dp.xml.flat",
+        "source": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/src/main/res/drawable/ic_camera_black_60dp.xml"
     },
     {
         "merged": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/build/intermediates/res/merged/bottomNav/debug/mipmap-xxxhdpi_ic_launcher.png.flat",
         "source": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
     },
     {
-        "merged": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/build/intermediates/res/merged/bottomNav/debug/drawable_ic_camera_black_60dp.xml.flat",
-        "source": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/src/main/res/drawable/ic_camera_black_60dp.xml"
+        "merged": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/build/intermediates/res/merged/bottomNav/debug/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
     },
     {
         "merged": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/build/intermediates/res/merged/bottomNav/debug/mipmap-xxhdpi_ic_launcher_round.png.flat",
@@ -190,6 +190,10 @@
     {
         "merged": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/build/intermediates/res/merged/bottomNav/debug/menu_activity_gallery1_drawer.xml.flat",
         "source": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/src/main/res/menu/activity_gallery1_drawer.xml"
+    },
+    {
+        "merged": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/build/intermediates/res/merged/bottomNav/debug/drawable_ic_camera_black_24dp.xml.flat",
+        "source": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/src/main/res/drawable/ic_camera_black_24dp.xml"
     },
     {
         "merged": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/build/intermediates/res/merged/bottomNav/debug/layout_activity_main.xml.flat",

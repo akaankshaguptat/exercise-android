@@ -16,6 +16,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ProgressBar
 import android.widget.Toast
+import androidx.core.graphics.drawable.toBitmap
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -128,10 +129,19 @@ class SignupFragment : Fragment() {
                 signUpViewModel.signupStatus(email,password,name,it1,imageView_progilesignup).observe(activity!!,
                     Observer { it->
                         if(it)
-                        {   Log.d("it",it.toString())
-                            var intent=Intent(activity,
-                                Gallery1Activity::class.java)
-                            startActivity(intent)
+                        {
+                            Log.d("it",it.toString())
+                            var imageBitmap:Bitmap=imageView_progilesignup.drawable.toBitmap()
+                            signUpViewModel.updateProfileData(imageBitmap,email,password,name,activity!!).observe(
+                                activity!!, Observer {
+                                    if(it){
+                                        var intent=Intent(activity,
+                                            Gallery1Activity::class.java)
+                                        startActivity(intent)
+                                    }
+                                }
+                            )
+
                         }
                         else
                         {

@@ -247,14 +247,16 @@ class FireBaseData {
         firebaseAuth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener(activity) { task ->
                 if (task.isSuccessful) {
+                    liveData.value=true
                     // Sign in success, update UI with the signed-in user's information
                     Log.d(ContentValues.TAG, "createUserWithEmail:success")
 
                     var imageBitmap: Bitmap = imageView_progilesignup.drawable.toBitmap()
 
-                    uplaodImageAndSaveUri(imageBitmap, email, password, name, activity)
-                    liveData.value=true
+                   // uplaodImageAndSaveUri(imageBitmap, email, password, name, activity)
+
                 } else {
+                    liveData.value=false
                     if (task.exception is FirebaseAuthUserCollisionException) {
                         Log.w(ContentValues.TAG, "user already exists", task.exception)
                         Toast.makeText(activity, "user already exists", Toast.LENGTH_SHORT).show()
@@ -275,7 +277,7 @@ class FireBaseData {
     }
 
 
-    /* uploadding user the data to the database*/
+    /* uploading user the data to the database*/
     fun uplaodImageAndSaveUri(
         imageBitmap: Bitmap,
         email: String,
@@ -346,11 +348,11 @@ class FireBaseData {
                                                 firebaseFirestoreException ->
 
             if (documentSnapshot != null) {
-                var mEmail = documentSnapshot.getString("email")!!
-                var mPassword = documentSnapshot.getString("password")!!
-                var mName = documentSnapshot.getString("name")!!
+                var mEmail = documentSnapshot?.getString("email")!!
+                var mPassword = documentSnapshot?.getString("password")!!
+                var mName = documentSnapshot?.getString("name")!!
 
-                var profile_image1 = documentSnapshot.getString("profileImage")
+                var profile_image1 = documentSnapshot?.getString("profileImage")
                 var profile = ProfileModelClass(
                     mEmail,
                     mPassword,

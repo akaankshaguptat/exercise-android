@@ -130,9 +130,7 @@ class Gallery1Activity : AppCompatActivity() {
     }
 
     fun updateNavHeader() {
-        val auth = FirebaseAuth.getInstance()
-        val userId = auth.currentUser!!.uid
-        val db = FirebaseFirestore.getInstance()
+
         val navView: NavigationView = findViewById(R.id.nav_view)
         var headerView = navView.getHeaderView(0)
         var name = headerView.findViewById<TextView>(R.id.name1)
@@ -149,23 +147,7 @@ class Gallery1Activity : AppCompatActivity() {
                 .into(imageView1)
 
         })
-        /* var documentReference = db.collection("users").document(userId)
-         documentReference.addSnapshotListener { documentSnapshot, firebaseFirestoreException ->
-             if(documentSnapshot!=null)
-             {
-                 var email1= documentSnapshot?.getString("email")!!
-                 var  name1 = documentSnapshot?.getString("name")!!
-                 name.setText(name1)
-                 email.setText(email1)
-                 var profile_image1 = documentSnapshot?.getString("profileImage")
-                 //Toast.makeText(activity, profile_image1, Toast.LENGTH_SHORT).show()
 
-                 Glide.with(this).load(profile_image1).apply(RequestOptions.circleCropTransform()).into(imageView1)
-             }
-
-
-         }
- */
 
     }
 

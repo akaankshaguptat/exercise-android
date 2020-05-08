@@ -1,11 +1,11 @@
 [
     {
-        "merged": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/build/intermediates/res/merged/leftMenu/debug/drawable_ic_timeline.xml.flat",
-        "source": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/src/main/res/drawable/ic_timeline.xml"
-    },
-    {
         "merged": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/build/intermediates/res/merged/leftMenu/debug/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/build/intermediates/res/merged/leftMenu/debug/drawable_ic_timeline.xml.flat",
+        "source": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/src/main/res/drawable/ic_timeline.xml"
     },
     {
         "merged": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/build/intermediates/res/merged/leftMenu/debug/layout_app_bar_gallery1.xml.flat",
@@ -30,6 +30,10 @@
     {
         "merged": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/build/intermediates/res/merged/leftMenu/debug/layout_fragment_profile.xml.flat",
         "source": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/src/main/res/layout/fragment_profile.xml"
+    },
+    {
+        "merged": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/build/intermediates/res/merged/leftMenu/debug/drawable_ic_camera_black_24dp.xml.flat",
+        "source": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/src/main/res/drawable/ic_camera_black_24dp.xml"
     },
     {
         "merged": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/build/intermediates/res/merged/leftMenu/debug/drawable_side_nav_bar.xml.flat",
@@ -178,6 +182,10 @@
     {
         "merged": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/build/intermediates/res/merged/leftMenu/debug/layout_fragment_add_category.xml.flat",
         "source": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/src/main/res/layout/fragment_add_category.xml"
+    },
+    {
+        "merged": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/build/intermediates/res/merged/leftMenu/debug/drawable_ic_mode_edit_white_24dp.xml.flat",
+        "source": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/src/main/res/drawable/ic_mode_edit_white_24dp.xml"
     },
     {
         "merged": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/build/intermediates/res/merged/leftMenu/debug/mipmap-hdpi_ic_launcher.png.flat",
