@@ -21,7 +21,6 @@ class HomeFragment : Fragment() {
     ): View? {
 
         val root = inflater.inflate(R.layout.fragment_home, container, false)
-        // val textView: TextView = root.findViewById(R.id.text_home)
 
         val categoryFragment= Category1()
         activity?.supportFragmentManager?.beginTransaction()

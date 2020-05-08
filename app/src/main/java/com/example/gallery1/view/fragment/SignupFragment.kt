@@ -1,7 +1,6 @@
 package com.example.view.gallery1
 
 import android.app.Activity
-import android.content.ContentValues.TAG
 import android.content.Intent
 import android.graphics.Bitmap
 import android.net.Uri
@@ -20,14 +19,12 @@ import androidx.core.graphics.drawable.toBitmap
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.example.gallery1.view.activity.Gallery1Activity
 import com.example.gallery1.R
+import com.example.gallery1.view.activity.Gallery1Activity
 import com.example.gallery1.viewmodel.SignUpViewModel
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.storage.FirebaseStorage
 import kotlinx.android.synthetic.main.fragment_signup.*
-import java.io.ByteArrayOutputStream
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -40,25 +37,24 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class SignupFragment : Fragment() {
-    private val REQUEST_IMAGE_CAPTURE: Int=102
+    private val REQUEST_IMAGE_CAPTURE: Int = 102
     private lateinit var imageUri: Uri
+
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
 
-    private lateinit var mEmail:EditText
-    private lateinit var mPassword:EditText
-    private lateinit var mRegisterBtn:Button
-    private lateinit var progreBar:ProgressBar
-    private lateinit var mConfirmPassword:EditText
-    private lateinit var mName:EditText
-    private lateinit var userId:String
-    private lateinit var profileLink:String
+    private lateinit var mEmail: EditText
+    private lateinit var mPassword: EditText
+    private lateinit var mRegisterBtn: Button
+    private lateinit var progreBar: ProgressBar
+    private lateinit var mConfirmPassword: EditText
+    private lateinit var mName: EditText
+    private lateinit var userId: String
+    private lateinit var profileLink: String
 
     private lateinit var auth: FirebaseAuth
-    private lateinit var fstore:FirebaseFirestore
-
-
+    private lateinit var fstore: FirebaseFirestore
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -75,14 +71,14 @@ class SignupFragment : Fragment() {
     ): View? {
 
         // Inflate the layout for this fragment
-        var view:View= inflater.inflate(R.layout.fragment_signup, container, false)
+        var view: View = inflater.inflate(R.layout.fragment_signup, container, false)
 
-         mRegisterBtn=view.findViewById(R.id.btn_register)
-         mEmail=view.findViewById(R.id.EditText_email)
-         mPassword=view.findViewById(R.id.EditText_pass)
-         mName=view.findViewById(R.id.editText_name)
-         mConfirmPassword=view.findViewById(R.id.EditText_confirmPass)
-        progreBar=view.findViewById(R.id.progressBar)
+        mRegisterBtn = view.findViewById(R.id.btn_register)
+        mEmail = view.findViewById(R.id.EditText_email)
+        mPassword = view.findViewById(R.id.EditText_pass)
+        mName = view.findViewById(R.id.editText_name)
+        mConfirmPassword = view.findViewById(R.id.EditText_confirmPass)
+        progreBar = view.findViewById(R.id.progressBar)
 
 
 
@@ -90,64 +86,75 @@ class SignupFragment : Fragment() {
 
         auth = FirebaseAuth.getInstance()
 
-        fstore= FirebaseFirestore.getInstance()
+        fstore = FirebaseFirestore.getInstance()
 
 
-        if (auth.currentUser!=null){
-            var intent=Intent(activity, Gallery1Activity::class.java)
+        if (auth.currentUser != null) {
+            var intent = Intent(activity, Gallery1Activity::class.java)
             startActivity(intent)
         }
 
 
 
         mRegisterBtn.setOnClickListener {
-            var email:String=mEmail.text.toString().trim()
-            var password=mPassword.text.toString().trim()
-            var confirmPass=mConfirmPassword.text.toString().trim()
-            var name=mName.text.toString()
+            var email: String = mEmail.text.toString().trim()
+            var password = mPassword.text.toString().trim()
+            var confirmPass = mConfirmPassword.text.toString().trim()
+            var name = mName.text.toString()
 
-            if (TextUtils.isEmpty(email)){
+            if (TextUtils.isEmpty(email)) {
                 mEmail.setError("Email is Required")
                 mEmail.requestFocus()
                 return@setOnClickListener
             }
 
-            if(TextUtils.isEmpty(password)){
+            if (TextUtils.isEmpty(password)) {
                 mPassword.setError("Password is requied")
                 mPassword.requestFocus()
                 return@setOnClickListener
             }
-            if(password!=confirmPass){
+            if (password != confirmPass) {
                 mConfirmPassword.setError("confirm Password should be same as Password")
                 mConfirmPassword.requestFocus()
                 return@setOnClickListener
             }
-            progreBar.visibility=View.VISIBLE
+            progreBar.visibility = View.VISIBLE
 
             activity?.let { it1 ->
-                var signUpViewModel: SignUpViewModel = ViewModelProvider(this)[SignUpViewModel::class.java]
-                signUpViewModel.signupStatus(email,password,name,it1,imageView_progilesignup).observe(activity!!,
-                    Observer { it->
-                        if(it)
-                        {
-                            Log.d("it",it.toString())
-                            var imageBitmap:Bitmap=imageView_progilesignup.drawable.toBitmap()
-                            signUpViewModel.updateProfileData(imageBitmap,email,password,name,activity!!).observe(
-                                activity!!, Observer {
-                                    if(it){
-                                        var intent=Intent(activity,
-                                            Gallery1Activity::class.java)
-                                        startActivity(intent)
+                var signUpViewModel: SignUpViewModel =
+                    ViewModelProvider(this)[SignUpViewModel::class.java]
+                signUpViewModel.signupStatus(email, password, name, it1, imageView_progilesignup)
+                    .observe(activity!!,
+                        Observer { it ->
+                            if (it) {
+                                Log.d("it", it.toString())
+                                var imageBitmap: Bitmap =
+                                    imageView_progilesignup.drawable.toBitmap()
+                                signUpViewModel.updateProfileData(
+                                    imageBitmap,
+                                    email,
+                                    password,
+                                    name,
+                                    activity!!
+                                ).observe(
+                                    activity!!, Observer {
+                                        if (it) {
+                                            progreBar.visibility = View.INVISIBLE
+                                            var intent = Intent(
+                                                activity,
+                                                Gallery1Activity::class.java
+                                            )
+                                            startActivity(intent)
+                                        }
                                     }
-                                }
-                            )
+                                )
 
-                        }
-                        else
-                        {
-                            Toast.makeText(activity,"Something went wrong",Toast.LENGTH_SHORT).show()
-                        }
-                    })
+                            } else {
+                                progreBar.visibility = View.INVISIBLE
+                                Toast.makeText(activity, "Something went wrong", Toast.LENGTH_SHORT)
+                                    .show()
+                            }
+                        })
 
             }
 
@@ -165,89 +172,22 @@ class SignupFragment : Fragment() {
     }
 
     private fun takepictureIntent() {
-        Intent(MediaStore.ACTION_IMAGE_CAPTURE).also { pictureIntent->
+        Intent(MediaStore.ACTION_IMAGE_CAPTURE).also { pictureIntent ->
             pictureIntent.resolveActivity(activity?.packageManager!!)?.also {
-                startActivityForResult(pictureIntent,REQUEST_IMAGE_CAPTURE)
+                startActivityForResult(pictureIntent, REQUEST_IMAGE_CAPTURE)
             }
         }
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        if(requestCode==REQUEST_IMAGE_CAPTURE && resultCode== Activity.RESULT_OK){
-            val imageBitmap= data?.extras?.get("data") as Bitmap
+        if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == Activity.RESULT_OK) {
+            val imageBitmap = data?.extras?.get("data") as Bitmap
             imageView_progilesignup.setImageBitmap(imageBitmap)
 
 
         }
     }
-
-    private fun uplaodImageAndSaveUri(
-        imageBitmap: Bitmap,
-        email: String,
-        password: String,
-        name: String
-    ){
-        var image1:String=""
-
-        val baos= ByteArrayOutputStream()
-        var db = FirebaseFirestore.getInstance()
-
-        val storafgeRef= FirebaseStorage.getInstance()
-            .reference.child("profileImages/${FirebaseAuth.getInstance().currentUser?.uid}")
-        imageBitmap.compress(Bitmap.CompressFormat.JPEG,100,baos)
-        val image=baos.toByteArray()
-        val uplaod=storafgeRef.putBytes(image)
-        uplaod.addOnCompleteListener{uplaodTask->
-            if(uplaodTask.isSuccessful){
-                storafgeRef.downloadUrl.addOnCompleteListener { urlTask->
-                    urlTask.result?.let {
-                        var intent=Intent(activity,
-                            Gallery1Activity::class.java)
-                        imageUri=it
-                        imageView_progilesignup.setImageBitmap(imageBitmap)
-                        Toast.makeText(activity,imageUri.toString(),Toast.LENGTH_SHORT).show()
-                        image1=imageUri.toString()
-
-                        val user = hashMapOf(
-                            "email" to email,
-                            "password" to password,
-                            "name" to name,
-                            "profileImage" to image1
-                        )
-
-// Add a new document with a generated ID
-                        db.collection("users").document(userId).set(user as Map<String, Any>)
-                            .addOnSuccessListener { documentReference ->
-                                // Log.d(TAG, "DocumentSnapshot added with ID: ${documentReference.id}")
-                            }
-                            .addOnFailureListener { e ->
-                                Log.w(TAG, "Error adding document", e)
-                            }
-                        startActivity(intent)
-
-                    }
-                }
-            }else{
-                uplaodTask.exception?.let {
-                    Toast.makeText(activity,it.message,Toast.LENGTH_SHORT).show()
-                }
-            }
-
-        }
-
-    }
-
-    public override fun onStart() {
-        super.onStart()
-        // Check if user is signed in (non-null) and update UI accordingly.
-        val currentUser = auth.currentUser
-//        updateUI(currentUser)
-    }
-
-//    private fun updateUI(currentUser: FirebaseUser?) {
-//
-//    }
 
 
     companion object {

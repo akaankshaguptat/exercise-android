@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
@@ -74,6 +75,7 @@ class LoginFragment : Fragment() {
 
         }
         var btn_SignIn = view.findViewById<Button>(R.id.btn_SignIn)
+        var progressBarLogin=view.findViewById<ProgressBar>(R.id.progressBarLogin)
         btn_SignIn.setOnClickListener {
             var email_login: String = mEmail.text.toString().trim()
             var password_login: String = mPassword.text.toString().trim()
@@ -90,7 +92,7 @@ class LoginFragment : Fragment() {
             }
 
 
-
+            progressBarLogin.visibility=View.VISIBLE
             activity?.let { it1 ->
                 var loginViewModel: LoginViewModel =
                     ViewModelProvider(this)[LoginViewModel::class.java]
@@ -98,11 +100,13 @@ class LoginFragment : Fragment() {
                     .observe(activity!!, Observer { it ->
 
                         if (it) {
+                            progressBarLogin.visibility=View.INVISIBLE
                             Toast.makeText(context, "login successful", Toast.LENGTH_SHORT).show()
                             val user = auth.currentUser
                             var intent = Intent(activity, Gallery1Activity::class.java)
                             startActivity(intent)
                         } else {
+                            progressBarLogin.visibility=View.INVISIBLE
                             //  Log.w(ContentValues.TAG, "loginUserWithEmail:failure", task.exception)
                             Toast.makeText(context, "login failed.", Toast.LENGTH_SHORT).show()
                         }

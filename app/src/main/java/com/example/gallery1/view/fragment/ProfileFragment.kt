@@ -34,16 +34,10 @@ class ProfileFragment : Fragment() {
 
     private lateinit var btn_logout: Button
     private lateinit var email: TextView
-    private lateinit var password: TextView
+
     private lateinit var name: TextView
     private lateinit var btn_changePic: Button
 
-    private lateinit var fAuth: FirebaseAuth
-    private lateinit var fStore: FirebaseStorage
-
-    private lateinit var userId: String
-    private lateinit var mUser: User
-    private lateinit var mDatabase: DatabaseReference
     private lateinit var mEmail: String
     private lateinit var mPassword: String
     private lateinit var mName: String
@@ -59,15 +53,8 @@ class ProfileFragment : Fragment() {
 
         var profile_image = root.findViewById<ImageView>(R.id.imageView_profile)
         email = root.findViewById(R.id.Text_email)
-        // password = root.findViewById(R.id.Text_pass)
         name = root.findViewById(R.id.Text_name)
         btn_changePic = root.findViewById(R.id.btn_changeprofilepic)
-        var progressBar_pic = root.findViewById<ProgressBar>(R.id.progressBar_pic)
-
-
-        var user = FirebaseAuth.getInstance().currentUser
-        fAuth = FirebaseAuth.getInstance()
-        fStore = FirebaseStorage.getInstance()
 
 
         btn_logout = root.findViewById(R.id.btn_logout)
@@ -80,17 +67,17 @@ class ProfileFragment : Fragment() {
         }
 
 
-        userId = fAuth.currentUser?.uid!!
-        val db = FirebaseFirestore.getInstance()
+
+
 
 
         var profileViewModel: ProfileViewModel =
             ViewModelProvider(this)[ProfileViewModel::class.java]
         profileViewModel.profiileData().observe(activity!!, Observer {
             var profileData = it
-            mEmail= profileData.email.toString()
-            mName= profileData.name.toString()
-            mPassword=profileData.pasword.toString()
+            mEmail = profileData.email.toString()
+            mName = profileData.name.toString()
+            mPassword = profileData.pasword.toString()
             email.setText(profileData.email)
             name.setText(profileData.name)
             Glide.with(this).load(profileData.image_url).apply(RequestOptions.circleCropTransform())
@@ -125,13 +112,14 @@ class ProfileFragment : Fragment() {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
             val imageBitmap = data?.extras?.get("data") as Bitmap
-            imageView_profile.setImageBitmap(imageBitmap)
+            progressBar_pic.visibility = View.VISIBLE
             var profileViewModel: ProfileViewModel =
                 ViewModelProvider(this)[ProfileViewModel::class.java]
-            profileViewModel.updateProfileData(imageBitmap,mEmail,mPassword, mName,activity!!)
+            profileViewModel.updateProfileData(imageBitmap, mEmail, mPassword, mName, activity!!)
                 .observe(activity!!,
                     Observer {
                         if (it) {
+                            progressBar_pic.visibility = View.INVISIBLE
                             Toast.makeText(
                                 activity,
                                 "Image Uploaded Sucessfully",

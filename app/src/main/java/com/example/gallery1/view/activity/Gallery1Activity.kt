@@ -144,7 +144,7 @@ class Gallery1Activity : AppCompatActivity() {
             name.setText(profileData.name)
 
             Glide.with(this).load(profileData.image_url).apply(RequestOptions.circleCropTransform())
-                .into(imageView1)
+                .into(image)
 
         })
 
@@ -155,6 +155,13 @@ class Gallery1Activity : AppCompatActivity() {
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
+    }
+
+    override fun onBackPressed() {
+        var count=supportFragmentManager.backStackEntryCount
+        Log.d("count",count.toString())
+        super.onBackPressed()
+
     }
 
     fun logout(item: MenuItem) {
