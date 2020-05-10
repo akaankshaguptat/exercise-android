@@ -1,4 +1,7 @@
 Gallery-Android App
+
+The app basically allows users to create categories, add their pictures in categories. Users can view the pictures in categories and in a timeline view.
+
 ------------------------------------------------------------------------------------------------------------
 Screenshots-
 
