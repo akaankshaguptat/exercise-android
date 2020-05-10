@@ -91,7 +91,7 @@ class LoginFragment : Fragment() {
                 mPassword.requestFocus()
                 return@setOnClickListener
             }
-            
+
             if(!context?.isNetworkAvailable()!!){
                 Toast.makeText(context,"network not available",Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
@@ -99,6 +99,8 @@ class LoginFragment : Fragment() {
 
 
             progressBarLogin.visibility=View.VISIBLE
+
+
             activity?.let { it1 ->
                 var loginViewModel: LoginViewModel =
                     ViewModelProvider(this)[LoginViewModel::class.java]
@@ -108,7 +110,6 @@ class LoginFragment : Fragment() {
                         if (it) {
                             progressBarLogin.visibility=View.INVISIBLE
                             Toast.makeText(context, "login successful", Toast.LENGTH_SHORT).show()
-                            val user = auth.currentUser
                             var intent = Intent(activity, Gallery1Activity::class.java)
                             startActivity(intent)
                         } else {

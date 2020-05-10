@@ -12,10 +12,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
 import android.widget.ProgressBar
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.gallery1.R
+import com.example.gallery1.utils.isNetworkAvailable
 import com.example.gallery1.viewmodel.AddCategoryViewModel
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
@@ -42,9 +44,7 @@ class AddCategoryFragment : Fragment() {
     private var param2: String? = null
 
     var auth = FirebaseAuth.getInstance()
-    var userId = auth.currentUser?.uid.toString()
-    val db = FirebaseFirestore.getInstance()
-    var fstore = FirebaseFirestore.getInstance()
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -76,6 +76,11 @@ class AddCategoryFragment : Fragment() {
                 mTitle.setError("please enter title of category")
                 mTitle.requestFocus()
                 return@setOnClickListener
+            }
+            if(!context?.isNetworkAvailable()!!){
+                Toast.makeText(context,"network not available", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+
             }
 
             takepictureIntent()

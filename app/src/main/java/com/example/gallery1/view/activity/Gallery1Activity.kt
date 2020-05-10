@@ -59,7 +59,7 @@ class Gallery1Activity : AppCompatActivity() {
         val type = Constants.test.Bottom.type
 
 
-        if (type.equals("l")) {
+        if (type.equals("leftMenu")) {
             val toolbar: Toolbar = findViewById(R.id.toolbar)
             setSupportActionBar(toolbar)
             val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
@@ -81,7 +81,7 @@ class Gallery1Activity : AppCompatActivity() {
         }
 
         Log.d("flavor", type)
-        if (type.equals("b")) {
+        if (type.equals("bottomNav")) {
             Log.d("flavor", type)
             val bottomNavigation: BottomNavigationView = findViewById(R.id.bottom_nav)
             homeFragment = HomeFragment()

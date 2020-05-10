@@ -1,11 +1,11 @@
 [
     {
-        "merged": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/build/intermediates/res/merged/leftMenu/debug/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
-    },
-    {
         "merged": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/build/intermediates/res/merged/leftMenu/debug/drawable_ic_timeline.xml.flat",
         "source": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/src/main/res/drawable/ic_timeline.xml"
+    },
+    {
+        "merged": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/build/intermediates/res/merged/leftMenu/debug/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
     {
         "merged": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/build/intermediates/res/merged/leftMenu/debug/layout_app_bar_gallery1.xml.flat",
