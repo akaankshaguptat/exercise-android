@@ -71,11 +71,11 @@
     <exclude-output />
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/build/generated/source/kapt/leftMenuDebug" isTestSource="false" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/build/generated/ap_generated_sources/leftMenuDebug/out" isTestSource="false" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/build/generated/aidl_source_output_dir/leftMenuDebug/out" isTestSource="false" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/buildConfig/leftMenu/debug" isTestSource="false" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/build/generated/renderscript_source_output_dir/leftMenuDebug/out" isTestSource="false" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/build/generated/source/kaptKotlin/leftMenuDebug" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/buildConfig/leftMenu/debug" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/ap_generated_sources/leftMenuDebug/out" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/renderscript_source_output_dir/leftMenuDebug/out" isTestSource="false" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/build/generated/res/google-services/leftMenu/debug" type="java-resource" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/build/generated/res/rs/leftMenu/debug" type="java-resource" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/leftMenuDebug/res" type="java-resource" />
@@ -85,9 +85,9 @@
       <sourceFolder url="file://$MODULE_DIR$/src/leftMenuDebug/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/leftMenuDebug/rs" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/leftMenuDebug/shaders" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/kapt/leftMenuDebugAndroidTest" isTestSource="true" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/build/generated/ap_generated_sources/leftMenuDebugAndroidTest/out" isTestSource="true" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/build/generated/aidl_source_output_dir/leftMenuDebugAndroidTest/out" isTestSource="true" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/kapt/leftMenuDebugAndroidTest" isTestSource="true" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/build/generated/source/buildConfig/androidTest/leftMenu/debug" isTestSource="true" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/build/generated/renderscript_source_output_dir/leftMenuDebugAndroidTest/out" isTestSource="true" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/build/generated/res/rs/androidTest/leftMenu/debug" type="java-test-resource" generated="true" />
@@ -177,16 +177,16 @@
     <orderEntry type="module-library">
       <library name="Gradle: kaptGeneratedClasses">
         <CLASSES>
-          <root url="file://$MODULE_DIR$/build/tmp/kapt3/classes/bottomNavDebugAndroidTest" />
-          <root url="file://$MODULE_DIR$/build/tmp/kapt3/classes/bottomNavDebug" />
-          <root url="file://$MODULE_DIR$/build/tmp/kapt3/classes/bottomNavDebugUnitTest" />
-          <root url="file://$MODULE_DIR$/build/tmp/kapt3/classes/bottomNavRelease" />
           <root url="file://$MODULE_DIR$/build/tmp/kapt3/classes/bottomNavReleaseUnitTest" />
-          <root url="file://$MODULE_DIR$/build/tmp/kapt3/classes/leftMenuDebugAndroidTest" />
-          <root url="file://$MODULE_DIR$/build/tmp/kapt3/classes/leftMenuDebug" />
-          <root url="file://$MODULE_DIR$/build/tmp/kapt3/classes/leftMenuDebugUnitTest" />
-          <root url="file://$MODULE_DIR$/build/tmp/kapt3/classes/leftMenuRelease" />
           <root url="file://$MODULE_DIR$/build/tmp/kapt3/classes/leftMenuReleaseUnitTest" />
+          <root url="file://$MODULE_DIR$/build/tmp/kapt3/classes/bottomNavDebugUnitTest" />
+          <root url="file://$MODULE_DIR$/build/tmp/kapt3/classes/bottomNavDebugAndroidTest" />
+          <root url="file://$MODULE_DIR$/build/tmp/kapt3/classes/leftMenuDebugAndroidTest" />
+          <root url="file://$MODULE_DIR$/build/tmp/kapt3/classes/bottomNavRelease" />
+          <root url="file://$MODULE_DIR$/build/tmp/kapt3/classes/leftMenuDebugUnitTest" />
+          <root url="file://$MODULE_DIR$/build/tmp/kapt3/classes/leftMenuDebug" />
+          <root url="file://$MODULE_DIR$/build/tmp/kapt3/classes/leftMenuRelease" />
+          <root url="file://$MODULE_DIR$/build/tmp/kapt3/classes/bottomNavDebug" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

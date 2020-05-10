@@ -20,6 +20,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.gallery1.R
+import com.example.gallery1.utils.isNetworkAvailable
 import com.example.gallery1.view.activity.Gallery1Activity
 import com.example.gallery1.viewmodel.SignUpViewModel
 import com.google.firebase.auth.FirebaseAuth
@@ -116,6 +117,10 @@ class SignupFragment : Fragment() {
             if (password != confirmPass) {
                 mConfirmPassword.setError("confirm Password should be same as Password")
                 mConfirmPassword.requestFocus()
+                return@setOnClickListener
+            }
+            if(!context?.isNetworkAvailable()!!){
+                Toast.makeText(context,"network not available",Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
             progreBar.visibility = View.VISIBLE

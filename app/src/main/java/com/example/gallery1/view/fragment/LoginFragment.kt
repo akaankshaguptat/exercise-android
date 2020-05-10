@@ -14,6 +14,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.gallery1.R
+import com.example.gallery1.utils.isNetworkAvailable
 import com.example.gallery1.view.activity.Gallery1Activity
 import com.example.gallery1.view.activity.MainActivity.Companion.manager
 import com.example.gallery1.viewmodel.LoginViewModel
@@ -88,6 +89,11 @@ class LoginFragment : Fragment() {
             if (TextUtils.isEmpty(password_login)) {
                 mPassword.setError("Password is requied")
                 mPassword.requestFocus()
+                return@setOnClickListener
+            }
+            
+            if(!context?.isNetworkAvailable()!!){
+                Toast.makeText(context,"network not available",Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 

@@ -3,6 +3,7 @@ package com.example.gallery1.data
 import android.app.Activity
 import android.content.ContentValues
 import android.content.ContentValues.TAG
+import android.content.Context
 import android.content.Intent
 import android.graphics.Bitmap
 import android.net.Uri
@@ -114,6 +115,7 @@ class FireBaseData {
 
     }
 
+    //for sorting recent image on top of the view
     fun selector(p: TimelineViewModel): String = p.timeStamp
 
 
@@ -269,10 +271,7 @@ class FireBaseData {
                             .show()
                     }
 
-//
                 }
-
-                // ...
             }
         return liveData
     }
@@ -303,8 +302,6 @@ class FireBaseData {
                         liveData.value = true
                         var intent= Intent(activity,Gallery1Activity::class.java)
                         var imageUri = it
-                        //   imageView_progilesignup.setImageBitmap(imageBitmap)
-                        //   Toast.makeText(activity,imageUri.toString(),Toast.LENGTH_SHORT).show()
                         image1 = imageUri.toString()
 
                         val user = hashMapOf(
