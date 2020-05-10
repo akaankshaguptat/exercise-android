@@ -15,6 +15,9 @@ Allow users to login using email and password.
 ----------------------------------------
 ![WhatsApp Image 2020-05-10 at 3 00 23 PM (1)](https://user-images.githubusercontent.com/60652132/81497064-add1fc80-92d9-11ea-9244-3d1701566852.jpeg)
 
+------------------------------------------------------------------------------------
+![WhatsApp Image 2020-05-10 at 3 00 23 PM](https://user-images.githubusercontent.com/60652132/81497123-0dc8a300-92da-11ea-8598-0b92d50efa41.jpeg)
+
 Signup Screen 
 --------------------
 
