@@ -1,16 +1,15 @@
 package com.example.gallery1.view.fragment
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-
 import com.example.gallery1.R
 import com.example.gallery1.model.Adapters.TimelineAdapter
 import com.example.gallery1.viewmodel.TimelineViewModel
@@ -27,9 +26,9 @@ private const val ARG_PARAM2 = "param2"
  */
 class TimelineFragment : Fragment() {
 
-    private var recyclerView: RecyclerView?=null
+    private var recyclerView: RecyclerView? = null
     private var gridLayoutManager: GridLayoutManager? = null
-    private var timelineAdapter: TimelineAdapter? =null
+    private var timelineAdapter: TimelineAdapter? = null
     private var param1: String? = null
     private var param2: String? = null
 
@@ -46,25 +45,28 @@ class TimelineFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-         val root= inflater.inflate(R.layout.fragment_timeline, container, false)
-        recyclerView=root.findViewById(R.id.timeline_recycler) as RecyclerView
-        var timelineViewModel: TimelineViewModel = ViewModelProvider(this)[TimelineViewModel::class.java]
-        timelineViewModel.getArrayList().observe(this.viewLifecycleOwner, Observer {timelineViewModel->
+        val root = inflater.inflate(R.layout.fragment_timeline, container, false)
+        recyclerView = root.findViewById(R.id.timeline_recycler) as RecyclerView
+        var timelineViewModel: TimelineViewModel =
+            ViewModelProvider(this)[TimelineViewModel::class.java]
+        timelineViewModel.getArrayList()
+            .observe(this.viewLifecycleOwner, Observer { timelineViewModel ->
 
 
-            timelineAdapter=context?.let {
-                TimelineAdapter(
-                    it,
-                    timelineViewModel!!
-                )
-            }
+                timelineAdapter = context?.let {
+                    TimelineAdapter(
+                        it,
+                        timelineViewModel!!
+                    )
+                }
 
-            gridLayoutManager = GridLayoutManager(context, 2, LinearLayoutManager.VERTICAL, false)
-            recyclerView?.layoutManager = gridLayoutManager
-            recyclerView!!.adapter=timelineAdapter
+                gridLayoutManager =
+                    GridLayoutManager(context, 2, LinearLayoutManager.VERTICAL, false)
+                recyclerView?.layoutManager = gridLayoutManager
+                recyclerView!!.adapter = timelineAdapter
 
 
-        })
+            })
         return root
     }
 

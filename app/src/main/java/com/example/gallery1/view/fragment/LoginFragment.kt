@@ -76,7 +76,7 @@ class LoginFragment : Fragment() {
 
         }
         var btn_SignIn = view.findViewById<Button>(R.id.btn_SignIn)
-        var progressBarLogin=view.findViewById<ProgressBar>(R.id.progressBarLogin)
+        var progressBarLogin = view.findViewById<ProgressBar>(R.id.progressBarLogin)
         btn_SignIn.setOnClickListener {
             var email_login: String = mEmail.text.toString().trim()
             var password_login: String = mPassword.text.toString().trim()
@@ -92,13 +92,13 @@ class LoginFragment : Fragment() {
                 return@setOnClickListener
             }
 
-            if(!context?.isNetworkAvailable()!!){
-                Toast.makeText(context,"network not available",Toast.LENGTH_SHORT).show()
+            if (!context?.isNetworkAvailable()!!) {
+                Toast.makeText(context, "network not available", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
 
-            progressBarLogin.visibility=View.VISIBLE
+            progressBarLogin.visibility = View.VISIBLE
 
 
             activity?.let { it1 ->
@@ -108,12 +108,12 @@ class LoginFragment : Fragment() {
                     .observe(activity!!, Observer { it ->
 
                         if (it) {
-                            progressBarLogin.visibility=View.INVISIBLE
+                            progressBarLogin.visibility = View.INVISIBLE
                             Toast.makeText(context, "login successful", Toast.LENGTH_SHORT).show()
                             var intent = Intent(activity, Gallery1Activity::class.java)
                             startActivity(intent)
                         } else {
-                            progressBarLogin.visibility=View.INVISIBLE
+                            progressBarLogin.visibility = View.INVISIBLE
                             //  Log.w(ContentValues.TAG, "loginUserWithEmail:failure", task.exception)
                             Toast.makeText(context, "login failed.", Toast.LENGTH_SHORT).show()
                         }
