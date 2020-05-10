@@ -2159,8 +2159,10 @@ int layout timeline_list 0x7f0b0095
 int menu activity_gallery1_drawer 0x7f0c0000
 int menu gallery1 0x7f0c0001
 int menu menu_navigation 0x7f0c0002
-int mipmap ic_launcher 0x7f0d0000
-int mipmap ic_launcher_round 0x7f0d0001
+int mipmap galleryicon 0x7f0d0000
+int mipmap ic_launcher 0x7f0d0001
+int mipmap ic_launcher_foreground 0x7f0d0002
+int mipmap ic_launcher_round 0x7f0d0003
 int navigation mobile_navigation 0x7f0e0000
 int plurals fui_error_weak_password 0x7f0f0000
 int plurals mtrl_badge_content_description 0x7f0f0001
