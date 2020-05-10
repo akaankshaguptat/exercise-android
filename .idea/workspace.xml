@@ -12,12 +12,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="00a53f97-bad3-4277-a3bc-c4f80a9bdb0c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/screenshots/Home.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshots/LeftMenuProductFlavor.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshots/addcategory.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshots/bottomNavProfile.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshots/login.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshots/signup.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
