@@ -2159,7 +2159,9 @@ layout timeline_list
 menu activity_gallery1_drawer
 menu gallery1
 menu menu_navigation
+mipmap galleryicon
 mipmap ic_launcher
+mipmap ic_launcher_foreground
 mipmap ic_launcher_round
 navigation mobile_navigation
 plurals fui_error_weak_password

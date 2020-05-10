@@ -52,6 +52,10 @@
         "source": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/src/main/res/drawable/ic_exit.xml"
     },
     {
+        "merged": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/build/intermediates/res/merged/leftMenu/debug/mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/src/main/res/mipmap-mdpi/ic_launcher_foreground.png"
+    },
+    {
         "merged": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/build/intermediates/res/merged/leftMenu/debug/layout_fragment_slideshow.xml.flat",
         "source": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/src/main/res/layout/fragment_slideshow.xml"
     },
@@ -90,6 +94,14 @@
     {
         "merged": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/build/intermediates/res/merged/leftMenu/debug/layout_category_list1.xml.flat",
         "source": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/src/main/res/layout/category_list1.xml"
+    },
+    {
+        "merged": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/build/intermediates/res/merged/leftMenu/debug/mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/build/intermediates/res/merged/leftMenu/debug/mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png"
     },
     {
         "merged": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/build/intermediates/res/merged/leftMenu/debug/drawable_ic_add_a_photo.xml.flat",
@@ -132,6 +144,10 @@
         "source": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/src/main/res/drawable/ic_vpn_key_black_24dp.xml"
     },
     {
+        "merged": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/build/intermediates/res/merged/leftMenu/debug/mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png"
+    },
+    {
         "merged": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/build/intermediates/res/merged/leftMenu/debug/drawable_ic_person.xml.flat",
         "source": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/src/main/res/drawable/ic_person.xml"
     },
@@ -156,6 +172,10 @@
         "source": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/src/main/res/menu/gallery1.xml"
     },
     {
+        "merged": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/build/intermediates/res/merged/leftMenu/debug/mipmap-xhdpi_galleryicon.png.flat",
+        "source": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/src/main/res/mipmap-xhdpi/galleryicon.png"
+    },
+    {
         "merged": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/build/intermediates/res/merged/leftMenu/debug/layout_activity_gallery1.xml.flat",
         "source": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/src/main/res/layout/activity_gallery1.xml"
     },
@@ -170,6 +190,10 @@
     {
         "merged": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/build/intermediates/res/merged/leftMenu/debug/drawable_selector.xml.flat",
         "source": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/src/main/res/drawable/selector.xml"
+    },
+    {
+        "merged": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/build/intermediates/res/merged/leftMenu/debug/mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png"
     },
     {
         "merged": "/home/akaanksha/Downloads/exercise-android-Gallery12/app/build/intermediates/res/merged/leftMenu/debug/layout_nav_header_gallery1.xml.flat",
